@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="TenantsApp.UpcomingRentPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:card="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sync="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+    xmlns:viewmodels="clr-namespace:TenantsApp"
+    Title="Upcoming"
+    Visual="Material"
+    mc:Ignorable="d">
+    <d:ContentPage.BindingContext>
+        <viewmodels:UpcomingRentPageModel />
+    </d:ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="ItemTemplate" x:Name="ItemTemplate">
+                <card:SfCardView
+                    Margin="10,0"
+                    BackgroundColor="{Binding ItemBackgroundColor}"
+                    HeightRequest="100"
+                    VerticalOptions="Start">
+                    <Grid Margin="10" VerticalOptions="Start">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.ColumnSpan="2" Text="{Binding Tenant.Name}" />
+                        <Label
+                            Grid.Row="1"
+                            Grid.ColumnSpan="2"
+                            Text="{Binding Tenant.Place.Description}" />
+
+                        <Label Grid.Row="2" Text="{Binding ExpiryDate, StringFormat='{0:MMMM dd, yyyy}'}" />
+
+                        <StackLayout
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            HorizontalOptions="EndAndExpand"
+                            Orientation="Horizontal">
+                            <Label Text="Total:" />
+                            <Label Text="{Binding Price}" />
+                        </StackLayout>
+
+
+                    </Grid>
+
+                </card:SfCardView>
+
+            </DataTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+
+            <sync:SfListView
+                x:Name="listView"
+                Margin="0,20,0,0"
+                AllowKeyboardNavigation="True"
+                AutoFitMode="Height"
+                ItemTemplate="{StaticResource ItemTemplate}"
+                ItemsSource="{Binding Rents}"
+                SelectedItem="{Binding RentSelected}"
+                SelectionBackgroundColor="#E4E4E4"
+                SelectionGesture="Tap"
+                SelectionMode="Single" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="TenantsApp.PropertiesPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:card="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sync="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+    xmlns:viewmodels="clr-namespace:TenantsApp"
+    Title="Properties"
+    Visual="Material"
+    mc:Ignorable="d">
+    <d:ContentPage.BindingContext>
+        <viewmodels:PropertiesPageModel />
+    </d:ContentPage.BindingContext>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="addIcon" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="ItemTemplate" x:Name="ItemTemplate">
+                <card:SfCardView
+                    Margin="10,0"
+                    HeightRequest="100"
+                    VerticalOptions="Start">
+                    <Grid Margin="10" VerticalOptions="Start">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.ColumnSpan="4" Text="{Binding Description}" />
+                        <Label
+                            Grid.Row="1"
+                            Grid.ColumnSpan="4"
+                            Text="{Binding Address}" />
+
+                        <StackLayout Grid.Row="2" Orientation="Horizontal">
+                            <ffimageloadingsvg:SvgCachedImage
+                                BackgroundColor="Transparent"
+                                HeightRequest="20"
+                                Source="resource://TenantsApp.Resources.bed.svg?assembly=TenantsApp"
+                                WidthRequest="20" />
+
+                            <Label Text="{Binding Rooms}" />
+                        </StackLayout>
+
+                        <StackLayout
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            Orientation="Horizontal">
+
+                            <ffimageloadingsvg:SvgCachedImage
+                                HeightRequest="20"
+                                Source="resource://TenantsApp.Resources.people.svg?assembly=TenantsApp"
+                                WidthRequest="20" />
+
+                            <Label Text="{Binding TenantsCapacity}" />
+                        </StackLayout>
+
+                        <StackLayout
+                            Grid.Row="2"
+                            Grid.Column="2"
+                            Orientation="Horizontal">
+                            <ffimageloadingsvg:SvgCachedImage
+                                BackgroundColor="Transparent"
+                                HeightRequest="20"
+                                Source="resource://TenantsApp.Resources.toilet.svg?assembly=TenantsApp"
+                                WidthRequest="20" />
+
+                            <Label Text="{Binding Bathrooms}" />
+                        </StackLayout>
+
+                        <StackLayout
+                            Grid.Row="2"
+                            Grid.Column="3"
+                            Orientation="Horizontal">
+                            <ffimageloadingsvg:SvgCachedImage
+                                HeightRequest="20"
+                                Source="resource://TenantsApp.Resources.parking.svg?assembly=TenantsApp"
+                                WidthRequest="20" />
+
+                            <Label Text="{Binding Carparks}" />
+                        </StackLayout>
+
+
+
+                    </Grid>
+
+                </card:SfCardView>
+
+            </DataTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+
+            <sync:SfListView
+                x:Name="listView"
+                Margin="0,20,0,0"
+                AllowKeyboardNavigation="True"
+                AutoFitMode="Height"
+                ItemTemplate="{StaticResource ItemTemplate}"
+                ItemsSource="{Binding Places}"
+                SelectedItem="{Binding PlaceSelected}"
+                SelectionBackgroundColor="#E4E4E4"
+                SelectionGesture="Tap"
+                SelectionMode="Single">
+                <sync:SfListView.HeaderTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal">
+                            <ffimageloadingsvg:SvgCachedImage
+                                Margin="0,0,10,10"
+                                HeightRequest="30"
+                                HorizontalOptions="EndAndExpand"
+                                Source="resource://TenantsApp.Resources.addIcon.svg?assembly=TenantsApp"
+                                WidthRequest="30">
+                                <ffimageloadingsvg:SvgCachedImage.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding AddCommand}" />
+                                </ffimageloadingsvg:SvgCachedImage.GestureRecognizers>
+                            </ffimageloadingsvg:SvgCachedImage>
+                        </StackLayout>
+                    </DataTemplate>
+                </sync:SfListView.HeaderTemplate>
+            </sync:SfListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -57,9 +57,8 @@ namespace TenantsApp
         {
             try
             {
-                var place = new Place { Description = "71 Arthur", Address = "U5 / 71 Arthur st, Fortitude Valley", Bathrooms = 1, Rooms = 2, TenantsCapacity = 3, Carparks = 1 };
-
-                await CoreMethods.PushPageModel<PropertyPageModel>(place);
+               
+                await CoreMethods.PushPageModel<PropertyPageModel>();
             }
             catch (Exception ex)
             {

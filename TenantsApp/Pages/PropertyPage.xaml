@@ -135,6 +135,7 @@
             <buttons:SfButton
                 x:Name="SfButton"
                 BackgroundColor="Black"
+                Command="{Binding SaveCommand}"
                 CornerRadius="5"
                 Text="Save" />
         </StackLayout>

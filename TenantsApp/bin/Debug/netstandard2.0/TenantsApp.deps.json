@@ -9,37 +9,48 @@
     ".NETStandard,Version=v2.0/": {
       "TenantsApp/1.0.0": {
         "dependencies": {
-          "Fody": "6.0.2",
+          "Acr.UserDialogs": "7.0.35",
+          "Fody": "6.0.3",
           "FreshMvvm": "3.0.0",
           "NETStandard.Library": "2.0.3",
           "PropertyChanged.Fody": "3.1.3",
-          "Syncfusion.Xamarin.Buttons": "17.3.0.19",
-          "Syncfusion.Xamarin.Cards": "17.3.0.19",
-          "Syncfusion.Xamarin.Core": "17.3.0.19",
-          "Syncfusion.Xamarin.SfChart": "17.3.0.19",
-          "Syncfusion.Xamarin.SfListView": "17.3.0.19",
-          "Syncfusion.Xamarin.SfMaskedEdit": "17.3.0.19",
-          "Syncfusion.Xamarin.SfNumericTextBox": "17.3.0.19",
-          "Syncfusion.Xamarin.SfTabView": "17.3.0.19",
+          "Syncfusion.Xamarin.Buttons": "17.3.0.21",
+          "Syncfusion.Xamarin.Cards": "17.3.0.21",
+          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Syncfusion.Xamarin.SfChart": "17.3.0.21",
+          "Syncfusion.Xamarin.SfListView": "17.3.0.21",
+          "Syncfusion.Xamarin.SfMaskedEdit": "17.3.0.21",
+          "Syncfusion.Xamarin.SfNumericTextBox": "17.3.0.21",
+          "Syncfusion.Xamarin.SfTabView": "17.3.0.21",
+          "TenantsApp.Bl": "1.0.0",
           "TenantsApp.Entities": "1.0.0",
+          "TenantsApp.Repository": "1.0.0",
           "Xamarin.Essentials": "1.3.1",
           "Xamarin.FFImageLoading": "2.4.11.982",
           "Xamarin.FFImageLoading.Forms": "2.4.11.982",
           "Xamarin.FFImageLoading.Svg": "2.4.11.982",
           "Xamarin.FFImageLoading.Svg.Forms": "2.4.11.982",
           "Xamarin.FFImageLoading.Transformations": "2.4.11.982",
-          "Xamarin.Forms": "4.3.0.908675",
-          "Xamarin.Forms.Visual.Material": "4.3.0.908675"
+          "Xamarin.Forms": "4.3.0.947036",
+          "Xamarin.Forms.Visual.Material": "4.3.0.947036"
         },
         "runtime": {
           "TenantsApp.dll": {}
         }
       },
-      "Fody/6.0.2": {},
+      "Acr.UserDialogs/7.0.35": {
+        "runtime": {
+          "lib/netstandard2.0/Acr.UserDialogs.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Fody/6.0.3": {},
       "FreshMvvm/3.0.0": {
         "dependencies": {
           "System.Reactive": "4.0.0",
-          "Xamarin.Forms": "4.3.0.908675"
+          "Xamarin.Forms": "4.3.0.947036"
         },
         "runtime": {
           "lib/netstandard2.0/FreshIOC.dll": {
@@ -61,7 +72,7 @@
       },
       "PropertyChanged.Fody/3.1.3": {
         "dependencies": {
-          "Fody": "6.0.2",
+          "Fody": "6.0.3",
           "NETStandard.Library": "2.0.3"
         },
         "runtime": {
@@ -79,125 +90,164 @@
           }
         }
       },
-      "Syncfusion.Licensing/17.3.0.19": {
+      "sqlite-net-pcl/1.6.292": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3",
+          "SQLitePCLRaw.bundle_green": "1.1.13"
+        },
         "runtime": {
-          "lib/netstandard2.0/Syncfusion.Licensing.dll": {
-            "assemblyVersion": "17.3.0.19",
-            "fileVersion": "17.3.0.19"
+          "lib/netstandard1.1/SQLite-net.dll": {
+            "assemblyVersion": "1.6.292.0",
+            "fileVersion": "1.6.292.0"
           }
         }
       },
-      "Syncfusion.Xamarin.Buttons/17.3.0.19": {
+      "SQLitePCLRaw.bundle_green/1.1.13": {
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.19",
-          "Xamarin.Forms": "4.3.0.908675"
+          "NETStandard.Library": "2.0.3",
+          "SQLitePCLRaw.core": "1.1.13"
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLitePCLRaw.batteries_green.dll": {
+            "assemblyVersion": "1.1.13.388",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/netstandard1.1/SQLitePCLRaw.batteries_v2.dll": {
+            "assemblyVersion": "1.1.13.388",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "SQLitePCLRaw.core/1.1.13": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3"
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLitePCLRaw.core.dll": {
+            "assemblyVersion": "1.1.13.388",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Syncfusion.Licensing/17.3.0.21": {
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Licensing.dll": {
+            "assemblyVersion": "17.3.0.21",
+            "fileVersion": "17.3.0.21"
+          }
+        }
+      },
+      "Syncfusion.Xamarin.Buttons/17.3.0.21": {
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Xamarin.Forms": "4.3.0.947036"
         },
         "runtime": {
           "lib/netstandard2.0/Syncfusion.Buttons.XForms.dll": {
-            "assemblyVersion": "17.3451.0.19",
-            "fileVersion": "17.3451.0.19"
+            "assemblyVersion": "17.3451.0.21",
+            "fileVersion": "17.3451.0.21"
           }
         }
       },
-      "Syncfusion.Xamarin.Cards/17.3.0.19": {
+      "Syncfusion.Xamarin.Cards/17.3.0.21": {
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.19",
-          "Xamarin.Forms": "4.3.0.908675"
+          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Xamarin.Forms": "4.3.0.947036"
         },
         "runtime": {
           "lib/netstandard2.0/Syncfusion.Cards.XForms.dll": {
-            "assemblyVersion": "17.3451.0.19",
-            "fileVersion": "17.3451.0.19"
+            "assemblyVersion": "17.3451.0.21",
+            "fileVersion": "17.3451.0.21"
           }
         }
       },
-      "Syncfusion.Xamarin.Core/17.3.0.19": {
+      "Syncfusion.Xamarin.Core/17.3.0.21": {
         "dependencies": {
-          "Syncfusion.Licensing": "17.3.0.19",
-          "Xamarin.Forms": "4.3.0.908675"
+          "Syncfusion.Licensing": "17.3.0.21",
+          "Xamarin.Forms": "4.3.0.947036"
         },
         "runtime": {
           "lib/netstandard2.0/Syncfusion.Core.XForms.dll": {
-            "assemblyVersion": "17.3451.0.19",
-            "fileVersion": "17.3451.0.19"
+            "assemblyVersion": "17.3451.0.21",
+            "fileVersion": "17.3451.0.21"
           }
         }
       },
-      "Syncfusion.Xamarin.DataSource/17.3.0.19": {
+      "Syncfusion.Xamarin.DataSource/17.3.0.21": {
         "runtime": {
           "lib/netstandard2.0/Syncfusion.DataSource.Portable.dll": {
-            "assemblyVersion": "17.3451.0.19",
-            "fileVersion": "17.3451.0.19"
+            "assemblyVersion": "17.3451.0.21",
+            "fileVersion": "17.3451.0.21"
           }
         }
       },
-      "Syncfusion.Xamarin.GridCommon/17.3.0.19": {
+      "Syncfusion.Xamarin.GridCommon/17.3.0.21": {
         "runtime": {
           "lib/netstandard2.0/Syncfusion.GridCommon.Portable.dll": {
-            "assemblyVersion": "17.3451.0.19",
-            "fileVersion": "17.3451.0.19"
+            "assemblyVersion": "17.3451.0.21",
+            "fileVersion": "17.3451.0.21"
           }
         }
       },
-      "Syncfusion.Xamarin.SfChart/17.3.0.19": {
+      "Syncfusion.Xamarin.SfChart/17.3.0.21": {
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.19",
-          "Xamarin.Forms": "4.3.0.908675"
+          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Xamarin.Forms": "4.3.0.947036"
         },
         "runtime": {
           "lib/netstandard2.0/Syncfusion.SfChart.XForms.dll": {
-            "assemblyVersion": "17.3451.0.19",
-            "fileVersion": "17.3451.0.19"
+            "assemblyVersion": "17.3451.0.21",
+            "fileVersion": "17.3451.0.21"
           }
         }
       },
-      "Syncfusion.Xamarin.SfListView/17.3.0.19": {
+      "Syncfusion.Xamarin.SfListView/17.3.0.21": {
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.19",
-          "Syncfusion.Xamarin.DataSource": "17.3.0.19",
-          "Syncfusion.Xamarin.GridCommon": "17.3.0.19",
-          "Xamarin.Forms": "4.3.0.908675"
+          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Syncfusion.Xamarin.DataSource": "17.3.0.21",
+          "Syncfusion.Xamarin.GridCommon": "17.3.0.21",
+          "Xamarin.Forms": "4.3.0.947036"
         },
         "runtime": {
           "lib/netstandard2.0/Syncfusion.SfListView.XForms.dll": {
-            "assemblyVersion": "17.3451.0.19",
-            "fileVersion": "17.3451.0.19"
+            "assemblyVersion": "17.3451.0.21",
+            "fileVersion": "17.3451.0.21"
           }
         }
       },
-      "Syncfusion.Xamarin.SfMaskedEdit/17.3.0.19": {
+      "Syncfusion.Xamarin.SfMaskedEdit/17.3.0.21": {
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.19",
-          "Xamarin.Forms": "4.3.0.908675"
+          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Xamarin.Forms": "4.3.0.947036"
         },
         "runtime": {
           "lib/netstandard2.0/Syncfusion.SfMaskedEdit.XForms.dll": {
-            "assemblyVersion": "17.3451.0.19",
-            "fileVersion": "17.3451.0.19"
+            "assemblyVersion": "17.3451.0.21",
+            "fileVersion": "17.3451.0.21"
           }
         }
       },
-      "Syncfusion.Xamarin.SfNumericTextBox/17.3.0.19": {
+      "Syncfusion.Xamarin.SfNumericTextBox/17.3.0.21": {
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.19",
-          "Xamarin.Forms": "4.3.0.908675"
+          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Xamarin.Forms": "4.3.0.947036"
         },
         "runtime": {
           "lib/netstandard2.0/Syncfusion.SfNumericTextBox.XForms.dll": {
-            "assemblyVersion": "17.3451.0.19",
-            "fileVersion": "17.3451.0.19"
+            "assemblyVersion": "17.3451.0.21",
+            "fileVersion": "17.3451.0.21"
           }
         }
       },
-      "Syncfusion.Xamarin.SfTabView/17.3.0.19": {
+      "Syncfusion.Xamarin.SfTabView/17.3.0.21": {
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.19",
-          "Xamarin.Forms": "4.3.0.908675"
+          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Xamarin.Forms": "4.3.0.947036"
         },
         "runtime": {
           "lib/netstandard2.0/Syncfusion.SfTabView.XForms.dll": {
-            "assemblyVersion": "17.3451.0.19",
-            "fileVersion": "17.3451.0.19"
+            "assemblyVersion": "17.3451.0.21",
+            "fileVersion": "17.3451.0.21"
           }
         }
       },
@@ -263,7 +313,7 @@
       "Xamarin.FFImageLoading.Forms/2.4.11.982": {
         "dependencies": {
           "Xamarin.FFImageLoading": "2.4.11.982",
-          "Xamarin.Forms": "4.3.0.908675"
+          "Xamarin.Forms": "4.3.0.947036"
         },
         "runtime": {
           "lib/netstandard1.0/FFImageLoading.Forms.dll": {
@@ -307,33 +357,57 @@
           }
         }
       },
-      "Xamarin.Forms/4.3.0.908675": {
+      "Xamarin.Forms/4.3.0.947036": {
         "runtime": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "4.3.0.336"
+            "fileVersion": "4.3.0.356"
           },
           "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "4.3.0.336"
+            "fileVersion": "4.3.0.356"
           },
           "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "4.3.0.336"
+            "fileVersion": "4.3.0.356"
           }
         }
       },
-      "Xamarin.Forms.Visual.Material/4.3.0.908675": {
+      "Xamarin.Forms.Visual.Material/4.3.0.947036": {
         "dependencies": {
-          "Xamarin.Forms": "4.3.0.908675"
+          "Xamarin.Forms": "4.3.0.947036"
+        }
+      },
+      "TenantsApp.Bl/1.0.0": {
+        "dependencies": {
+          "TenantsApp.Entities": "1.0.0"
+        },
+        "runtime": {
+          "TenantsApp.Bl.dll": {}
         }
       },
       "TenantsApp.Entities/1.0.0": {
         "dependencies": {
-          "Xamarin.Forms": "4.3.0.908675"
+          "TenantsApp.Shared": "1.0.0",
+          "Xamarin.Forms": "4.3.0.947036",
+          "sqlite-net-pcl": "1.6.292"
         },
         "runtime": {
           "TenantsApp.Entities.dll": {}
+        }
+      },
+      "TenantsApp.Repository/1.0.0": {
+        "dependencies": {
+          "TenantsApp.Entities": "1.0.0",
+          "sqlite-net-pcl": "1.6.292"
+        },
+        "runtime": {
+          "TenantsApp.Repository.dll": {}
+        }
+      },
+      "TenantsApp.Shared/1.0.0": {
+        "runtime": {
+          "TenantsApp.Shared.dll": {}
         }
       }
     }
@@ -344,12 +418,19 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Fody/6.0.2": {
+    "Acr.UserDialogs/7.0.35": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Oq9dxiHWkw/tPKu9LSmfp6uuCNDZLDkxwHB0sJuwyQRSmvFSB3Ab54WgCQWIsGDO9Z+va9expamqkKpFfdd1sQ==",
-      "path": "fody/6.0.2",
-      "hashPath": "fody.6.0.2.nupkg.sha512"
+      "sha512": "sha512-z/b/LYtRW6logITXFhbN65MHzuiUyDsQ4gJmui178FmEgpB2TgOwUnXE1rGw/zrU3IE5zjMcUt07oRHILarDtA==",
+      "path": "acr.userdialogs/7.0.35",
+      "hashPath": "acr.userdialogs.7.0.35.nupkg.sha512"
+    },
+    "Fody/6.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3TV45xD5zP2VAfd/5Jb7naB72UzF0CrIxQnkYyfjLZjT8+1Yco5MUY03xGlS6UiUBtEMQWpzmACwr/TRGaMonA==",
+      "path": "fody/6.0.3",
+      "hashPath": "fody.6.0.3.nupkg.sha512"
     },
     "FreshMvvm/3.0.0": {
       "type": "package",
@@ -393,82 +474,103 @@
       "path": "skiasharp/1.68.0",
       "hashPath": "skiasharp.1.68.0.nupkg.sha512"
     },
-    "Syncfusion.Licensing/17.3.0.19": {
+    "sqlite-net-pcl/1.6.292": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-sADWlWsYRVxzINixq5A2Mm0uBwaxtLbF6gf0dJJkL82ETiEsiFW7o1y1cIBgkR7+hPjR7ZUK/3f8hFOL4eo+ZA==",
-      "path": "syncfusion.licensing/17.3.0.19",
-      "hashPath": "syncfusion.licensing.17.3.0.19.nupkg.sha512"
+      "sha512": "sha512-TZPs206/ZZXhDAgCzxE5Dmw1enkRmtpd1RKt+dLJA6Kvml4RxwkasRs4js2kijtGxik1SLCs39rh9nl9YFwrYg==",
+      "path": "sqlite-net-pcl/1.6.292",
+      "hashPath": "sqlite-net-pcl.1.6.292.nupkg.sha512"
     },
-    "Syncfusion.Xamarin.Buttons/17.3.0.19": {
+    "SQLitePCLRaw.bundle_green/1.1.13": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-YLsbfc4L3FluYSACN3h3MfgC3UqNvxs4EBFR2JRdXky8BGNx9XfQ1W5C4W3JVPQhgRlxT6cBV8nT2/1ROsgE6w==",
-      "path": "syncfusion.xamarin.buttons/17.3.0.19",
-      "hashPath": "syncfusion.xamarin.buttons.17.3.0.19.nupkg.sha512"
+      "sha512": "sha512-E0Hm/XTfleE/LlrRZVucB1dQqDlIDPgqvkFymbGqMO7bSaoB6R2X5Cgzq/RDxBFSzHjpzet2Tp5Kar8faLSZ+Q==",
+      "path": "sqlitepclraw.bundle_green/1.1.13",
+      "hashPath": "sqlitepclraw.bundle_green.1.1.13.nupkg.sha512"
     },
-    "Syncfusion.Xamarin.Cards/17.3.0.19": {
+    "SQLitePCLRaw.core/1.1.13": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-tyM6Y6ph+ql06wk92JM7BA8EaPMSV2cwk7xU+DB8Nk21cyumOE7qg3EpJ12SK/Cyp0wSVFjEYFUWvehS6u3L7g==",
-      "path": "syncfusion.xamarin.cards/17.3.0.19",
-      "hashPath": "syncfusion.xamarin.cards.17.3.0.19.nupkg.sha512"
+      "sha512": "sha512-I8Q9qL1urPegoyZ5uI32lgqsxl8aPRZAyVBJbO+0T/zlGz/LBc8vhRVyDyCOU9LWWpV8dYpT0nCpuLv1ua6zkA==",
+      "path": "sqlitepclraw.core/1.1.13",
+      "hashPath": "sqlitepclraw.core.1.1.13.nupkg.sha512"
     },
-    "Syncfusion.Xamarin.Core/17.3.0.19": {
+    "Syncfusion.Licensing/17.3.0.21": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-YKqfGbaJZyaN1uJf0Wemw/80cgjvwgkueVoue88K+h60fqdhDNpKAFnomRY6s9HGUILz8OBIoRQOQ/+4kIPYkQ==",
-      "path": "syncfusion.xamarin.core/17.3.0.19",
-      "hashPath": "syncfusion.xamarin.core.17.3.0.19.nupkg.sha512"
+      "sha512": "sha512-NyEF2K77GmmEhyQbVc9MYv4URqoapfUDMZ1Rwq8SFd7Lw4VmeWSiZjniGZBlAQiNomyz8j0I2/5h6HuZB6vV/g==",
+      "path": "syncfusion.licensing/17.3.0.21",
+      "hashPath": "syncfusion.licensing.17.3.0.21.nupkg.sha512"
     },
-    "Syncfusion.Xamarin.DataSource/17.3.0.19": {
+    "Syncfusion.Xamarin.Buttons/17.3.0.21": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-SwNwfG8MR1tao+zJPcVfZ+FOVXbJUKIcwT/SZM8uXO23sxTNekNkNkX0cKVbIhuZN843KKV5M8WCnM/Ifkq0pQ==",
-      "path": "syncfusion.xamarin.datasource/17.3.0.19",
-      "hashPath": "syncfusion.xamarin.datasource.17.3.0.19.nupkg.sha512"
+      "sha512": "sha512-30HkID9ZqFKvzaOGmDxRTUpspswhFhGRxEtGHXbbgFucnvBxHLoxu9NKudkH4HQdrCVT4wib/rLRQyMvQewWzA==",
+      "path": "syncfusion.xamarin.buttons/17.3.0.21",
+      "hashPath": "syncfusion.xamarin.buttons.17.3.0.21.nupkg.sha512"
     },
-    "Syncfusion.Xamarin.GridCommon/17.3.0.19": {
+    "Syncfusion.Xamarin.Cards/17.3.0.21": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-VennHRsRLzC5yc1gApb+rzZCW7APRHR30ohTqQVOw31NP21V3066k/Sa5fdphjATJV1wOZMutoWSnioBwYqM2A==",
-      "path": "syncfusion.xamarin.gridcommon/17.3.0.19",
-      "hashPath": "syncfusion.xamarin.gridcommon.17.3.0.19.nupkg.sha512"
+      "sha512": "sha512-FNie1JKPcFL6xqij4IhYQZI0Pd8BYCeuEez7ot2O5BUlLzlXpmG+Z6Ax6+tuzlPRSbcgWgkq49kKnV+Z5zgAjg==",
+      "path": "syncfusion.xamarin.cards/17.3.0.21",
+      "hashPath": "syncfusion.xamarin.cards.17.3.0.21.nupkg.sha512"
     },
-    "Syncfusion.Xamarin.SfChart/17.3.0.19": {
+    "Syncfusion.Xamarin.Core/17.3.0.21": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-gNGLYKEUFU5cb5dcvH8wPwGSKmrIXjhzBSE4T0jIA1ibUypHfb4hKM3rm6qCEKm882oeOukvGidwCmgfrs4ECg==",
-      "path": "syncfusion.xamarin.sfchart/17.3.0.19",
-      "hashPath": "syncfusion.xamarin.sfchart.17.3.0.19.nupkg.sha512"
+      "sha512": "sha512-xAvjnZpAetCtiQO0Sw1W38voCi7sAre8csLnyxprgMlJoQ9AANwV161S+kzqj7VyBFAlotr/DCGclYk38tUyBA==",
+      "path": "syncfusion.xamarin.core/17.3.0.21",
+      "hashPath": "syncfusion.xamarin.core.17.3.0.21.nupkg.sha512"
     },
-    "Syncfusion.Xamarin.SfListView/17.3.0.19": {
+    "Syncfusion.Xamarin.DataSource/17.3.0.21": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-9DI0Ma/7D5Be1AuUcZDMCJnQxgAHY+vU+Q6Xc/oLd7f7uSfnunggMBjsstR48JFP11YJfWcJEdQIl15x6x9nUw==",
-      "path": "syncfusion.xamarin.sflistview/17.3.0.19",
-      "hashPath": "syncfusion.xamarin.sflistview.17.3.0.19.nupkg.sha512"
+      "sha512": "sha512-5HoZLU3skMVljBuF5ZiVmRtsuWINbGSPfa+1hg+k1b5PE2S7UHY19mpHWM5xA4YdqfWOZYclJCF6FoHEqltGIg==",
+      "path": "syncfusion.xamarin.datasource/17.3.0.21",
+      "hashPath": "syncfusion.xamarin.datasource.17.3.0.21.nupkg.sha512"
     },
-    "Syncfusion.Xamarin.SfMaskedEdit/17.3.0.19": {
+    "Syncfusion.Xamarin.GridCommon/17.3.0.21": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-olc8OX5t6hIEJoJkiS4XBxVWB4Y33TEdM47g4uI3WcWbUqQ4O0SSdt2Ed+OdA1/fon62n3f7cmkejODEauWlGQ==",
-      "path": "syncfusion.xamarin.sfmaskededit/17.3.0.19",
-      "hashPath": "syncfusion.xamarin.sfmaskededit.17.3.0.19.nupkg.sha512"
+      "sha512": "sha512-m7Bx/JbiC8iTEwpD/YXZPsLC2dTO2B1gkf6D2IR8zwZOSmofJlIgSNfe8kxHiFunEjD3Vw8OSsKx05yLRtnzmg==",
+      "path": "syncfusion.xamarin.gridcommon/17.3.0.21",
+      "hashPath": "syncfusion.xamarin.gridcommon.17.3.0.21.nupkg.sha512"
     },
-    "Syncfusion.Xamarin.SfNumericTextBox/17.3.0.19": {
+    "Syncfusion.Xamarin.SfChart/17.3.0.21": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-EIOpyRe2MG4ZQ5hzDZy02cjA+OVBLWiUM4qIDfBsyEngC0zQFimfkQoTtY/ZXFaSLPAPq1KtZRexeJc69NPApg==",
-      "path": "syncfusion.xamarin.sfnumerictextbox/17.3.0.19",
-      "hashPath": "syncfusion.xamarin.sfnumerictextbox.17.3.0.19.nupkg.sha512"
+      "sha512": "sha512-hkOyvK8/TntMEzbrW/pZP8KhJXqwBE6KNDcEafpgqDKFbzpONtU2JCgPQTG0NBgd9MWd0kpDxpb/2bHHSVBSsQ==",
+      "path": "syncfusion.xamarin.sfchart/17.3.0.21",
+      "hashPath": "syncfusion.xamarin.sfchart.17.3.0.21.nupkg.sha512"
     },
-    "Syncfusion.Xamarin.SfTabView/17.3.0.19": {
+    "Syncfusion.Xamarin.SfListView/17.3.0.21": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-qWGXym2tmZuBJWnOFmnu+8NdTEVTkcrYndt1tMSsT3bdQdFsqoOq5MZ0VEQwZFi/7puMcOeQ7Mfojjr895IvSg==",
-      "path": "syncfusion.xamarin.sftabview/17.3.0.19",
-      "hashPath": "syncfusion.xamarin.sftabview.17.3.0.19.nupkg.sha512"
+      "sha512": "sha512-mhhnkZ2y+UPXSSZstBgQgHPiZBSm2ccgCX75swCljvjdwO8G1kepKB09XgG1zJq7U6vDZMTsWVxHiOGefeRcLg==",
+      "path": "syncfusion.xamarin.sflistview/17.3.0.21",
+      "hashPath": "syncfusion.xamarin.sflistview.17.3.0.21.nupkg.sha512"
+    },
+    "Syncfusion.Xamarin.SfMaskedEdit/17.3.0.21": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xUaXsU79n9+fR0g+SHCO4b0h4lb1xwbHXsVANWBjaacgcY+WDUuiPMC8MrHf+ymDRUogWGy0VhZZPi79aDUhrA==",
+      "path": "syncfusion.xamarin.sfmaskededit/17.3.0.21",
+      "hashPath": "syncfusion.xamarin.sfmaskededit.17.3.0.21.nupkg.sha512"
+    },
+    "Syncfusion.Xamarin.SfNumericTextBox/17.3.0.21": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-30EvQ3m2DL02lkp4bCWLTobzT8l6zZh0xWnAaEoLMkholiARcBCfBvLiTQk/QCByJ7sNrQ7UpHY1xeNVBbkI1A==",
+      "path": "syncfusion.xamarin.sfnumerictextbox/17.3.0.21",
+      "hashPath": "syncfusion.xamarin.sfnumerictextbox.17.3.0.21.nupkg.sha512"
+    },
+    "Syncfusion.Xamarin.SfTabView/17.3.0.21": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iRDfrsMY5RNkhHU3jK2gyBSk1Rg3di4NKA8qLd2BTvJAHseSo8E7aL/R3NRWHtWTGYrOjBH5AB9y3PXbanrV/g==",
+      "path": "syncfusion.xamarin.sftabview/17.3.0.21",
+      "hashPath": "syncfusion.xamarin.sftabview.17.3.0.21.nupkg.sha512"
     },
     "System.Numerics.Vectors/4.5.0": {
       "type": "package",
@@ -540,21 +642,36 @@
       "path": "xamarin.ffimageloading.transformations/2.4.11.982",
       "hashPath": "xamarin.ffimageloading.transformations.2.4.11.982.nupkg.sha512"
     },
-    "Xamarin.Forms/4.3.0.908675": {
+    "Xamarin.Forms/4.3.0.947036": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-kXrbXKJvXYF4cKjs1Jsb+pQFEnFGl0AONYSeABjgOJqN/o5Y4zC0XXQ68xiUI81PKQTuRB5F3oDom2t5ccJDZw==",
-      "path": "xamarin.forms/4.3.0.908675",
-      "hashPath": "xamarin.forms.4.3.0.908675.nupkg.sha512"
+      "sha512": "sha512-oEAwwHfaZesC+VvP07UoctI1DGIgewZlKMr/sHPl/hNMRM6ZfccPgOY19Yw017asj9z7PKXqpDDUbFFOJ2jN4A==",
+      "path": "xamarin.forms/4.3.0.947036",
+      "hashPath": "xamarin.forms.4.3.0.947036.nupkg.sha512"
     },
-    "Xamarin.Forms.Visual.Material/4.3.0.908675": {
+    "Xamarin.Forms.Visual.Material/4.3.0.947036": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-jZviM/yZJtKZZMMlC2LP+CzOhP/7zD+IKVC7DraGCo8aTNMJIvBZ3AF+8XHDVuFV2F5UnZ79PDETIbEVpu6Zrw==",
-      "path": "xamarin.forms.visual.material/4.3.0.908675",
-      "hashPath": "xamarin.forms.visual.material.4.3.0.908675.nupkg.sha512"
+      "sha512": "sha512-4GSVDWNBv1h1jZ3DOid8DlFt4j2ymiaqmWznhF16d6b0amOSBLCyq5IplgcDQRFMMw7iC0TfVALaIhRHVSr7kA==",
+      "path": "xamarin.forms.visual.material/4.3.0.947036",
+      "hashPath": "xamarin.forms.visual.material.4.3.0.947036.nupkg.sha512"
+    },
+    "TenantsApp.Bl/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "TenantsApp.Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TenantsApp.Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TenantsApp.Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

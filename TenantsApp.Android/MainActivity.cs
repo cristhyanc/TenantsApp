@@ -7,6 +7,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using FFImageLoading;
+using Acr.UserDialogs;
 
 namespace TenantsApp.Droid
 {
@@ -36,7 +37,7 @@ namespace TenantsApp.Droid
             };
 
             ImageService.Instance.Initialize(config);
-
+            UserDialogs.Init(this);
             LoadApplication(new App());
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)

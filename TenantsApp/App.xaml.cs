@@ -4,6 +4,9 @@ using TenantsApp;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+using TenantsApp.Entities.Interfaces;
+using TenantsApp.Repository;
+using Acr.UserDialogs;
 
 namespace TenantsApp
 {
@@ -13,15 +16,16 @@ namespace TenantsApp
         {
             try
             {
+
+                FreshIOC.Container.Register<IPlaceRepository, PlaceRepository>();
+                FreshIOC.Container.Register<IUnitOfWork, UnitOfWork>().AsSingleton();
+                FreshIOC.Container.Register<IUserDialogs>(UserDialogs.Instance);
+                FreshIOC.Container.Register<Bl.IPlacesBl, Bl.PlacesBl>();
+                
                 Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MTU5MTk4QDMxMzcyZTMzMmUzMGFvd0UvK2ZtUm5LSXYxRE9Rc3NvZnBOUFZqTHJqWkF2WVFKa1JVRENETFk9");
                 InitializeComponent();
 
-                // Page page = new BankyApp.MainPage();
-                //page.BindingContext = new MainPageModel();
-                //  var mainPage = new FreshNavigationContainer(page);
-
                 var mainPage = new FreshTabbedNavigationContainer();
-
 
                  mainPage.On<Xamarin.Forms.PlatformConfiguration.Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
                 //mainPage.UnselectedTabColor = Color.Black;
@@ -36,7 +40,7 @@ namespace TenantsApp
             catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
         }
 

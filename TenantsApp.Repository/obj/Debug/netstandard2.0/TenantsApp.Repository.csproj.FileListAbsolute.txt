@@ -1,0 +1,13 @@
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Repository\bin\Debug\netstandard2.0\TenantsApp.Repository.deps.json
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Repository\bin\Debug\netstandard2.0\TenantsApp.Repository.dll
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Repository\bin\Debug\netstandard2.0\TenantsApp.Repository.pdb
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Repository\bin\Debug\netstandard2.0\TenantsApp.Entities.dll
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Repository\bin\Debug\netstandard2.0\TenantsApp.Shared.dll
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Repository\bin\Debug\netstandard2.0\TenantsApp.Entities.pdb
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Repository\bin\Debug\netstandard2.0\TenantsApp.Shared.pdb
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Repository\obj\Debug\netstandard2.0\TenantsApp.Repository.csprojAssemblyReference.cache
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Repository\obj\Debug\netstandard2.0\TenantsApp.Repository.AssemblyInfoInputs.cache
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Repository\obj\Debug\netstandard2.0\TenantsApp.Repository.AssemblyInfo.cs
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Repository\obj\Debug\netstandard2.0\TenantsApp.Repository.csproj.CopyComplete
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Repository\obj\Debug\netstandard2.0\TenantsApp.Repository.dll
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Repository\obj\Debug\netstandard2.0\TenantsApp.Repository.pdb

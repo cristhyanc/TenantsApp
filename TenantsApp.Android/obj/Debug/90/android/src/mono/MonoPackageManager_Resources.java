@@ -3,6 +3,8 @@ public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
 		/* We need to ensure that "TenantsApp.Android.dll" comes first in this list. */
 		"TenantsApp.Android.dll",
+		"Acr.UserDialogs.dll",
+		"AndHUD.dll",
 		"FFImageLoading.dll",
 		"FFImageLoading.Forms.dll",
 		"FFImageLoading.Forms.Platform.dll",
@@ -15,6 +17,12 @@ public class MonoPackageManager_Resources {
 		"FreshMvvm.dll",
 		"PropertyChanged.dll",
 		"SkiaSharp.dll",
+		"SQLite-net.dll",
+		"SQLitePCLRaw.batteries_green.dll",
+		"SQLitePCLRaw.batteries_v2.dll",
+		"SQLitePCLRaw.core.dll",
+		"SQLitePCLRaw.lib.e_sqlite3.dll",
+		"SQLitePCLRaw.provider.e_sqlite3.dll",
 		"Syncfusion.Buttons.XForms.Android.dll",
 		"Syncfusion.Buttons.XForms.dll",
 		"Syncfusion.Cards.XForms.Android.dll",
@@ -81,6 +89,9 @@ public class MonoPackageManager_Resources {
 		"Xamarin.Forms.Platform.dll",
 		"Xamarin.Forms.Xaml.dll",
 		"TenantsApp.Entities.dll",
+		"TenantsApp.Shared.dll",
+		"TenantsApp.Bl.dll",
+		"TenantsApp.Repository.dll",
 	};
 	public static String[] Dependencies = new String[]{
 	};

@@ -22,32 +22,43 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Fody" Version="6.0.2">
+    <PackageReference Include="Acr.UserDialogs" Version="7.0.35" />
+    <PackageReference Include="Fody" Version="6.0.3">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="FreshMvvm" Version="3.0.0" />
     <PackageReference Include="PropertyChanged.Fody" Version="3.1.3" />
-    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="17.3.0.19" />
-    <PackageReference Include="Syncfusion.Xamarin.Cards" Version="17.3.0.19" />
-    <PackageReference Include="Syncfusion.Xamarin.Core" Version="17.3.0.19" />
-    <PackageReference Include="Syncfusion.Xamarin.SfChart" Version="17.3.0.19" />
-    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="17.3.0.19" />
-    <PackageReference Include="Syncfusion.Xamarin.SfMaskedEdit" Version="17.3.0.19" />
-    <PackageReference Include="Syncfusion.Xamarin.SfNumericTextBox" Version="17.3.0.19" />
-    <PackageReference Include="Syncfusion.Xamarin.SfTabView" Version="17.3.0.19" />
+    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="17.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.Cards" Version="17.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="17.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.SfChart" Version="17.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="17.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.SfMaskedEdit" Version="17.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.SfNumericTextBox" Version="17.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.SfTabView" Version="17.3.0.21" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Svg" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Transformations" Version="2.4.11.982" />
-    <PackageReference Include="Xamarin.Forms" Version="4.3.0.908675" />
+    <PackageReference Include="Xamarin.Forms" Version="4.3.0.947036" />
     <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
-    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.3.0.908675" />
+    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.3.0.947036" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TenantsApp.Bl\TenantsApp.Bl.csproj" />
     <ProjectReference Include="..\TenantsApp.Entities\TenantsApp.Entities.csproj" />
+    <ProjectReference Include="..\TenantsApp.Repository\TenantsApp.Repository.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources\StringResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>StringResources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -59,6 +70,10 @@
     </EmbeddedResource>
     <EmbeddedResource Update="Pages\UpcomingRentPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\StringResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StringResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 </Project>

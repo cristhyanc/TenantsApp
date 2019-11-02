@@ -1,3 +1,5 @@
+Acr.UserDialogs
+AndHUD
 FFImageLoading.Forms.Platform
 FFImageLoading.Platform
 FFImageLoading.Svg.Forms
@@ -5,6 +7,11 @@ FFImageLoading.Svg.Platform
 FFImageLoading.Transformations
 FormsViewGroup
 SkiaSharp
+SQLitePCLRaw.batteries_green
+SQLitePCLRaw.batteries_v2
+SQLitePCLRaw.core
+SQLitePCLRaw.lib.e_sqlite3
+SQLitePCLRaw.provider.e_sqlite3
 Syncfusion.Buttons.XForms.Android
 Syncfusion.Cards.XForms.Android
 Syncfusion.Core.XForms.Android

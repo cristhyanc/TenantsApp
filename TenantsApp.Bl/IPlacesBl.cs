@@ -7,7 +7,8 @@ namespace TenantsApp.Bl
 {
   public  interface IPlacesBl
     {
-        bool SavePlace(Place place);
+        bool SavePlace(Place place);        
+        bool DeletePlace(Guid  placeId);
         IList<Place> GetCurrentPlaces();
     }
 }

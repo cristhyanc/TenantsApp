@@ -14,23 +14,39 @@ using Xamarin.Forms;
 namespace TenantsApp
 {
     [PropertyChanged.AddINotifyPropertyChangedInterface]
-    public class PropertyPageModel: FreshBasePageModel
+    public class PropertyPageModel: BaseViewModel
     {
 
         IUserDialogs _userDialogs;
 
         public ICommand SaveCommand { get; set; }
+        public ICommand AddTenatCommand { get; set; }
+
+        public int TotalTenants { get; set; }
 
         public Place Place { get; set; }
 
         IPlacesBl _placesBl;
 
-        public PropertyPageModel(IUserDialogs userDialogs, IPlacesBl placesBl )
+        public PropertyPageModel(IUserDialogs userDialogs, IPlacesBl placesBl ): base(userDialogs)
         {
           
             _userDialogs = userDialogs;
             _placesBl = placesBl;
             SaveCommand = new Command(Save);
+            AddTenatCommand = new Command(GoToTenants);
+        }
+
+        private void GoToTenants()
+        {
+            try
+            {
+                CoreMethods.PushPageModel<TenantsPageModel>(Place );
+            }
+            catch (Exception ex)
+            {
+                Helpers.ExceptionHelper.ProcessException(ex, _userDialogs, nameof(PropertyPageModel));
+            }
         }
 
         public override void Init(object initData)
@@ -43,6 +59,7 @@ namespace TenantsApp
                 if (initData != null)
                 {
                     this.Place = (Place)initData;
+                    TotalTenants = this.Place.Tenants.Count;
                 }
             }
             catch (Exception ex)

@@ -2786,6 +2786,9 @@ namespace TenantsApp.Droid
 			global::Com.Syncfusion.Numerictextbox.Resource.Styleable.SfNumericTextBox_valueChangeMode = global::TenantsApp.Droid.Resource.Styleable.SfNumericTextBox_valueChangeMode;
 			global::Com.Syncfusion.Numerictextbox.Resource.Styleable.SfNumericTextBox_watermark = global::TenantsApp.Droid.Resource.Styleable.SfNumericTextBox_watermark;
 			global::Com.Syncfusion.Numerictextbox.Resource.Styleable.SfNumericTextBox_watermarkColor = global::TenantsApp.Droid.Resource.Styleable.SfNumericTextBox_watermarkColor;
+			global::Com.Syncfusion.Numericupdown.Resource.String.library_name = global::TenantsApp.Droid.Resource.String.library_name;
+			global::Com.Syncfusion.Numericupdown.Resource.String.sfnumericupdown_decrement_button_accessibility_label = global::TenantsApp.Droid.Resource.String.sfnumericupdown_decrement_button_accessibility_label;
+			global::Com.Syncfusion.Numericupdown.Resource.String.sfnumericupdown_increment_button_accessibility_label = global::TenantsApp.Droid.Resource.String.sfnumericupdown_increment_button_accessibility_label;
 			global::Xamarin.Essentials.Resource.Attribute.alpha = global::TenantsApp.Droid.Resource.Attribute.alpha;
 			global::Xamarin.Essentials.Resource.Attribute.coordinatorLayoutStyle = global::TenantsApp.Droid.Resource.Attribute.coordinatorLayoutStyle;
 			global::Xamarin.Essentials.Resource.Attribute.font = global::TenantsApp.Droid.Resource.Attribute.font;
@@ -11405,91 +11408,97 @@ namespace TenantsApp.Droid
 			public const int design_snackbar_background = 2131165315;
 			
 			// aapt resource value: 0x7F070084
-			public const int ic_errorstatus = 2131165316;
+			public const int DownButton = 2131165316;
 			
 			// aapt resource value: 0x7F070085
-			public const int ic_mtrl_chip_checked_black = 2131165317;
+			public const int ic_errorstatus = 2131165317;
 			
 			// aapt resource value: 0x7F070086
-			public const int ic_mtrl_chip_checked_circle = 2131165318;
+			public const int ic_mtrl_chip_checked_black = 2131165318;
 			
 			// aapt resource value: 0x7F070087
-			public const int ic_mtrl_chip_close_circle = 2131165319;
+			public const int ic_mtrl_chip_checked_circle = 2131165319;
 			
 			// aapt resource value: 0x7F070088
-			public const int ic_successstatus = 2131165320;
+			public const int ic_mtrl_chip_close_circle = 2131165320;
 			
 			// aapt resource value: 0x7F070089
-			public const int inputlayout_togglecollapseicon = 2131165321;
+			public const int ic_successstatus = 2131165321;
 			
 			// aapt resource value: 0x7F07008A
-			public const int inputlayout_togglevisibleicon = 2131165322;
+			public const int inputlayout_togglecollapseicon = 2131165322;
 			
 			// aapt resource value: 0x7F07008B
-			public const int input_layout_drop_down_icon = 2131165323;
+			public const int inputlayout_togglevisibleicon = 2131165323;
 			
 			// aapt resource value: 0x7F07008C
-			public const int MaterialActivityIndicatorBackground = 2131165324;
+			public const int input_layout_drop_down_icon = 2131165324;
 			
 			// aapt resource value: 0x7F07008D
-			public const int MaterialProgressBar = 2131165325;
+			public const int MaterialActivityIndicatorBackground = 2131165325;
 			
 			// aapt resource value: 0x7F07008E
-			public const int mtrl_snackbar_background = 2131165326;
+			public const int MaterialProgressBar = 2131165326;
 			
 			// aapt resource value: 0x7F07008F
-			public const int mtrl_tabs_default_indicator = 2131165327;
+			public const int mtrl_snackbar_background = 2131165327;
 			
 			// aapt resource value: 0x7F070090
-			public const int navigation_empty_icon = 2131165328;
+			public const int mtrl_tabs_default_indicator = 2131165328;
 			
 			// aapt resource value: 0x7F070091
-			public const int notification_action_background = 2131165329;
+			public const int navigation_empty_icon = 2131165329;
 			
 			// aapt resource value: 0x7F070092
-			public const int notification_bg = 2131165330;
+			public const int notification_action_background = 2131165330;
 			
 			// aapt resource value: 0x7F070093
-			public const int notification_bg_low = 2131165331;
+			public const int notification_bg = 2131165331;
 			
 			// aapt resource value: 0x7F070094
-			public const int notification_bg_low_normal = 2131165332;
+			public const int notification_bg_low = 2131165332;
 			
 			// aapt resource value: 0x7F070095
-			public const int notification_bg_low_pressed = 2131165333;
+			public const int notification_bg_low_normal = 2131165333;
 			
 			// aapt resource value: 0x7F070096
-			public const int notification_bg_normal = 2131165334;
+			public const int notification_bg_low_pressed = 2131165334;
 			
 			// aapt resource value: 0x7F070097
-			public const int notification_bg_normal_pressed = 2131165335;
+			public const int notification_bg_normal = 2131165335;
 			
 			// aapt resource value: 0x7F070098
-			public const int notification_icon_background = 2131165336;
+			public const int notification_bg_normal_pressed = 2131165336;
 			
 			// aapt resource value: 0x7F070099
-			public const int notification_template_icon_bg = 2131165337;
+			public const int notification_icon_background = 2131165337;
 			
 			// aapt resource value: 0x7F07009A
-			public const int notification_template_icon_low_bg = 2131165338;
+			public const int notification_template_icon_bg = 2131165338;
 			
 			// aapt resource value: 0x7F07009B
-			public const int notification_tile_bg = 2131165339;
+			public const int notification_template_icon_low_bg = 2131165339;
 			
 			// aapt resource value: 0x7F07009C
-			public const int notify_panel_notification_icon_bg = 2131165340;
+			public const int notification_tile_bg = 2131165340;
 			
 			// aapt resource value: 0x7F07009D
-			public const int roundedbg = 2131165341;
+			public const int notify_panel_notification_icon_bg = 2131165341;
 			
 			// aapt resource value: 0x7F07009E
-			public const int roundedbgdark = 2131165342;
+			public const int roundedbg = 2131165342;
 			
 			// aapt resource value: 0x7F07009F
-			public const int tooltip_frame_dark = 2131165343;
+			public const int roundedbgdark = 2131165343;
 			
 			// aapt resource value: 0x7F0700A0
-			public const int tooltip_frame_light = 2131165344;
+			public const int tooltip_frame_dark = 2131165344;
+			
+			// aapt resource value: 0x7F0700A1
+			public const int tooltip_frame_light = 2131165345;
+			
+			// aapt resource value: 0x7F0700A2
+			public const int UpButton = 2131165346;
 			
 			static Drawable()
 			{
@@ -12833,13 +12842,19 @@ namespace TenantsApp.Droid
 			public const int sfchart_total_label = 2131558466;
 			
 			// aapt resource value: 0x7F0D0043
-			public const int status_bar_notification_info_overflow = 2131558467;
+			public const int sfnumericupdown_decrement_button_accessibility_label = 2131558467;
 			
 			// aapt resource value: 0x7F0D0044
-			public const int w = 2131558468;
+			public const int sfnumericupdown_increment_button_accessibility_label = 2131558468;
 			
 			// aapt resource value: 0x7F0D0045
-			public const int week = 2131558469;
+			public const int status_bar_notification_info_overflow = 2131558469;
+			
+			// aapt resource value: 0x7F0D0046
+			public const int w = 2131558470;
+			
+			// aapt resource value: 0x7F0D0047
+			public const int week = 2131558471;
 			
 			static String()
 			{

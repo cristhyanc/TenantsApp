@@ -11,133 +11,161 @@
     xmlns:syncNumeric="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
     mc:Ignorable="d">
     <ContentPage.Content>
-        <StackLayout Margin="15,20">
-            <Label FontSize="Title" Text="Property Details" />
-            <inputLayout:SfTextInputLayout
-                x:Name="txtDescriptionLayout"
-                ContainerBackgroundColor="White"
-                ContainerType="Filled"
-                FocusedColor="Aqua"
-                Hint="Description">
-                <Entry x:Name="description" Text="{Binding Place.Description}" />
-            </inputLayout:SfTextInputLayout>
+        <ScrollView VerticalOptions="FillAndExpand">
+            <StackLayout Margin="15,20" VerticalOptions="FillAndExpand">
 
-            <inputLayout:SfTextInputLayout
-                x:Name="txtAddressLayout"
-                ContainerBackgroundColor="White"
-                ContainerType="Filled"
-                FocusedColor="Aqua"
-                Hint="Address">
-                <Entry x:Name="address" Text="{Binding Place.Address}" />
-            </inputLayout:SfTextInputLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        FontSize="Title"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Property Details" />
 
-            <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+
+                    <ffimageloadingsvg:SvgCachedImage
+                        Margin="0,0,10,10"
+                        HeightRequest="30"
+                        HorizontalOptions="EndAndExpand"
+                        Source="resource://TenantsApp.Resources.people.svg?assembly=TenantsApp"
+                        VerticalOptions="CenterAndExpand"
+                        WidthRequest="30">
+
+                        <ffimageloadingsvg:SvgCachedImage.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding AddTenatCommand}" />
+                        </ffimageloadingsvg:SvgCachedImage.GestureRecognizers>
+                    </ffimageloadingsvg:SvgCachedImage>
+                    <Label
+                        FontSize="Title"
+                        HorizontalOptions="Center"
+                        Text="{Binding TotalTenants}"
+                        VerticalOptions="CenterAndExpand" />
+                </StackLayout>
+
                 <inputLayout:SfTextInputLayout
-                    x:Name="txtNumericLayout"
+                    x:Name="txtDescriptionLayout"
                     ContainerBackgroundColor="White"
                     ContainerType="Filled"
                     FocusedColor="Aqua"
-                    Hint="Rooms"
-                    HorizontalOptions="FillAndExpand"
-                    LeadingViewPosition="Inside">
-
-                    <syncNumeric:SfNumericTextBox
-                        AllowNull="true"
-                        FormatString="n"
-                        MaximumNumberDecimalDigits="0"
-                        Value="{Binding Place.Rooms}" />
-                    <inputLayout:SfTextInputLayout.LeadingView>
-                        <ffimageloadingsvg:SvgCachedImage
-                            Margin="0,0,30,0"
-                            BackgroundColor="Transparent"
-                            HeightRequest="20"
-                            Source="resource://TenantsApp.Resources.bed.svg?assembly=TenantsApp"
-                            WidthRequest="20" />
-                    </inputLayout:SfTextInputLayout.LeadingView>
+                    Hint="Description">
+                    <Entry x:Name="description" Text="{Binding Place.Description}" />
                 </inputLayout:SfTextInputLayout>
 
                 <inputLayout:SfTextInputLayout
-                    x:Name="txtBathroomsLayout"
+                    x:Name="txtAddressLayout"
                     ContainerBackgroundColor="White"
                     ContainerType="Filled"
                     FocusedColor="Aqua"
-                    Hint="Bathrooms"
-                    HorizontalOptions="FillAndExpand"
-                    LeadingViewPosition="Inside">
-
-                    <syncNumeric:SfNumericTextBox
-                        AllowNull="true"
-                        FormatString="n"
-                        MaximumNumberDecimalDigits="0"
-                        Value="{Binding Place.Bathrooms}" />
-                    <inputLayout:SfTextInputLayout.LeadingView>
-                        <ffimageloadingsvg:SvgCachedImage
-                            Margin="0,0,30,0"
-                            BackgroundColor="Transparent"
-                            HeightRequest="20"
-                            Source="resource://TenantsApp.Resources.toilet.svg?assembly=TenantsApp"
-                            WidthRequest="20" />
-                    </inputLayout:SfTextInputLayout.LeadingView>
+                    Hint="Address">
+                    <Entry x:Name="address" Text="{Binding Place.Address}" />
                 </inputLayout:SfTextInputLayout>
+
+                <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                    <inputLayout:SfTextInputLayout
+                        x:Name="txtNumericLayout"
+                        ContainerBackgroundColor="White"
+                        ContainerType="Filled"
+                        FocusedColor="Aqua"
+                        Hint="Rooms"
+                        HorizontalOptions="FillAndExpand"
+                        LeadingViewPosition="Inside">
+
+                        <syncNumeric:SfNumericTextBox
+                            AllowNull="true"
+                            FormatString="n"
+                            MaximumNumberDecimalDigits="0"
+                            Value="{Binding Place.Rooms}" />
+                        <inputLayout:SfTextInputLayout.LeadingView>
+                            <ffimageloadingsvg:SvgCachedImage
+                                Margin="0,0,30,0"
+                                BackgroundColor="Transparent"
+                                HeightRequest="20"
+                                Source="resource://TenantsApp.Resources.bed.svg?assembly=TenantsApp"
+                                WidthRequest="20" />
+                        </inputLayout:SfTextInputLayout.LeadingView>
+                    </inputLayout:SfTextInputLayout>
+
+                    <inputLayout:SfTextInputLayout
+                        x:Name="txtBathroomsLayout"
+                        ContainerBackgroundColor="White"
+                        ContainerType="Filled"
+                        FocusedColor="Aqua"
+                        Hint="Bathrooms"
+                        HorizontalOptions="FillAndExpand"
+                        LeadingViewPosition="Inside">
+
+                        <syncNumeric:SfNumericTextBox
+                            AllowNull="true"
+                            FormatString="n"
+                            MaximumNumberDecimalDigits="0"
+                            Value="{Binding Place.Bathrooms}" />
+                        <inputLayout:SfTextInputLayout.LeadingView>
+                            <ffimageloadingsvg:SvgCachedImage
+                                Margin="0,0,30,0"
+                                BackgroundColor="Transparent"
+                                HeightRequest="20"
+                                Source="resource://TenantsApp.Resources.toilet.svg?assembly=TenantsApp"
+                                WidthRequest="20" />
+                        </inputLayout:SfTextInputLayout.LeadingView>
+                    </inputLayout:SfTextInputLayout>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                    <inputLayout:SfTextInputLayout
+                        x:Name="txtPeopleLayout"
+                        ContainerBackgroundColor="White"
+                        ContainerType="Filled"
+                        FocusedColor="Aqua"
+                        Hint="Tenants"
+                        HorizontalOptions="FillAndExpand"
+                        LeadingViewPosition="Inside">
+
+                        <syncNumeric:SfNumericTextBox
+                            AllowNull="true"
+                            FormatString="n"
+                            MaximumNumberDecimalDigits="0"
+                            Value="{Binding Place.TenantsCapacity}" />
+
+                        <inputLayout:SfTextInputLayout.LeadingView>
+                            <ffimageloadingsvg:SvgCachedImage
+                                Margin="0,0,30,0"
+                                BackgroundColor="Transparent"
+                                HeightRequest="20"
+                                Source="resource://TenantsApp.Resources.people.svg?assembly=TenantsApp"
+                                WidthRequest="20" />
+                        </inputLayout:SfTextInputLayout.LeadingView>
+                    </inputLayout:SfTextInputLayout>
+
+                    <inputLayout:SfTextInputLayout
+                        x:Name="txtCarparksLayout"
+                        ContainerBackgroundColor="White"
+                        ContainerType="Filled"
+                        FocusedColor="Aqua"
+                        Hint="Carparks"
+                        HorizontalOptions="FillAndExpand"
+                        LeadingViewPosition="Inside">
+
+                        <syncNumeric:SfNumericTextBox
+                            AllowNull="true"
+                            FormatString=""
+                            MaximumNumberDecimalDigits="0"
+                            Value="{Binding Place.Carparks}" />
+                        <inputLayout:SfTextInputLayout.LeadingView>
+                            <ffimageloadingsvg:SvgCachedImage
+                                Margin="0,0,30,0"
+                                BackgroundColor="Transparent"
+                                HeightRequest="20"
+                                Source="resource://TenantsApp.Resources.parking.svg?assembly=TenantsApp"
+                                WidthRequest="20" />
+                        </inputLayout:SfTextInputLayout.LeadingView>
+                    </inputLayout:SfTextInputLayout>
+                </StackLayout>
+
+                <buttons:SfButton
+                    x:Name="SfButton"
+                    BackgroundColor="Black"
+                    Command="{Binding SaveCommand}"
+                    CornerRadius="5"
+                    Text="Save" />
             </StackLayout>
-
-            <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
-                <inputLayout:SfTextInputLayout
-                    x:Name="txtPeopleLayout"
-                    ContainerBackgroundColor="White"
-                    ContainerType="Filled"
-                    FocusedColor="Aqua"
-                    Hint="Tenants"
-                    HorizontalOptions="FillAndExpand"
-                    LeadingViewPosition="Inside">
-
-                    <syncNumeric:SfNumericTextBox
-                        AllowNull="true"
-                        FormatString="n"
-                        MaximumNumberDecimalDigits="0"
-                        Value="{Binding Place.TenantsCapacity}" />
-
-                    <inputLayout:SfTextInputLayout.LeadingView>
-                        <ffimageloadingsvg:SvgCachedImage
-                            Margin="0,0,30,0"
-                            BackgroundColor="Transparent"
-                            HeightRequest="20"
-                            Source="resource://TenantsApp.Resources.people.svg?assembly=TenantsApp"
-                            WidthRequest="20" />
-                    </inputLayout:SfTextInputLayout.LeadingView>
-                </inputLayout:SfTextInputLayout>
-
-                <inputLayout:SfTextInputLayout
-                    x:Name="txtCarparksLayout"
-                    ContainerBackgroundColor="White"
-                    ContainerType="Filled"
-                    FocusedColor="Aqua"
-                    Hint="Carparks"
-                    HorizontalOptions="FillAndExpand"
-                    LeadingViewPosition="Inside">
-
-                    <syncNumeric:SfNumericTextBox
-                        AllowNull="true"
-                        FormatString=""
-                        MaximumNumberDecimalDigits="0"
-                        Value="{Binding Place.Carparks}" />
-                    <inputLayout:SfTextInputLayout.LeadingView>
-                        <ffimageloadingsvg:SvgCachedImage
-                            Margin="0,0,30,0"
-                            BackgroundColor="Transparent"
-                            HeightRequest="20"
-                            Source="resource://TenantsApp.Resources.parking.svg?assembly=TenantsApp"
-                            WidthRequest="20" />
-                    </inputLayout:SfTextInputLayout.LeadingView>
-                </inputLayout:SfTextInputLayout>
-            </StackLayout>
-
-            <buttons:SfButton
-                x:Name="SfButton"
-                BackgroundColor="Black"
-                Command="{Binding SaveCommand}"
-                CornerRadius="5"
-                Text="Save" />
-        </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

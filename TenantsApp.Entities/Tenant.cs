@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using TenantsApp.Entities.Interfaces;
+using TenantsApp.Shared.Exceptions;
 
 namespace TenantsApp.Entities
 {
@@ -19,6 +21,30 @@ namespace TenantsApp.Entities
 
         [Ignore]
         public Place Place { get; set; }
+
+        public bool Save(IUnitOfWork uow)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(this.Name))
+                {
+                    throw new ValidationException("The Name is required");
+                }
+
+                if (this.TenantID == Guid.Empty)
+                {
+                    this.TenantID = Guid.NewGuid();
+                    return uow.TenantRepository .Insert(this);
+                }
+
+                return uow.TenantRepository.Update(this);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
     }
 }

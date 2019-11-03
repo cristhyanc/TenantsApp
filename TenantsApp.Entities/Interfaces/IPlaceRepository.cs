@@ -15,7 +15,7 @@ namespace TenantsApp.Entities.Interfaces
         bool Insert(IEnumerable<Place> entities);
         bool Update(Place entity);
         bool Update(IEnumerable<Place> entities);
-        int Delete(Place entity);
-        int Delete(IEnumerable<Place> entities);
+        bool Delete(Place entity);
+        bool Delete(IEnumerable<Place> entities);
     }
 }

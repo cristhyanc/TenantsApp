@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="TenantsApp.TenantPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:numericUp="clr-namespace:Syncfusion.SfNumericUpDown.XForms;assembly=Syncfusion.SfNumericUpDown.XForms"
+    xmlns:syncNumeric="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <ScrollView VerticalOptions="FillAndExpand">
+            <StackLayout Margin="15,20" VerticalOptions="FillAndExpand">
+
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        FontSize="Title"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Tenant's Details" />
+                </StackLayout>
+
+                <inputLayout:SfTextInputLayout
+                    x:Name="txtDescriptionLayout"
+                    ContainerBackgroundColor="White"
+                    ContainerType="Filled"
+                    FocusedColor="Aqua"
+                    Hint="Name">
+                    <Entry x:Name="description" Text="{Binding Tenant.Name}" />
+                </inputLayout:SfTextInputLayout>
+
+                <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                    <inputLayout:SfTextInputLayout
+                        ContainerBackgroundColor="White"
+                        ContainerType="Filled"
+                        FocusedColor="Aqua"
+                        Hint="Bond"
+                        HorizontalOptions="FillAndExpand"
+                        LeadingViewPosition="Inside">
+
+                        <syncNumeric:SfNumericTextBox
+                            AllowNull="true"
+                            FormatString="n"
+                            MaximumNumberDecimalDigits="0"
+                            Value="{Binding Tenant.Bond}" />
+                        <inputLayout:SfTextInputLayout.LeadingView>
+                            <ffimageloadingsvg:SvgCachedImage
+                                Margin="0,0,30,0"
+                                BackgroundColor="Transparent"
+                                HeightRequest="20"
+                                Source="resource://TenantsApp.Resources.bed.svg?assembly=TenantsApp"
+                                WidthRequest="20" />
+                        </inputLayout:SfTextInputLayout.LeadingView>
+                    </inputLayout:SfTextInputLayout>
+
+                    <inputLayout:SfTextInputLayout
+                        ContainerBackgroundColor="White"
+                        ContainerType="Filled"
+                        FocusedColor="Aqua"
+                        Hint="Rent"
+                        HorizontalOptions="FillAndExpand"
+                        LeadingViewPosition="Inside">
+
+                        <syncNumeric:SfNumericTextBox
+                            AllowNull="true"
+                            FormatString="n"
+                            MaximumNumberDecimalDigits="0"
+                            Value="{Binding Tenant.Rent}" />
+                        <inputLayout:SfTextInputLayout.LeadingView>
+                            <ffimageloadingsvg:SvgCachedImage
+                                Margin="0,0,30,0"
+                                BackgroundColor="Transparent"
+                                HeightRequest="20"
+                                Source="resource://TenantsApp.Resources.toilet.svg?assembly=TenantsApp"
+                                WidthRequest="20" />
+                        </inputLayout:SfTextInputLayout.LeadingView>
+                    </inputLayout:SfTextInputLayout>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                    <inputLayout:SfTextInputLayout
+                        ContainerBackgroundColor="White"
+                        ContainerType="Filled"
+                        FocusedColor="Aqua"
+                        Hint="Start Date"
+                        HorizontalOptions="FillAndExpand"
+                        LeadingViewPosition="Inside">
+
+
+                        <DatePicker Date="{Binding Tenant.Start}" />
+
+                        <inputLayout:SfTextInputLayout.LeadingView>
+                            <ffimageloadingsvg:SvgCachedImage
+                                Margin="0,0,30,0"
+                                BackgroundColor="Transparent"
+                                HeightRequest="20"
+                                Source="resource://TenantsApp.Resources.timetable.svg?assembly=TenantsApp"
+                                WidthRequest="20" />
+                        </inputLayout:SfTextInputLayout.LeadingView>
+                    </inputLayout:SfTextInputLayout>
+
+                    <inputLayout:SfTextInputLayout
+                        ContainerBackgroundColor="White"
+                        ContainerType="Filled"
+                        FocusedColor="Aqua"
+                        Hint="End Date"
+                        HorizontalOptions="FillAndExpand"
+                        LeadingViewPosition="Inside">
+
+                        <DatePicker Date="{Binding Tenant.End}" />
+
+                        <inputLayout:SfTextInputLayout.LeadingView>
+                            <ffimageloadingsvg:SvgCachedImage
+                                Margin="0,0,30,0"
+                                BackgroundColor="Transparent"
+                                HeightRequest="20"
+                                Source="resource://TenantsApp.Resources.timetable.svg?assembly=TenantsApp"
+                                WidthRequest="20" />
+                        </inputLayout:SfTextInputLayout.LeadingView>
+                    </inputLayout:SfTextInputLayout>
+                </StackLayout>
+
+                <inputLayout:SfTextInputLayout
+                    ContainerBackgroundColor="White"
+                    ContainerType="Filled"
+                    FocusedColor="Aqua"
+                    Hint="Pay Week Period"
+                    HorizontalOptions="FillAndExpand"
+                    LeadingViewPosition="Inside">
+
+                    <numericUp:SfNumericUpDown
+                        x:Name="numericUpDown"
+                        FormatString="n"
+                        Value="{Binding Tenant.PayWeekPeriod}" />
+
+                    <inputLayout:SfTextInputLayout.LeadingView>
+                        <ffimageloadingsvg:SvgCachedImage
+                            Margin="0,0,30,0"
+                            BackgroundColor="Transparent"
+                            HeightRequest="20"
+                            Source="resource://TenantsApp.Resources.counter.svg?assembly=TenantsApp"
+                            WidthRequest="20" />
+                    </inputLayout:SfTextInputLayout.LeadingView>
+                </inputLayout:SfTextInputLayout>
+
+                <buttons:SfButton
+                    x:Name="SfButton"
+                    BackgroundColor="Black"
+                    Command="{Binding SaveCommand}"
+                    CornerRadius="5"
+                    Text="Save" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

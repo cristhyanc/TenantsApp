@@ -86,13 +86,18 @@ namespace TenantsApp.Repository
             return false;
         }
 
-        public virtual int Delete(T entity)
-        {          
-            return _db.Delete(entity);
+        public virtual bool Delete(T entity)
+        {         
+            
+            if (_db.Delete(entity) > 0)
+            {
+                return true;
+            }
+            return false;
         }
-        public virtual int Delete(IEnumerable<T> entities)
+        public virtual bool Delete(IEnumerable<T> entities)
         {
-            int result = 0;
+            bool result =false;
             foreach (var item in entities)
             {
                 result = Delete(item);

@@ -57,5 +57,53 @@ namespace TenantsApp.Entities
                 throw ex;
             }
         }
+
+        public bool AddTenant(Tenant tenant, IUnitOfWork uow)
+        {
+            try
+            {
+                tenant.PlaceID = this.PlaceID;
+                if (tenant.Save(uow))
+                {
+                    if(this.Tenants==null)
+                    {
+                        this.Tenants = new List<Tenant>();
+                    }
+                    this.Tenants.Add(tenant);
+                    return true;
+                }
+
+                return false;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public bool Delete(IUnitOfWork uow)
+        {
+            try
+            {
+                if (this.PlaceID == Guid.Empty)
+                {
+                    throw new ValidationException("The place ID is required");
+                }
+                var tenants = uow.TenantRepository.GetAll(x => x.PlaceID == this.PlaceID);
+
+                uow.Begin();
+                if(tenants?.Count>0)
+                {
+                    uow.TenantRepository.Delete(tenants);
+                }
+
+                return uow.PlaceRepository.Delete(this);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

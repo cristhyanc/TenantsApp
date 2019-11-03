@@ -29,6 +29,7 @@ namespace TenantsApp.iOS
             Syncfusion.XForms.iOS.Border.SfBorderRenderer.Init();
             //Syncfusion.SfChart.XForms.iOS.Renderers.SfChartRenderer.Init();
             Syncfusion.XForms.iOS.TabView.SfTabViewRenderer.Init();
+            Syncfusion.SfNumericUpDown.XForms.iOS.SfNumericUpDownRenderer.Init();
             global::Xamarin.Forms.Forms.Init();
 
             new SfNumericTextBoxRenderer();

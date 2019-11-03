@@ -109,13 +109,16 @@
                 x:Name="listView"
                 Margin="0,20,0,0"
                 AllowKeyboardNavigation="True"
+                AllowSwiping="true"
                 AutoFitMode="Height"
                 ItemTemplate="{StaticResource ItemTemplate}"
                 ItemsSource="{Binding Places}"
                 SelectedItem="{Binding PlaceSelected}"
                 SelectionBackgroundColor="#E4E4E4"
                 SelectionGesture="Tap"
-                SelectionMode="Single">
+                SelectionMode="Single"
+                SwipeEnded="listView_SwipeEnded"
+                SwipeStarted="listView_SwipeStarted">
                 <sync:SfListView.HeaderTemplate>
                     <DataTemplate>
                         <StackLayout Orientation="Horizontal">
@@ -132,6 +135,38 @@
                         </StackLayout>
                     </DataTemplate>
                 </sync:SfListView.HeaderTemplate>
+                <sync:SfListView.RightSwipeTemplate>
+                    <DataTemplate x:Name="LeftSwipeTemplate">
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+
+                            <Grid
+                                Grid.Column="0"
+                                BackgroundColor="#DC595F"
+                                BindingContextChanged="Grid_BindingContextChanged"
+                                HorizontalOptions="Fill"
+                                VerticalOptions="Fill">
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={x:Reference listView}, Path=BindingContext.DeletePlaceCommand}" CommandParameter="{Binding PlaceID}" />
+                                </Grid.GestureRecognizers>
+                                <Grid HorizontalOptions="Center" VerticalOptions="Center">
+                                    <ffimageloadingsvg:SvgCachedImage
+                                        Margin="0,0,10,10"
+                                        HeightRequest="35"
+                                        HorizontalOptions="CenterAndExpand"
+                                        Source="resource://TenantsApp.Resources.delete.svg?assembly=TenantsApp"
+                                        VerticalOptions="CenterAndExpand"
+                                        WidthRequest="35" />
+                                </Grid>
+                            </Grid>
+
+                        </Grid>
+                    </DataTemplate>
+                </sync:SfListView.RightSwipeTemplate>
             </sync:SfListView>
 
         </StackLayout>

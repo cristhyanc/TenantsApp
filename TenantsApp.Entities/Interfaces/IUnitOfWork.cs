@@ -7,6 +7,7 @@ namespace TenantsApp.Entities.Interfaces
    public interface IUnitOfWork
     {
          IPlaceRepository PlaceRepository { get; }
+        ITenantRepository TenantRepository { get; }
 
         void Begin();
         void Commit();

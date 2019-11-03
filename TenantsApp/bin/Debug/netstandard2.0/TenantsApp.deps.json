@@ -21,6 +21,7 @@
           "Syncfusion.Xamarin.SfListView": "17.3.0.21",
           "Syncfusion.Xamarin.SfMaskedEdit": "17.3.0.21",
           "Syncfusion.Xamarin.SfNumericTextBox": "17.3.0.21",
+          "Syncfusion.Xamarin.SfNumericUpDown": "17.3.0.21",
           "Syncfusion.Xamarin.SfTabView": "17.3.0.21",
           "TenantsApp.Bl": "1.0.0",
           "TenantsApp.Entities": "1.0.0",
@@ -234,6 +235,18 @@
         },
         "runtime": {
           "lib/netstandard2.0/Syncfusion.SfNumericTextBox.XForms.dll": {
+            "assemblyVersion": "17.3451.0.21",
+            "fileVersion": "17.3451.0.21"
+          }
+        }
+      },
+      "Syncfusion.Xamarin.SfNumericUpDown/17.3.0.21": {
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Xamarin.Forms": "4.3.0.947036"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.SfNumericUpDown.XForms.dll": {
             "assemblyVersion": "17.3451.0.21",
             "fileVersion": "17.3451.0.21"
           }
@@ -564,6 +577,13 @@
       "sha512": "sha512-30EvQ3m2DL02lkp4bCWLTobzT8l6zZh0xWnAaEoLMkholiARcBCfBvLiTQk/QCByJ7sNrQ7UpHY1xeNVBbkI1A==",
       "path": "syncfusion.xamarin.sfnumerictextbox/17.3.0.21",
       "hashPath": "syncfusion.xamarin.sfnumerictextbox.17.3.0.21.nupkg.sha512"
+    },
+    "Syncfusion.Xamarin.SfNumericUpDown/17.3.0.21": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XdAIrtsouvhuoYJ8J8naFXZu+5oA+1p8x0Efh13obir8Y9N4mny4HEE+Mubhjp4TZBZxCHak2rlaxop1/3LSjg==",
+      "path": "syncfusion.xamarin.sfnumericupdown/17.3.0.21",
+      "hashPath": "syncfusion.xamarin.sfnumericupdown.17.3.0.21.nupkg.sha512"
     },
     "Syncfusion.Xamarin.SfTabView/17.3.0.21": {
       "type": "package",

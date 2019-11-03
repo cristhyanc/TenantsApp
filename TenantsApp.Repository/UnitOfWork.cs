@@ -8,11 +8,24 @@ namespace TenantsApp.Repository
     public class UnitOfWork : IUnitOfWork
     {
         IPlaceRepository _placeRepository;
+        ITenantRepository _tenantRepository;
         private DBContext _context;
 
         public UnitOfWork()
         {
             _context = new DBContext();
+        }
+
+        public ITenantRepository TenantRepository
+        {
+            get
+            {
+                if (_tenantRepository == null)
+                {
+                    _tenantRepository = new TenantRepository(_context);
+                }
+                return _tenantRepository;
+            }
         }
 
         public IPlaceRepository PlaceRepository

@@ -214,6 +214,10 @@
               "target": "Package",
               "version": "[17.3.0.21, )"
             },
+            "Syncfusion.Xamarin.SfNumericUpDown": {
+              "target": "Package",
+              "version": "[17.3.0.21, )"
+            },
             "Syncfusion.Xamarin.SfTabView": {
               "target": "Package",
               "version": "[17.3.0.21, )"
@@ -495,6 +499,10 @@
               "version": "[17.3.0.21, )"
             },
             "Syncfusion.Xamarin.SfNumericTextBox": {
+              "target": "Package",
+              "version": "[17.3.0.21, )"
+            },
+            "Syncfusion.Xamarin.SfNumericUpDown": {
               "target": "Package",
               "version": "[17.3.0.21, )"
             },

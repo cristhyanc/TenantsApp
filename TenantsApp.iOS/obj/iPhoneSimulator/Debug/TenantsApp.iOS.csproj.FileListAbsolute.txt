@@ -1,10 +1,3 @@
-C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\obj\iPhoneSimulator\Debug\ibtool\_BundleResourceWithLogicalName.items
-C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\obj\iPhoneSimulator\Debug\actool\_PartialAppManifest.items
-C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\obj\iPhoneSimulator\Debug\actool\_BundleResourceWithLogicalName.items
-C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\obj\iPhoneSimulator\Debug\coremlc\_PartialAppManifest.items
-C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\obj\iPhoneSimulator\Debug\coremlc\_BundleResourceWithLogicalName.items
-C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\obj\iPhoneSimulator\Debug\optimized\
-C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\obj\iPhoneSimulator\Debug\TenantsApp.iOS.csprojAssemblyReference.cache
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\bin\iPhoneSimulator\Debug\TenantsApp.iOS.exe
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\bin\iPhoneSimulator\Debug\TenantsApp.iOS.pdb
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\bin\iPhoneSimulator\Debug\Acr.UserDialogs.dll
@@ -39,6 +32,8 @@ C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\bin\iPhoneS
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\bin\iPhoneSimulator\Debug\Syncfusion.SfNumericTextBox.XForms.dll
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\bin\iPhoneSimulator\Debug\Syncfusion.SfNumericTextBox.XForms.iOS.dll
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\bin\iPhoneSimulator\Debug\Syncfusion.SfNumericTextBox.iOS.dll
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\bin\iPhoneSimulator\Debug\Syncfusion.SfNumericUpDown.XForms.dll
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\bin\iPhoneSimulator\Debug\Syncfusion.SfNumericUpDown.XForms.iOS.dll
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\bin\iPhoneSimulator\Debug\Syncfusion.SfTabView.XForms.dll
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\bin\iPhoneSimulator\Debug\Syncfusion.SfTabView.XForms.iOS.dll
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\bin\iPhoneSimulator\Debug\System.Reactive.dll
@@ -113,6 +108,13 @@ C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\bin\iPhoneS
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\bin\iPhoneSimulator\Debug\TenantsApp.Bl.pdb
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\bin\iPhoneSimulator\Debug\TenantsApp.Shared.pdb
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\bin\iPhoneSimulator\Debug\TenantsApp.Repository.pdb
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\obj\iPhoneSimulator\Debug\ibtool\_BundleResourceWithLogicalName.items
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\obj\iPhoneSimulator\Debug\actool\_PartialAppManifest.items
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\obj\iPhoneSimulator\Debug\actool\_BundleResourceWithLogicalName.items
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\obj\iPhoneSimulator\Debug\coremlc\_PartialAppManifest.items
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\obj\iPhoneSimulator\Debug\coremlc\_BundleResourceWithLogicalName.items
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\obj\iPhoneSimulator\Debug\optimized\
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\obj\iPhoneSimulator\Debug\TenantsApp.iOS.csprojAssemblyReference.cache
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\obj\iPhoneSimulator\Debug\XamlC.stamp
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\obj\iPhoneSimulator\Debug\TenantsApp.iOS.csproj.CopyComplete
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\obj\iPhoneSimulator\Debug\TenantsApp.iOS.exe

@@ -283,6 +283,21 @@
           "lib/MonoAndroid10/Syncfusion.SfNumericTextBox.XForms.dll": {}
         }
       },
+      "Syncfusion.Xamarin.SfNumericUpDown/17.3.0.21": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Xamarin.Forms": "3.6.0.344457"
+        },
+        "compile": {
+          "lib/MonoAndroid10/Syncfusion.SfNumericUpDown.XForms.Android.dll": {},
+          "lib/MonoAndroid10/Syncfusion.SfNumericUpDown.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/Syncfusion.SfNumericUpDown.XForms.Android.dll": {},
+          "lib/MonoAndroid10/Syncfusion.SfNumericUpDown.XForms.dll": {}
+        }
+      },
       "Syncfusion.Xamarin.SfTabView/17.3.0.21": {
         "type": "package",
         "dependencies": {
@@ -1214,6 +1229,7 @@
           "Syncfusion.Xamarin.SfListView": "17.3.0.21",
           "Syncfusion.Xamarin.SfMaskedEdit": "17.3.0.21",
           "Syncfusion.Xamarin.SfNumericTextBox": "17.3.0.21",
+          "Syncfusion.Xamarin.SfNumericUpDown": "17.3.0.21",
           "Syncfusion.Xamarin.SfTabView": "17.3.0.21",
           "TenantsApp.Bl": "1.0.0",
           "TenantsApp.Entities": "1.0.0",
@@ -1799,6 +1815,31 @@
         "lib/uap10.0/Syncfusion.SfNumericTextBox.XForms.xml",
         "syncfusion.xamarin.sfnumerictextbox.17.3.0.21.nupkg.sha512",
         "syncfusion.xamarin.sfnumerictextbox.nuspec"
+      ]
+    },
+    "Syncfusion.Xamarin.SfNumericUpDown/17.3.0.21": {
+      "sha512": "XdAIrtsouvhuoYJ8J8naFXZu+5oA+1p8x0Efh13obir8Y9N4mny4HEE+Mubhjp4TZBZxCHak2rlaxop1/3LSjg==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfnumericupdown/17.3.0.21",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/Syncfusion.SfNumericUpDown.XForms.Android.dll",
+        "lib/MonoAndroid10/Syncfusion.SfNumericUpDown.XForms.dll",
+        "lib/MonoAndroid10/Syncfusion.SfNumericUpDown.XForms.xml",
+        "lib/Xamarin.iOS10/Syncfusion.SfNumericUpDown.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfNumericUpDown.XForms.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfNumericUpDown.XForms.xml",
+        "lib/netstandard2.0/Syncfusion.SfNumericUpDown.XForms.dll",
+        "lib/netstandard2.0/Syncfusion.SfNumericUpDown.XForms.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfNumericUpDown.XForms.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfNumericUpDown.XForms.xml",
+        "lib/uap10.0/Syncfusion.SfNumericUpDown.XForms.UWP.XML",
+        "lib/uap10.0/Syncfusion.SfNumericUpDown.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.SfNumericUpDown.XForms.dll",
+        "lib/uap10.0/Syncfusion.SfNumericUpDown.XForms.xml",
+        "syncfusion.xamarin.sfnumericupdown.17.3.0.21.nupkg.sha512",
+        "syncfusion.xamarin.sfnumericupdown.nuspec"
       ]
     },
     "Syncfusion.Xamarin.SfTabView/17.3.0.21": {
@@ -3276,6 +3317,7 @@
       "Syncfusion.Xamarin.SfListView >= 17.3.0.21",
       "Syncfusion.Xamarin.SfMaskedEdit >= 17.3.0.21",
       "Syncfusion.Xamarin.SfNumericTextBox >= 17.3.0.21",
+      "Syncfusion.Xamarin.SfNumericUpDown >= 17.3.0.21",
       "Syncfusion.Xamarin.SfTabView >= 17.3.0.21",
       "TenantsApp >= 1.0.0",
       "Xamarin.Android.Support.Core.Utils >= 28.0.0.3",
@@ -3365,6 +3407,10 @@
             "version": "[17.3.0.21, )"
           },
           "Syncfusion.Xamarin.SfNumericTextBox": {
+            "target": "Package",
+            "version": "[17.3.0.21, )"
+          },
+          "Syncfusion.Xamarin.SfNumericUpDown": {
             "target": "Package",
             "version": "[17.3.0.21, )"
           },

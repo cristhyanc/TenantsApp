@@ -21,6 +21,7 @@ namespace TenantsApp
                 FreshIOC.Container.Register<IUnitOfWork, UnitOfWork>().AsSingleton();
                 FreshIOC.Container.Register<IUserDialogs>(UserDialogs.Instance);
                 FreshIOC.Container.Register<Bl.IPlacesBl, Bl.PlacesBl>();
+                FreshIOC.Container.Register<Bl.ITenantsBl, Bl.TenantsBl>();
                 
                 Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MTU5MTk4QDMxMzcyZTMzMmUzMGFvd0UvK2ZtUm5LSXYxRE9Rc3NvZnBOUFZqTHJqWkF2WVFKa1JVRENETFk9");
                 InitializeComponent();

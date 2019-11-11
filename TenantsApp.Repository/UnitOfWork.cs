@@ -9,11 +9,37 @@ namespace TenantsApp.Repository
     {
         IPlaceRepository _placeRepository;
         ITenantRepository _tenantRepository;
+        IScheduleRentRepositoy _scheduleRentRepositoy;
+        IRentRepository _rentRepository;
         private DBContext _context;
 
         public UnitOfWork()
         {
             _context = new DBContext();
+        }
+
+        public IRentRepository RentRepository
+        {
+            get
+            {
+                if (_rentRepository == null)
+                {
+                    _rentRepository = new RentRepository(_context);
+                }
+                return _rentRepository;
+            }
+        }
+
+        public IScheduleRentRepositoy ScheduleRentRepositoy
+        {
+            get
+            {
+                if (_scheduleRentRepositoy == null)
+                {
+                    _scheduleRentRepositoy = new ScheduleRentRepositoy(_context);
+                }
+                return _scheduleRentRepositoy;
+            }
         }
 
         public ITenantRepository TenantRepository

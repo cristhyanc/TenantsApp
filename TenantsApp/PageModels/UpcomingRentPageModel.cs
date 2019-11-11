@@ -1,17 +1,22 @@
-﻿using FreshMvvm;
+﻿using Acr.UserDialogs;
+using FreshMvvm;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Windows.Input;
+using TenantsApp.Bl;
 using TenantsApp.Entities;
+using Xamarin.Forms;
 
 namespace TenantsApp
 {
     [PropertyChanged.AddINotifyPropertyChangedInterface]
-    public class UpcomingRentPageModel: FreshBasePageModel
+    public class UpcomingRentPageModel: BaseViewModel
     {
+        IUserDialogs _userDialogs;
         ObservableCollection<Rent> rents;
         public ObservableCollection<Rent> Rents
         {
@@ -31,63 +36,56 @@ namespace TenantsApp
                 this.rentSelected = value;
             }
         }
+        
+        public ICommand PayRentCommand { get; set; }
+        IScheduleBl _scheduleBl;
 
-        public UpcomingRentPageModel()
+        public UpcomingRentPageModel(IUserDialogs userDialogs, IScheduleBl scheduleBl) : base(userDialogs)
         {
-            //var aa = typeof(UpcomingRentPageModel).Assembly.FullName;
+            _scheduleBl = scheduleBl;
+              _userDialogs = userDialogs;         
+            PayRentCommand = new Command<Guid>((x) => { PayRent(x); });
 
-            //string[] resourceNames = this.GetType().GetTypeInfo().Assembly.GetManifestResourceNames();
-            //foreach (var name in resourceNames)
-            //{
-            //   if(name.Contains("perso"))
-            //    {
-            //        var asd = "";
-            //    }
+        }
 
-            //    if (name.Contains("bath"))
-            //    {
-            //        var asd = "";
-            //    }
-            //}
+        private void LoadRents()
+        {
+            try
+            {
+                this.Rents = new ObservableCollection<Rent>(_scheduleBl.GetUpcomingRents());
+            }
+            catch (Exception ex)
+            {
+                Helpers.ExceptionHelper.ProcessException(ex, _userDialogs, nameof(RentsPageModel));
+            }
+        }
 
-            Rents = new ObservableCollection<Rent>();
-            var tenant = new Tenant { Name="Paula ateourtua" };
-            var place = new Place { Description="Emporium" };
-            tenant.Place = place;
-            var rent = new Rent { ExpiryDate=DateTime.Now.AddDays(15), Price=145, Tenant= tenant };
-            Rents.Add(rent);
 
-             tenant = new Tenant { Name = "Sophie Chung" };
-            place = new Place { Description = "Emporium" };
-            tenant.Place = place;
-            rent = new Rent { ExpiryDate = DateTime.Now.AddDays(7), Price = 145, Tenant = tenant };
-            Rents.Add(rent);
+        protected override void ViewIsAppearing(object sender, EventArgs e)
+        {
+            base.ViewIsAppearing(sender, e);
+            LoadRents();
+        }
 
-            tenant = new Tenant { Name = "Alan" };
-            place = new Place { Description = "Berwick" };
-            tenant.Place = place;
-            rent = new Rent { ExpiryDate = DateTime.Now.AddDays(-5), Price = 150, Tenant = tenant };
-            Rents.Add(rent);
-
-            tenant = new Tenant { Name = "Andres" };
-            place = new Place { Description = "Berwick" };
-            tenant.Place = place;
-            rent = new Rent { ExpiryDate = DateTime.Now.AddDays(0), Price = 150, Tenant = tenant };
-            Rents.Add(rent);
-
-            tenant = new Tenant { Name = "Camila" };
-            place = new Place { Description = "Arthur" };
-            tenant.Place = place;
-            rent = new Rent { ExpiryDate = DateTime.Now.AddDays(3), Price = 150, Tenant = tenant };
-            Rents.Add(rent);
-
-            tenant = new Tenant { Name = "Reem" };
-            place = new Place { Description = "Arthur" };
-            tenant.Place = place;
-            rent = new Rent { ExpiryDate = DateTime.Now.AddDays(-3), Price = 150, Tenant = tenant };
-            Rents.Add(rent);
-
-            Rents = new ObservableCollection<Rent>(Rents.OrderBy(x => x.ExpiryDate));
+        private void PayRent(Guid rentId)
+        {
+            try
+            {
+              
+                if(!_scheduleBl.PayRent(rentId))
+                {
+                    _userDialogs.Alert("The rent could not be proccessed");
+                }
+                else
+                {
+                    _userDialogs.Alert("Done");
+                    LoadRents();
+                }
+            }
+            catch (Exception ex)
+            {
+                Helpers.ExceptionHelper.ProcessException(ex, _userDialogs, nameof(RentsPageModel));
+            }
         }
     }
 }

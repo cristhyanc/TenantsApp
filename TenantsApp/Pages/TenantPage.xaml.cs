@@ -15,6 +15,7 @@ namespace TenantsApp
         public TenantPage()
         {
             InitializeComponent();
+            
         }
     }
 }

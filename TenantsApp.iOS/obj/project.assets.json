@@ -136,7 +136,7 @@
           "lib/Xamarin.iOS10/SQLitePCLRaw.provider.sqlite3.dll": {}
         }
       },
-      "Syncfusion.Licensing/17.3.0.21": {
+      "Syncfusion.Licensing/17.3.0.26": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
@@ -145,10 +145,10 @@
           "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
         }
       },
-      "Syncfusion.Xamarin.Buttons/17.3.0.21": {
+      "Syncfusion.Xamarin.Buttons/17.3.0.26": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -160,10 +160,10 @@
           "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.Cards/17.3.0.21": {
+      "Syncfusion.Xamarin.Cards/17.3.0.26": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -175,10 +175,10 @@
           "lib/Xamarin.iOS10/Syncfusion.Cards.XForms.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.Core/17.3.0.21": {
+      "Syncfusion.Xamarin.Core/17.3.0.26": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Licensing": "17.3.0.21",
+          "Syncfusion.Licensing": "17.3.0.26",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -190,7 +190,7 @@
           "lib/Xamarin.iOS10/Syncfusion.Core.XForms.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.DataSource/17.3.0.21": {
+      "Syncfusion.Xamarin.DataSource/17.3.0.26": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
@@ -199,7 +199,7 @@
           "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
         }
       },
-      "Syncfusion.Xamarin.GridCommon/17.3.0.21": {
+      "Syncfusion.Xamarin.GridCommon/17.3.0.26": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
@@ -208,10 +208,10 @@
           "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfChart/17.3.0.21": {
+      "Syncfusion.Xamarin.SfChart/17.3.0.26": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -223,12 +223,12 @@
           "lib/Xamarin.iOS10/Syncfusion.SfChart.XForms.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfListView/17.3.0.21": {
+      "Syncfusion.Xamarin.SfListView/17.3.0.26": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.21",
-          "Syncfusion.Xamarin.DataSource": "17.3.0.21",
-          "Syncfusion.Xamarin.GridCommon": "17.3.0.21",
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
+          "Syncfusion.Xamarin.DataSource": "17.3.0.26",
+          "Syncfusion.Xamarin.GridCommon": "17.3.0.26",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -240,10 +240,10 @@
           "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfMaskedEdit/17.3.0.21": {
+      "Syncfusion.Xamarin.SfMaskedEdit/17.3.0.26": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -255,10 +255,10 @@
           "lib/Xamarin.iOS10/Syncfusion.SfMaskedEdit.XForms.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfNumericTextBox/17.3.0.21": {
+      "Syncfusion.Xamarin.SfNumericTextBox/17.3.0.26": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -272,10 +272,10 @@
           "lib/Xamarin.iOS10/Syncfusion.SfNumericTextBox.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfNumericUpDown/17.3.0.21": {
+      "Syncfusion.Xamarin.SfNumericUpDown/17.3.0.26": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -287,10 +287,25 @@
           "lib/Xamarin.iOS10/Syncfusion.SfNumericUpDown.XForms.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfTabView/17.3.0.21": {
+      "Syncfusion.Xamarin.SfPopupLayout/17.3.0.26": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
+          "Xamarin.Forms": "3.6.0.344457"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPopupLayout.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfPopupLayout.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPopupLayout.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfPopupLayout.XForms.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfTabView/17.3.0.26": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -575,15 +590,16 @@
           "Acr.UserDialogs": "7.0.35",
           "FreshMvvm": "3.0.0",
           "PropertyChanged.Fody": "3.1.3",
-          "Syncfusion.Xamarin.Buttons": "17.3.0.21",
-          "Syncfusion.Xamarin.Cards": "17.3.0.21",
-          "Syncfusion.Xamarin.Core": "17.3.0.21",
-          "Syncfusion.Xamarin.SfChart": "17.3.0.21",
-          "Syncfusion.Xamarin.SfListView": "17.3.0.21",
-          "Syncfusion.Xamarin.SfMaskedEdit": "17.3.0.21",
-          "Syncfusion.Xamarin.SfNumericTextBox": "17.3.0.21",
-          "Syncfusion.Xamarin.SfNumericUpDown": "17.3.0.21",
-          "Syncfusion.Xamarin.SfTabView": "17.3.0.21",
+          "Syncfusion.Xamarin.Buttons": "17.3.0.26",
+          "Syncfusion.Xamarin.Cards": "17.3.0.26",
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
+          "Syncfusion.Xamarin.SfChart": "17.3.0.26",
+          "Syncfusion.Xamarin.SfListView": "17.3.0.26",
+          "Syncfusion.Xamarin.SfMaskedEdit": "17.3.0.26",
+          "Syncfusion.Xamarin.SfNumericTextBox": "17.3.0.26",
+          "Syncfusion.Xamarin.SfNumericUpDown": "17.3.0.26",
+          "Syncfusion.Xamarin.SfPopupLayout": "17.3.0.26",
+          "Syncfusion.Xamarin.SfTabView": "17.3.0.26",
           "TenantsApp.Bl": "1.0.0",
           "TenantsApp.Entities": "1.0.0",
           "TenantsApp.Repository": "1.0.0",
@@ -769,7 +785,7 @@
           "lib/Xamarin.iOS10/SQLitePCLRaw.provider.sqlite3.dll": {}
         }
       },
-      "Syncfusion.Licensing/17.3.0.21": {
+      "Syncfusion.Licensing/17.3.0.26": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
@@ -778,10 +794,10 @@
           "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
         }
       },
-      "Syncfusion.Xamarin.Buttons/17.3.0.21": {
+      "Syncfusion.Xamarin.Buttons/17.3.0.26": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -793,10 +809,10 @@
           "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.Cards/17.3.0.21": {
+      "Syncfusion.Xamarin.Cards/17.3.0.26": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -808,10 +824,10 @@
           "lib/Xamarin.iOS10/Syncfusion.Cards.XForms.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.Core/17.3.0.21": {
+      "Syncfusion.Xamarin.Core/17.3.0.26": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Licensing": "17.3.0.21",
+          "Syncfusion.Licensing": "17.3.0.26",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -823,7 +839,7 @@
           "lib/Xamarin.iOS10/Syncfusion.Core.XForms.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.DataSource/17.3.0.21": {
+      "Syncfusion.Xamarin.DataSource/17.3.0.26": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
@@ -832,7 +848,7 @@
           "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
         }
       },
-      "Syncfusion.Xamarin.GridCommon/17.3.0.21": {
+      "Syncfusion.Xamarin.GridCommon/17.3.0.26": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
@@ -841,10 +857,10 @@
           "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfChart/17.3.0.21": {
+      "Syncfusion.Xamarin.SfChart/17.3.0.26": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -856,12 +872,12 @@
           "lib/Xamarin.iOS10/Syncfusion.SfChart.XForms.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfListView/17.3.0.21": {
+      "Syncfusion.Xamarin.SfListView/17.3.0.26": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.21",
-          "Syncfusion.Xamarin.DataSource": "17.3.0.21",
-          "Syncfusion.Xamarin.GridCommon": "17.3.0.21",
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
+          "Syncfusion.Xamarin.DataSource": "17.3.0.26",
+          "Syncfusion.Xamarin.GridCommon": "17.3.0.26",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -873,10 +889,10 @@
           "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfMaskedEdit/17.3.0.21": {
+      "Syncfusion.Xamarin.SfMaskedEdit/17.3.0.26": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -888,10 +904,10 @@
           "lib/Xamarin.iOS10/Syncfusion.SfMaskedEdit.XForms.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfNumericTextBox/17.3.0.21": {
+      "Syncfusion.Xamarin.SfNumericTextBox/17.3.0.26": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -905,10 +921,10 @@
           "lib/Xamarin.iOS10/Syncfusion.SfNumericTextBox.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfNumericUpDown/17.3.0.21": {
+      "Syncfusion.Xamarin.SfNumericUpDown/17.3.0.26": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -920,10 +936,25 @@
           "lib/Xamarin.iOS10/Syncfusion.SfNumericUpDown.XForms.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfTabView/17.3.0.21": {
+      "Syncfusion.Xamarin.SfPopupLayout/17.3.0.26": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
+          "Xamarin.Forms": "3.6.0.344457"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPopupLayout.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfPopupLayout.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPopupLayout.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfPopupLayout.XForms.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfTabView/17.3.0.26": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -1208,15 +1239,16 @@
           "Acr.UserDialogs": "7.0.35",
           "FreshMvvm": "3.0.0",
           "PropertyChanged.Fody": "3.1.3",
-          "Syncfusion.Xamarin.Buttons": "17.3.0.21",
-          "Syncfusion.Xamarin.Cards": "17.3.0.21",
-          "Syncfusion.Xamarin.Core": "17.3.0.21",
-          "Syncfusion.Xamarin.SfChart": "17.3.0.21",
-          "Syncfusion.Xamarin.SfListView": "17.3.0.21",
-          "Syncfusion.Xamarin.SfMaskedEdit": "17.3.0.21",
-          "Syncfusion.Xamarin.SfNumericTextBox": "17.3.0.21",
-          "Syncfusion.Xamarin.SfNumericUpDown": "17.3.0.21",
-          "Syncfusion.Xamarin.SfTabView": "17.3.0.21",
+          "Syncfusion.Xamarin.Buttons": "17.3.0.26",
+          "Syncfusion.Xamarin.Cards": "17.3.0.26",
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
+          "Syncfusion.Xamarin.SfChart": "17.3.0.26",
+          "Syncfusion.Xamarin.SfListView": "17.3.0.26",
+          "Syncfusion.Xamarin.SfMaskedEdit": "17.3.0.26",
+          "Syncfusion.Xamarin.SfNumericTextBox": "17.3.0.26",
+          "Syncfusion.Xamarin.SfNumericUpDown": "17.3.0.26",
+          "Syncfusion.Xamarin.SfPopupLayout": "17.3.0.26",
+          "Syncfusion.Xamarin.SfTabView": "17.3.0.26",
           "TenantsApp.Bl": "1.0.0",
           "TenantsApp.Entities": "1.0.0",
           "TenantsApp.Repository": "1.0.0",
@@ -1405,7 +1437,7 @@
           "lib/Xamarin.iOS10/SQLitePCLRaw.provider.sqlite3.dll": {}
         }
       },
-      "Syncfusion.Licensing/17.3.0.21": {
+      "Syncfusion.Licensing/17.3.0.26": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
@@ -1414,10 +1446,10 @@
           "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
         }
       },
-      "Syncfusion.Xamarin.Buttons/17.3.0.21": {
+      "Syncfusion.Xamarin.Buttons/17.3.0.26": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -1429,10 +1461,10 @@
           "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.Cards/17.3.0.21": {
+      "Syncfusion.Xamarin.Cards/17.3.0.26": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -1444,10 +1476,10 @@
           "lib/Xamarin.iOS10/Syncfusion.Cards.XForms.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.Core/17.3.0.21": {
+      "Syncfusion.Xamarin.Core/17.3.0.26": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Licensing": "17.3.0.21",
+          "Syncfusion.Licensing": "17.3.0.26",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -1459,7 +1491,7 @@
           "lib/Xamarin.iOS10/Syncfusion.Core.XForms.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.DataSource/17.3.0.21": {
+      "Syncfusion.Xamarin.DataSource/17.3.0.26": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
@@ -1468,7 +1500,7 @@
           "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
         }
       },
-      "Syncfusion.Xamarin.GridCommon/17.3.0.21": {
+      "Syncfusion.Xamarin.GridCommon/17.3.0.26": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
@@ -1477,10 +1509,10 @@
           "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfChart/17.3.0.21": {
+      "Syncfusion.Xamarin.SfChart/17.3.0.26": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -1492,12 +1524,12 @@
           "lib/Xamarin.iOS10/Syncfusion.SfChart.XForms.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfListView/17.3.0.21": {
+      "Syncfusion.Xamarin.SfListView/17.3.0.26": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.21",
-          "Syncfusion.Xamarin.DataSource": "17.3.0.21",
-          "Syncfusion.Xamarin.GridCommon": "17.3.0.21",
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
+          "Syncfusion.Xamarin.DataSource": "17.3.0.26",
+          "Syncfusion.Xamarin.GridCommon": "17.3.0.26",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -1509,10 +1541,10 @@
           "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfMaskedEdit/17.3.0.21": {
+      "Syncfusion.Xamarin.SfMaskedEdit/17.3.0.26": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -1524,10 +1556,10 @@
           "lib/Xamarin.iOS10/Syncfusion.SfMaskedEdit.XForms.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfNumericTextBox/17.3.0.21": {
+      "Syncfusion.Xamarin.SfNumericTextBox/17.3.0.26": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -1541,10 +1573,10 @@
           "lib/Xamarin.iOS10/Syncfusion.SfNumericTextBox.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfNumericUpDown/17.3.0.21": {
+      "Syncfusion.Xamarin.SfNumericUpDown/17.3.0.26": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -1556,10 +1588,25 @@
           "lib/Xamarin.iOS10/Syncfusion.SfNumericUpDown.XForms.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfTabView/17.3.0.21": {
+      "Syncfusion.Xamarin.SfPopupLayout/17.3.0.26": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
+          "Xamarin.Forms": "3.6.0.344457"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPopupLayout.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfPopupLayout.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPopupLayout.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfPopupLayout.XForms.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfTabView/17.3.0.26": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -1844,15 +1891,16 @@
           "Acr.UserDialogs": "7.0.35",
           "FreshMvvm": "3.0.0",
           "PropertyChanged.Fody": "3.1.3",
-          "Syncfusion.Xamarin.Buttons": "17.3.0.21",
-          "Syncfusion.Xamarin.Cards": "17.3.0.21",
-          "Syncfusion.Xamarin.Core": "17.3.0.21",
-          "Syncfusion.Xamarin.SfChart": "17.3.0.21",
-          "Syncfusion.Xamarin.SfListView": "17.3.0.21",
-          "Syncfusion.Xamarin.SfMaskedEdit": "17.3.0.21",
-          "Syncfusion.Xamarin.SfNumericTextBox": "17.3.0.21",
-          "Syncfusion.Xamarin.SfNumericUpDown": "17.3.0.21",
-          "Syncfusion.Xamarin.SfTabView": "17.3.0.21",
+          "Syncfusion.Xamarin.Buttons": "17.3.0.26",
+          "Syncfusion.Xamarin.Cards": "17.3.0.26",
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
+          "Syncfusion.Xamarin.SfChart": "17.3.0.26",
+          "Syncfusion.Xamarin.SfListView": "17.3.0.26",
+          "Syncfusion.Xamarin.SfMaskedEdit": "17.3.0.26",
+          "Syncfusion.Xamarin.SfNumericTextBox": "17.3.0.26",
+          "Syncfusion.Xamarin.SfNumericUpDown": "17.3.0.26",
+          "Syncfusion.Xamarin.SfPopupLayout": "17.3.0.26",
+          "Syncfusion.Xamarin.SfTabView": "17.3.0.26",
           "TenantsApp.Bl": "1.0.0",
           "TenantsApp.Entities": "1.0.0",
           "TenantsApp.Repository": "1.0.0",
@@ -2041,7 +2089,7 @@
           "lib/Xamarin.iOS10/SQLitePCLRaw.provider.sqlite3.dll": {}
         }
       },
-      "Syncfusion.Licensing/17.3.0.21": {
+      "Syncfusion.Licensing/17.3.0.26": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
@@ -2050,10 +2098,10 @@
           "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
         }
       },
-      "Syncfusion.Xamarin.Buttons/17.3.0.21": {
+      "Syncfusion.Xamarin.Buttons/17.3.0.26": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -2065,10 +2113,10 @@
           "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.Cards/17.3.0.21": {
+      "Syncfusion.Xamarin.Cards/17.3.0.26": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -2080,10 +2128,10 @@
           "lib/Xamarin.iOS10/Syncfusion.Cards.XForms.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.Core/17.3.0.21": {
+      "Syncfusion.Xamarin.Core/17.3.0.26": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Licensing": "17.3.0.21",
+          "Syncfusion.Licensing": "17.3.0.26",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -2095,7 +2143,7 @@
           "lib/Xamarin.iOS10/Syncfusion.Core.XForms.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.DataSource/17.3.0.21": {
+      "Syncfusion.Xamarin.DataSource/17.3.0.26": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
@@ -2104,7 +2152,7 @@
           "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
         }
       },
-      "Syncfusion.Xamarin.GridCommon/17.3.0.21": {
+      "Syncfusion.Xamarin.GridCommon/17.3.0.26": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
@@ -2113,10 +2161,10 @@
           "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfChart/17.3.0.21": {
+      "Syncfusion.Xamarin.SfChart/17.3.0.26": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -2128,12 +2176,12 @@
           "lib/Xamarin.iOS10/Syncfusion.SfChart.XForms.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfListView/17.3.0.21": {
+      "Syncfusion.Xamarin.SfListView/17.3.0.26": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.21",
-          "Syncfusion.Xamarin.DataSource": "17.3.0.21",
-          "Syncfusion.Xamarin.GridCommon": "17.3.0.21",
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
+          "Syncfusion.Xamarin.DataSource": "17.3.0.26",
+          "Syncfusion.Xamarin.GridCommon": "17.3.0.26",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -2145,10 +2193,10 @@
           "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfMaskedEdit/17.3.0.21": {
+      "Syncfusion.Xamarin.SfMaskedEdit/17.3.0.26": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -2160,10 +2208,10 @@
           "lib/Xamarin.iOS10/Syncfusion.SfMaskedEdit.XForms.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfNumericTextBox/17.3.0.21": {
+      "Syncfusion.Xamarin.SfNumericTextBox/17.3.0.26": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -2177,10 +2225,10 @@
           "lib/Xamarin.iOS10/Syncfusion.SfNumericTextBox.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfNumericUpDown/17.3.0.21": {
+      "Syncfusion.Xamarin.SfNumericUpDown/17.3.0.26": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -2192,10 +2240,25 @@
           "lib/Xamarin.iOS10/Syncfusion.SfNumericUpDown.XForms.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfTabView/17.3.0.21": {
+      "Syncfusion.Xamarin.SfPopupLayout/17.3.0.26": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "17.3.0.21",
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
+          "Xamarin.Forms": "3.6.0.344457"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPopupLayout.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfPopupLayout.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfPopupLayout.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfPopupLayout.XForms.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfTabView/17.3.0.26": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
           "Xamarin.Forms": "3.6.0.344457"
         },
         "compile": {
@@ -2480,15 +2543,16 @@
           "Acr.UserDialogs": "7.0.35",
           "FreshMvvm": "3.0.0",
           "PropertyChanged.Fody": "3.1.3",
-          "Syncfusion.Xamarin.Buttons": "17.3.0.21",
-          "Syncfusion.Xamarin.Cards": "17.3.0.21",
-          "Syncfusion.Xamarin.Core": "17.3.0.21",
-          "Syncfusion.Xamarin.SfChart": "17.3.0.21",
-          "Syncfusion.Xamarin.SfListView": "17.3.0.21",
-          "Syncfusion.Xamarin.SfMaskedEdit": "17.3.0.21",
-          "Syncfusion.Xamarin.SfNumericTextBox": "17.3.0.21",
-          "Syncfusion.Xamarin.SfNumericUpDown": "17.3.0.21",
-          "Syncfusion.Xamarin.SfTabView": "17.3.0.21",
+          "Syncfusion.Xamarin.Buttons": "17.3.0.26",
+          "Syncfusion.Xamarin.Cards": "17.3.0.26",
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
+          "Syncfusion.Xamarin.SfChart": "17.3.0.26",
+          "Syncfusion.Xamarin.SfListView": "17.3.0.26",
+          "Syncfusion.Xamarin.SfMaskedEdit": "17.3.0.26",
+          "Syncfusion.Xamarin.SfNumericTextBox": "17.3.0.26",
+          "Syncfusion.Xamarin.SfNumericUpDown": "17.3.0.26",
+          "Syncfusion.Xamarin.SfPopupLayout": "17.3.0.26",
+          "Syncfusion.Xamarin.SfTabView": "17.3.0.26",
           "TenantsApp.Bl": "1.0.0",
           "TenantsApp.Entities": "1.0.0",
           "TenantsApp.Repository": "1.0.0",
@@ -2798,10 +2862,10 @@
         "sqlitepclraw.provider.sqlite3.ios_unified.nuspec"
       ]
     },
-    "Syncfusion.Licensing/17.3.0.21": {
-      "sha512": "NyEF2K77GmmEhyQbVc9MYv4URqoapfUDMZ1Rwq8SFd7Lw4VmeWSiZjniGZBlAQiNomyz8j0I2/5h6HuZB6vV/g==",
+    "Syncfusion.Licensing/17.3.0.26": {
+      "sha512": "EeKHArPD0M1bkJ3x28EcKcnlCqkBokQWd/v5v44j48ImsFuQgywV8G1CN8W+S1aSsqjwZaRF0W16oJvWBkbhfw==",
       "type": "package",
-      "path": "syncfusion.licensing/17.3.0.21",
+      "path": "syncfusion.licensing/17.3.0.26",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2821,14 +2885,14 @@
         "lib/netstandard2.0/Syncfusion.Licensing.dll",
         "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Licensing.dll",
         "lib/uap10.0/Syncfusion.Licensing.dll",
-        "syncfusion.licensing.17.3.0.21.nupkg.sha512",
+        "syncfusion.licensing.17.3.0.26.nupkg.sha512",
         "syncfusion.licensing.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.Buttons/17.3.0.21": {
-      "sha512": "30HkID9ZqFKvzaOGmDxRTUpspswhFhGRxEtGHXbbgFucnvBxHLoxu9NKudkH4HQdrCVT4wib/rLRQyMvQewWzA==",
+    "Syncfusion.Xamarin.Buttons/17.3.0.26": {
+      "sha512": "oYgdvO6S9he9dbWNODKBKUjlsSqyLP4k31VVHiXxIsk0pq3bJhucCImRq/BtPpqhO7DCdDVzzl1hwSgw5bBwzQ==",
       "type": "package",
-      "path": "syncfusion.xamarin.buttons/17.3.0.21",
+      "path": "syncfusion.xamarin.buttons/17.3.0.26",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2852,14 +2916,14 @@
         "lib/uap10.0/Syncfusion.Buttons.XForms.UWP/Themes/Generic.xaml",
         "lib/uap10.0/Syncfusion.Buttons.XForms.dll",
         "lib/uap10.0/Syncfusion.Buttons.XForms.xml",
-        "syncfusion.xamarin.buttons.17.3.0.21.nupkg.sha512",
+        "syncfusion.xamarin.buttons.17.3.0.26.nupkg.sha512",
         "syncfusion.xamarin.buttons.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.Cards/17.3.0.21": {
-      "sha512": "FNie1JKPcFL6xqij4IhYQZI0Pd8BYCeuEez7ot2O5BUlLzlXpmG+Z6Ax6+tuzlPRSbcgWgkq49kKnV+Z5zgAjg==",
+    "Syncfusion.Xamarin.Cards/17.3.0.26": {
+      "sha512": "5NOLS/30/kHMdD/zKbutLJD+JMrQhsldyTcEnAcoCE73O816xUcG3gXzJVzznkTgDw4Gd5ioO2ncoqmxLOTQfA==",
       "type": "package",
-      "path": "syncfusion.xamarin.cards/17.3.0.21",
+      "path": "syncfusion.xamarin.cards/17.3.0.26",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2877,14 +2941,14 @@
         "lib/uap10.0/Syncfusion.Cards.XForms.UWP.xml",
         "lib/uap10.0/Syncfusion.Cards.XForms.dll",
         "lib/uap10.0/Syncfusion.Cards.XForms.xml",
-        "syncfusion.xamarin.cards.17.3.0.21.nupkg.sha512",
+        "syncfusion.xamarin.cards.17.3.0.26.nupkg.sha512",
         "syncfusion.xamarin.cards.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.Core/17.3.0.21": {
-      "sha512": "xAvjnZpAetCtiQO0Sw1W38voCi7sAre8csLnyxprgMlJoQ9AANwV161S+kzqj7VyBFAlotr/DCGclYk38tUyBA==",
+    "Syncfusion.Xamarin.Core/17.3.0.26": {
+      "sha512": "EFqxspU6SCQw5HT0YwT7x63aKexC/Vd5grIW8kDki8PF9cI5A34gVGDxVDh4BEpm734xRxOBKXwrQ//jUO1zIw==",
       "type": "package",
-      "path": "syncfusion.xamarin.core/17.3.0.21",
+      "path": "syncfusion.xamarin.core/17.3.0.26",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2908,14 +2972,14 @@
         "lib/uap10.0/Syncfusion.Core.XForms.UWP/TILRenderer/ToggleIcons/ToggleVisibleIcon.xaml",
         "lib/uap10.0/Syncfusion.Core.XForms.dll",
         "lib/uap10.0/Syncfusion.Core.XForms.xml",
-        "syncfusion.xamarin.core.17.3.0.21.nupkg.sha512",
+        "syncfusion.xamarin.core.17.3.0.26.nupkg.sha512",
         "syncfusion.xamarin.core.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.DataSource/17.3.0.21": {
-      "sha512": "5HoZLU3skMVljBuF5ZiVmRtsuWINbGSPfa+1hg+k1b5PE2S7UHY19mpHWM5xA4YdqfWOZYclJCF6FoHEqltGIg==",
+    "Syncfusion.Xamarin.DataSource/17.3.0.26": {
+      "sha512": "ssrcNjANi9pCGSXN4Ocfm7x9Qjmyn3QMZ6ir7RMu41yvUN6r0lmxIGwqIx6gX01mwwWPWRPToCpuy8GEOW+LSg==",
       "type": "package",
-      "path": "syncfusion.xamarin.datasource/17.3.0.21",
+      "path": "syncfusion.xamarin.datasource/17.3.0.26",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2929,14 +2993,14 @@
         "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.DataSource.Portable.dll",
         "lib/uap10.0/Syncfusion.DataSource.Portable.XML",
         "lib/uap10.0/Syncfusion.DataSource.Portable.dll",
-        "syncfusion.xamarin.datasource.17.3.0.21.nupkg.sha512",
+        "syncfusion.xamarin.datasource.17.3.0.26.nupkg.sha512",
         "syncfusion.xamarin.datasource.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.GridCommon/17.3.0.21": {
-      "sha512": "m7Bx/JbiC8iTEwpD/YXZPsLC2dTO2B1gkf6D2IR8zwZOSmofJlIgSNfe8kxHiFunEjD3Vw8OSsKx05yLRtnzmg==",
+    "Syncfusion.Xamarin.GridCommon/17.3.0.26": {
+      "sha512": "9STRFKy3JOSpiONyAE7wWZCdAOjJ4sz1mdQ44Nd9gpa1DR3OlNtRK+J3d5dvsIvJLsO7bGE0VFjN0GwIk0qGpQ==",
       "type": "package",
-      "path": "syncfusion.xamarin.gridcommon/17.3.0.21",
+      "path": "syncfusion.xamarin.gridcommon/17.3.0.26",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2952,14 +3016,14 @@
         "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.GridCommon.Portable.dll",
         "lib/uap10.0/Syncfusion.GridCommon.Portable.XML",
         "lib/uap10.0/Syncfusion.GridCommon.Portable.dll",
-        "syncfusion.xamarin.gridcommon.17.3.0.21.nupkg.sha512",
+        "syncfusion.xamarin.gridcommon.17.3.0.26.nupkg.sha512",
         "syncfusion.xamarin.gridcommon.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.SfChart/17.3.0.21": {
-      "sha512": "hkOyvK8/TntMEzbrW/pZP8KhJXqwBE6KNDcEafpgqDKFbzpONtU2JCgPQTG0NBgd9MWd0kpDxpb/2bHHSVBSsQ==",
+    "Syncfusion.Xamarin.SfChart/17.3.0.26": {
+      "sha512": "yW53Bv69FIyZ2N3Tns6GmdMCdJBq6wRHyXaxQOl8W6nXLuCgNJjSPzFVQt1kCD9AVSF/p+wOgGrezqSAWHQlJg==",
       "type": "package",
-      "path": "syncfusion.xamarin.sfchart/17.3.0.21",
+      "path": "syncfusion.xamarin.sfchart/17.3.0.26",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2979,14 +3043,14 @@
         "lib/uap10.0/Syncfusion.SfChart.XForms.UWP.dll",
         "lib/uap10.0/Syncfusion.SfChart.XForms.dll",
         "lib/uap10.0/Syncfusion.SfChart.XForms.xml",
-        "syncfusion.xamarin.sfchart.17.3.0.21.nupkg.sha512",
+        "syncfusion.xamarin.sfchart.17.3.0.26.nupkg.sha512",
         "syncfusion.xamarin.sfchart.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.SfListView/17.3.0.21": {
-      "sha512": "mhhnkZ2y+UPXSSZstBgQgHPiZBSm2ccgCX75swCljvjdwO8G1kepKB09XgG1zJq7U6vDZMTsWVxHiOGefeRcLg==",
+    "Syncfusion.Xamarin.SfListView/17.3.0.26": {
+      "sha512": "QDVelJOzNnFxss5EN6MaND80dNtyB6SLTJ6zdseqNI6R7ughzkHuxHcZLfV+JCt5K6cO+KEpvjdmPFU5X4rMZA==",
       "type": "package",
-      "path": "syncfusion.xamarin.sflistview/17.3.0.21",
+      "path": "syncfusion.xamarin.sflistview/17.3.0.26",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3006,14 +3070,14 @@
         "lib/uap10.0/Syncfusion.SfListView.XForms.UWP.dll",
         "lib/uap10.0/Syncfusion.SfListView.XForms.dll",
         "lib/uap10.0/Syncfusion.SfListView.XForms.xml",
-        "syncfusion.xamarin.sflistview.17.3.0.21.nupkg.sha512",
+        "syncfusion.xamarin.sflistview.17.3.0.26.nupkg.sha512",
         "syncfusion.xamarin.sflistview.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.SfMaskedEdit/17.3.0.21": {
-      "sha512": "xUaXsU79n9+fR0g+SHCO4b0h4lb1xwbHXsVANWBjaacgcY+WDUuiPMC8MrHf+ymDRUogWGy0VhZZPi79aDUhrA==",
+    "Syncfusion.Xamarin.SfMaskedEdit/17.3.0.26": {
+      "sha512": "8wdQ9lB6eH03tHfoPhf+y88ruG4hl28+XyL+1kje5py3t3nQSvBY+dH5MkCKDIP90uC8+ZUhi7oHPPjdqHZB5Q==",
       "type": "package",
-      "path": "syncfusion.xamarin.sfmaskededit/17.3.0.21",
+      "path": "syncfusion.xamarin.sfmaskededit/17.3.0.26",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3031,14 +3095,14 @@
         "lib/uap10.0/Syncfusion.SfMaskedEdit.XForms.UWP.dll",
         "lib/uap10.0/Syncfusion.SfMaskedEdit.XForms.dll",
         "lib/uap10.0/Syncfusion.SfMaskedEdit.XForms.xml",
-        "syncfusion.xamarin.sfmaskededit.17.3.0.21.nupkg.sha512",
+        "syncfusion.xamarin.sfmaskededit.17.3.0.26.nupkg.sha512",
         "syncfusion.xamarin.sfmaskededit.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.SfNumericTextBox/17.3.0.21": {
-      "sha512": "30EvQ3m2DL02lkp4bCWLTobzT8l6zZh0xWnAaEoLMkholiARcBCfBvLiTQk/QCByJ7sNrQ7UpHY1xeNVBbkI1A==",
+    "Syncfusion.Xamarin.SfNumericTextBox/17.3.0.26": {
+      "sha512": "f5WseRSFr/SZy+l41UGwnuUgDSCCqJ13NwBXYgAN0nV8/sLEEQxVWQNQxmRqXn01xrQWgFhlGtCQmblQ47wnMw==",
       "type": "package",
-      "path": "syncfusion.xamarin.sfnumerictextbox/17.3.0.21",
+      "path": "syncfusion.xamarin.sfnumerictextbox/17.3.0.26",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3060,14 +3124,14 @@
         "lib/uap10.0/Syncfusion.SfNumericTextBox.XForms.UWP.dll",
         "lib/uap10.0/Syncfusion.SfNumericTextBox.XForms.dll",
         "lib/uap10.0/Syncfusion.SfNumericTextBox.XForms.xml",
-        "syncfusion.xamarin.sfnumerictextbox.17.3.0.21.nupkg.sha512",
+        "syncfusion.xamarin.sfnumerictextbox.17.3.0.26.nupkg.sha512",
         "syncfusion.xamarin.sfnumerictextbox.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.SfNumericUpDown/17.3.0.21": {
-      "sha512": "XdAIrtsouvhuoYJ8J8naFXZu+5oA+1p8x0Efh13obir8Y9N4mny4HEE+Mubhjp4TZBZxCHak2rlaxop1/3LSjg==",
+    "Syncfusion.Xamarin.SfNumericUpDown/17.3.0.26": {
+      "sha512": "vnqGdqyFj5e62nP1AG84AFpeiD4oTz/uSyB8XBKzPhdwmqHpiBGr/XBzp5GMiBrKBHWw/pZtiTWzRpDUXzwk2Q==",
       "type": "package",
-      "path": "syncfusion.xamarin.sfnumericupdown/17.3.0.21",
+      "path": "syncfusion.xamarin.sfnumericupdown/17.3.0.26",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3085,14 +3149,47 @@
         "lib/uap10.0/Syncfusion.SfNumericUpDown.XForms.UWP.dll",
         "lib/uap10.0/Syncfusion.SfNumericUpDown.XForms.dll",
         "lib/uap10.0/Syncfusion.SfNumericUpDown.XForms.xml",
-        "syncfusion.xamarin.sfnumericupdown.17.3.0.21.nupkg.sha512",
+        "syncfusion.xamarin.sfnumericupdown.17.3.0.26.nupkg.sha512",
         "syncfusion.xamarin.sfnumericupdown.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.SfTabView/17.3.0.21": {
-      "sha512": "iRDfrsMY5RNkhHU3jK2gyBSk1Rg3di4NKA8qLd2BTvJAHseSo8E7aL/R3NRWHtWTGYrOjBH5AB9y3PXbanrV/g==",
+    "Syncfusion.Xamarin.SfPopupLayout/17.3.0.26": {
+      "sha512": "lpbFyM0qE5a0UceKikb4E2dy6eH6Q9Ev1h6yzP1//2FzkNcKqvz2ooRLTGFymI21pvLsyfTrjsH7laf+xOh/Fw==",
       "type": "package",
-      "path": "syncfusion.xamarin.sftabview/17.3.0.21",
+      "path": "syncfusion.xamarin.sfpopuplayout/17.3.0.26",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/Syncfusion.SfPopupLayout.XForms.Android.dll",
+        "lib/MonoAndroid10/Syncfusion.SfPopupLayout.XForms.dll",
+        "lib/MonoAndroid10/Syncfusion.SfPopupLayout.XForms.xml",
+        "lib/Xamarin.iOS10/Syncfusion.SfPopupLayout.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfPopupLayout.XForms.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfPopupLayout.XForms.xml",
+        "lib/netstandard2.0/Syncfusion.SfPopupLayout.XForms.dll",
+        "lib/netstandard2.0/Syncfusion.SfPopupLayout.XForms.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfPopupLayout.XForms.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfPopupLayout.XForms.xml",
+        "lib/uap10.0/Syncfusion.SfPopupLayout.XForms.UWP.XML",
+        "lib/uap10.0/Syncfusion.SfPopupLayout.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.SfPopupLayout.XForms.UWP.pri",
+        "lib/uap10.0/Syncfusion.SfPopupLayout.XForms.UWP/Properties/Syncfusion.SfPopupLayout.XForms.UWP.rd.xml",
+        "lib/uap10.0/Syncfusion.SfPopupLayout.XForms.UWP/Resources/popup_forms_dark_theme_close_icon.png",
+        "lib/uap10.0/Syncfusion.SfPopupLayout.XForms.UWP/Resources/popup_forms_light_theme_close_icon.png",
+        "lib/uap10.0/Syncfusion.SfPopupLayout.XForms.UWP/Resources/popup_forms_uwp_close_icon.png",
+        "lib/uap10.0/Syncfusion.SfPopupLayout.XForms.UWP/Syncfusion.SfPopupLayout.XForms.UWP/Resources/popup_forms_dark_theme_close_icon.png",
+        "lib/uap10.0/Syncfusion.SfPopupLayout.XForms.UWP/Syncfusion.SfPopupLayout.XForms.UWP/Resources/popup_forms_light_theme_close_icon.png",
+        "lib/uap10.0/Syncfusion.SfPopupLayout.XForms.UWP/Syncfusion.SfPopupLayout.XForms.UWP/Resources/popup_forms_uwp_close_icon.png",
+        "lib/uap10.0/Syncfusion.SfPopupLayout.XForms.dll",
+        "lib/uap10.0/Syncfusion.SfPopupLayout.XForms.xml",
+        "syncfusion.xamarin.sfpopuplayout.17.3.0.26.nupkg.sha512",
+        "syncfusion.xamarin.sfpopuplayout.nuspec"
+      ]
+    },
+    "Syncfusion.Xamarin.SfTabView/17.3.0.26": {
+      "sha512": "K32DE+7Ur5Th0jdaoWE0H3uKKnMgVf/wdgaoHWTAWTVbzmSuUYYaudctCfoYlP3cDRT2LjTRnRJgfM3T4RZtuA==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sftabview/17.3.0.26",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3114,7 +3211,7 @@
         "lib/uap10.0/Syncfusion.SfTabView.XForms.UWP/Themes/Generic.xaml",
         "lib/uap10.0/Syncfusion.SfTabView.XForms.dll",
         "lib/uap10.0/Syncfusion.SfTabView.XForms.xml",
-        "syncfusion.xamarin.sftabview.17.3.0.21.nupkg.sha512",
+        "syncfusion.xamarin.sftabview.17.3.0.26.nupkg.sha512",
         "syncfusion.xamarin.sftabview.nuspec"
       ]
     },
@@ -3831,15 +3928,16 @@
     "Xamarin.iOS,Version=v1.0": [
       "Acr.UserDialogs >= 7.0.35",
       "FreshMvvm >= 3.0.0",
-      "Syncfusion.Xamarin.Buttons >= 17.3.0.21",
-      "Syncfusion.Xamarin.Cards >= 17.3.0.21",
-      "Syncfusion.Xamarin.Core >= 17.3.0.21",
-      "Syncfusion.Xamarin.SfChart >= 17.3.0.21",
-      "Syncfusion.Xamarin.SfListView >= 17.3.0.21",
-      "Syncfusion.Xamarin.SfMaskedEdit >= 17.3.0.21",
-      "Syncfusion.Xamarin.SfNumericTextBox >= 17.3.0.21",
-      "Syncfusion.Xamarin.SfNumericUpDown >= 17.3.0.21",
-      "Syncfusion.Xamarin.SfTabView >= 17.3.0.21",
+      "Syncfusion.Xamarin.Buttons >= 17.3.0.26",
+      "Syncfusion.Xamarin.Cards >= 17.3.0.26",
+      "Syncfusion.Xamarin.Core >= 17.3.0.26",
+      "Syncfusion.Xamarin.SfChart >= 17.3.0.26",
+      "Syncfusion.Xamarin.SfListView >= 17.3.0.26",
+      "Syncfusion.Xamarin.SfMaskedEdit >= 17.3.0.26",
+      "Syncfusion.Xamarin.SfNumericTextBox >= 17.3.0.26",
+      "Syncfusion.Xamarin.SfNumericUpDown >= 17.3.0.26",
+      "Syncfusion.Xamarin.SfPopupLayout >= 17.3.0.26",
+      "Syncfusion.Xamarin.SfTabView >= 17.3.0.26",
       "TenantsApp >= 1.0.0",
       "Xamarin.Essentials >= 1.3.1",
       "Xamarin.FFImageLoading >= 2.4.11.982",
@@ -3904,39 +4002,43 @@
           },
           "Syncfusion.Xamarin.Buttons": {
             "target": "Package",
-            "version": "[17.3.0.21, )"
+            "version": "[17.3.0.26, )"
           },
           "Syncfusion.Xamarin.Cards": {
             "target": "Package",
-            "version": "[17.3.0.21, )"
+            "version": "[17.3.0.26, )"
           },
           "Syncfusion.Xamarin.Core": {
             "target": "Package",
-            "version": "[17.3.0.21, )"
+            "version": "[17.3.0.26, )"
           },
           "Syncfusion.Xamarin.SfChart": {
             "target": "Package",
-            "version": "[17.3.0.21, )"
+            "version": "[17.3.0.26, )"
           },
           "Syncfusion.Xamarin.SfListView": {
             "target": "Package",
-            "version": "[17.3.0.21, )"
+            "version": "[17.3.0.26, )"
           },
           "Syncfusion.Xamarin.SfMaskedEdit": {
             "target": "Package",
-            "version": "[17.3.0.21, )"
+            "version": "[17.3.0.26, )"
           },
           "Syncfusion.Xamarin.SfNumericTextBox": {
             "target": "Package",
-            "version": "[17.3.0.21, )"
+            "version": "[17.3.0.26, )"
           },
           "Syncfusion.Xamarin.SfNumericUpDown": {
             "target": "Package",
-            "version": "[17.3.0.21, )"
+            "version": "[17.3.0.26, )"
+          },
+          "Syncfusion.Xamarin.SfPopupLayout": {
+            "target": "Package",
+            "version": "[17.3.0.26, )"
           },
           "Syncfusion.Xamarin.SfTabView": {
             "target": "Package",
-            "version": "[17.3.0.21, )"
+            "version": "[17.3.0.26, )"
           },
           "Xamarin.Essentials": {
             "target": "Package",

@@ -41,6 +41,9 @@ namespace TenantsApp {
         private global::Syncfusion.XForms.TextInputLayout.SfTextInputLayout txtCarparksLayout;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Syncfusion.XForms.TextInputLayout.SfTextInputLayout txtTotalBond;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Syncfusion.XForms.Buttons.SfButton SfButton;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
@@ -54,6 +57,7 @@ namespace TenantsApp {
             txtBathroomsLayout = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Syncfusion.XForms.TextInputLayout.SfTextInputLayout>(this, "txtBathroomsLayout");
             txtPeopleLayout = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Syncfusion.XForms.TextInputLayout.SfTextInputLayout>(this, "txtPeopleLayout");
             txtCarparksLayout = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Syncfusion.XForms.TextInputLayout.SfTextInputLayout>(this, "txtCarparksLayout");
+            txtTotalBond = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Syncfusion.XForms.TextInputLayout.SfTextInputLayout>(this, "txtTotalBond");
             SfButton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Syncfusion.XForms.Buttons.SfButton>(this, "SfButton");
         }
     }

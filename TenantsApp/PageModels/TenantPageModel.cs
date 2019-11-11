@@ -9,19 +9,23 @@ using Xamarin.Forms;
 
 namespace TenantsApp
 {
+    public class TenantPageParameters
+    {
+        public Tenant Tenant { get; set; }
+        public Place Place { get; set; }
+    }
+
     [PropertyChanged.AddINotifyPropertyChangedInterface]
     public  class TenantPageModel: BaseViewModel
     {
 
-        public class TenantPageParameters
-        {
-            public Tenant Tenant { get; set; }
-            public Place Place { get; set; }
-        }
+       
 
         IUserDialogs _userDialogs;
         ITenantsBl _tenantsBl;
         public ICommand SaveCommand { get; set; }
+
+        public ICommand GoToRentsCommand { get; set; }
 
         public Tenant Tenant { get; set; }
         public Place Place { get; set; }
@@ -32,7 +36,23 @@ namespace TenantsApp
             _userDialogs = userDialogs;
             _tenantsBl = tenantsBl;
             SaveCommand = new Command(Save);
-           
+            GoToRentsCommand = new Command(GoToRents);
+
+
+        }
+
+        private async void GoToRents()
+        {
+            try
+            {
+                var para = new RentsPageModelParameters();
+                para.Tenant  = this.Tenant ;
+                await CoreMethods.PushPageModel<RentsPageModel>(para);
+            }
+            catch (Exception ex)
+            {
+                Helpers.ExceptionHelper.ProcessException(ex, _userDialogs, nameof(PropertyPageModel));
+            }
         }
 
         private async void Save()
@@ -54,8 +74,7 @@ namespace TenantsApp
         {
             try
             {
-                base.Init(initData);
-               
+                base.Init(initData);               
 
                 if (initData != null)
                 {
@@ -67,6 +86,8 @@ namespace TenantsApp
                 if (this.Tenant==null)
                 {
                     this.Tenant = new Tenant();
+                    this.Tenant.Start = DateTime.Now;
+                    this.Tenant.End = DateTime.Now.AddYears(1);
                 }
             }
             catch (Exception ex)

@@ -23,6 +23,12 @@ namespace TenantsApp {
         private global::Xamarin.Forms.Entry description;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.DatePicker dtStartDate;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.DatePicker dtEndDate;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Syncfusion.SfNumericUpDown.XForms.SfNumericUpDown numericUpDown;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
@@ -33,6 +39,8 @@ namespace TenantsApp {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(TenantPage));
             txtDescriptionLayout = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Syncfusion.XForms.TextInputLayout.SfTextInputLayout>(this, "txtDescriptionLayout");
             description = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "description");
+            dtStartDate = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.DatePicker>(this, "dtStartDate");
+            dtEndDate = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.DatePicker>(this, "dtEndDate");
             numericUpDown = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Syncfusion.SfNumericUpDown.XForms.SfNumericUpDown>(this, "numericUpDown");
             SfButton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Syncfusion.XForms.Buttons.SfButton>(this, "SfButton");
         }

@@ -31,6 +31,9 @@ namespace TenantsApp
             set { this.places = value; }
         }
 
+        public decimal  TotalBond { get; set; }
+        public decimal TotalSaved { get; set; }
+
         Place placeSelected;
         public Place PlaceSelected
         {
@@ -59,21 +62,7 @@ namespace TenantsApp
             AddCommand = new Command(AddPlace);
             DeletePlaceCommand = new Command<Guid>((x) => { AttempToDeleteProperty(x); });
             _placesBl = placesBl;
-            _userDialogs = userDialogs;
-
-            //if (System.ComponentModel.LicenseManager.UsageMode == System.ComponentModel.LicenseUsageMode.Designtime)
-            //{
-                //Places = new ObservableCollection<Place>();
-                //var place = new Place { Description = "71 Arthur", Address = "U5 / 71 Arthur st, Fortitude Valley", Bathrooms = 1, Rooms = 2, TenantsCapacity = 3, Carparks = 1 };
-
-                //Places.Add(place);
-
-                //place = new Place { Description = "79 Berwick", Address = "U26 / 79 Berwick st, Fortitude Valley", Bathrooms = 2, Rooms = 2, TenantsCapacity = 4, Carparks = 1 };
-                //Places.Add(place);
-
-                //place = new Place { Description = "Emporium", Address = "U211 / 1000 Ann St, Fortitude Valley", Bathrooms = 2, Rooms = 2, TenantsCapacity = 4, Carparks = 1 };
-                //Places.Add(place);
-          //  }
+            _userDialogs = userDialogs;           
         }
 
         private async Task AttempToDeleteProperty(Guid placeId)
@@ -117,9 +106,19 @@ namespace TenantsApp
         {
             try
             {
+                this.TotalBond = 0;
+                this.TotalSaved = 0;
+
                 this.IsBusy = true;                
                 Places = new ObservableCollection<Place>(_placesBl.GetCurrentPlaces());
-               
+               if(this.Places?.Count>0)
+                {
+                    foreach (var item in this.Places )
+                    {
+                        this.TotalBond += item.Tenants.Sum(x => x.Bond);
+                        this.TotalSaved += item.TotalSaved;
+                    }
+                }
             }
             catch (Exception ex)
             {

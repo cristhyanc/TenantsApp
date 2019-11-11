@@ -7,17 +7,20 @@ using TenantsApp.Shared.Exceptions;
 
 namespace TenantsApp.Entities
 {
-   public class Tenant
+    public class Tenant
     {
         [PrimaryKey]
         public Guid TenantID { get; set; }
         public Guid PlaceID { get; set; }
         public string Name { get; set; }
-        public decimal  Rent { get; set; }
+        public decimal Rent { get; set; }
         public decimal Bond { get; set; }
         public int PayWeekPeriod { get; set; }
         public DateTime Start { get; set; }
-        public DateTime End { get; set; }
+        public DateTime? End { get; set; }
+
+        [Ignore]
+        public ScheduleRent ScheduleRent { get; set; }
 
         [Ignore]
         public Place Place { get; set; }
@@ -34,7 +37,7 @@ namespace TenantsApp.Entities
                 if (this.TenantID == Guid.Empty)
                 {
                     this.TenantID = Guid.NewGuid();
-                    return uow.TenantRepository .Insert(this);
+                    return uow.TenantRepository.Insert(this);
                 }
 
                 return uow.TenantRepository.Update(this);
@@ -44,6 +47,22 @@ namespace TenantsApp.Entities
             {
                 throw ex;
             }
+        }
+
+        public bool Delete(IUnitOfWork uow)
+        {
+
+            if (this.TenantID == Guid.Empty)
+            {
+                throw new ValidationException("The Tenant ID is required");
+            }
+
+            var schedules = uow.ScheduleRentRepositoy.GetAll(x => x.TenantID == this.TenantID);
+            if(schedules?.Count>0)
+            {
+                schedules.ForEach(x => x.Delete(uow));
+            }
+            return uow.TenantRepository.Delete(this);
         }
 
     }

@@ -42,6 +42,8 @@ C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Android\obj\Deb
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Android\obj\Debug\90\android\assets\Syncfusion.SfNumericTextBox.XForms.dll
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Android\obj\Debug\90\android\assets\Syncfusion.SfNumericUpDown.XForms.Android.dll
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Android\obj\Debug\90\android\assets\Syncfusion.SfNumericUpDown.XForms.dll
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Android\obj\Debug\90\android\assets\Syncfusion.SfPopupLayout.XForms.Android.dll
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Android\obj\Debug\90\android\assets\Syncfusion.SfPopupLayout.XForms.dll
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Android\obj\Debug\90\android\assets\Syncfusion.SfTabView.XForms.Android.dll
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Android\obj\Debug\90\android\assets\Syncfusion.SfTabView.XForms.dll
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Android\obj\Debug\90\android\assets\System.Core.dll

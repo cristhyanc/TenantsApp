@@ -11,7 +11,9 @@
     <None Remove="Resources\counter.svg" />
     <None Remove="Resources\delete.svg" />
     <None Remove="Resources\parking.svg" />
+    <None Remove="Resources\payment.svg" />
     <None Remove="Resources\people.svg" />
+    <None Remove="Resources\piggyBank.svg" />
     <None Remove="Resources\timetable.svg" />
     <None Remove="Resources\toilet.svg" />
   </ItemGroup>
@@ -22,28 +24,35 @@
     <EmbeddedResource Include="Resources\counter.svg" />
     <EmbeddedResource Include="Resources\delete.svg" />
     <EmbeddedResource Include="Resources\parking.svg" />
+    <EmbeddedResource Include="Resources\payment.svg" />
     <EmbeddedResource Include="Resources\people.svg" />
+    <EmbeddedResource Include="Resources\piggyBank.svg" />
     <EmbeddedResource Include="Resources\timetable.svg" />
     <EmbeddedResource Include="Resources\toilet.svg" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Acr.UserDialogs" Version="7.0.35" />
-    <PackageReference Include="Fody" Version="6.0.3">
+    <PackageReference Include="Fody" Version="6.0.4">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="FreshMvvm" Version="3.0.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="PropertyChanged.Fody" Version="3.1.3" />
-    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="17.3.0.21" />
-    <PackageReference Include="Syncfusion.Xamarin.Cards" Version="17.3.0.21" />
-    <PackageReference Include="Syncfusion.Xamarin.Core" Version="17.3.0.21" />
-    <PackageReference Include="Syncfusion.Xamarin.SfChart" Version="17.3.0.21" />
-    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="17.3.0.21" />
-    <PackageReference Include="Syncfusion.Xamarin.SfMaskedEdit" Version="17.3.0.21" />
-    <PackageReference Include="Syncfusion.Xamarin.SfNumericTextBox" Version="17.3.0.21" />
-    <PackageReference Include="Syncfusion.Xamarin.SfNumericUpDown" Version="17.3.0.21" />
-    <PackageReference Include="Syncfusion.Xamarin.SfTabView" Version="17.3.0.21" />
+    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="17.3.0.26" />
+    <PackageReference Include="Syncfusion.Xamarin.Cards" Version="17.3.0.26" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="17.3.0.26" />
+    <PackageReference Include="Syncfusion.Xamarin.SfChart" Version="17.3.0.26" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="17.3.0.26" />
+    <PackageReference Include="Syncfusion.Xamarin.SfMaskedEdit" Version="17.3.0.26" />
+    <PackageReference Include="Syncfusion.Xamarin.SfNumericTextBox" Version="17.3.0.26" />
+    <PackageReference Include="Syncfusion.Xamarin.SfNumericUpDown" Version="17.3.0.26" />
+    <PackageReference Include="Syncfusion.Xamarin.SfPopupLayout" Version="17.3.0.26" />
+    <PackageReference Include="Syncfusion.Xamarin.SfTabView" Version="17.3.0.26" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Svg" Version="2.4.11.982" />
@@ -73,6 +82,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Pages\PropertyPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\RentsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Pages\TenantPage.xaml">

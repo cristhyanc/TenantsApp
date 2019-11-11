@@ -17,11 +17,15 @@ namespace TenantsApp
             try
             {
 
+                FreshIOC.Container.Register<IScheduleRentRepositoy, ScheduleRentRepositoy>();
+                FreshIOC.Container.Register<ITenantRepository, TenantRepository>();
+                FreshIOC.Container.Register<IRentRepository, RentRepository>();
                 FreshIOC.Container.Register<IPlaceRepository, PlaceRepository>();
                 FreshIOC.Container.Register<IUnitOfWork, UnitOfWork>().AsSingleton();
                 FreshIOC.Container.Register<IUserDialogs>(UserDialogs.Instance);
                 FreshIOC.Container.Register<Bl.IPlacesBl, Bl.PlacesBl>();
                 FreshIOC.Container.Register<Bl.ITenantsBl, Bl.TenantsBl>();
+                FreshIOC.Container.Register<Bl.IScheduleBl, Bl.ScheduleBl>();
                 
                 Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MTU5MTk4QDMxMzcyZTMzMmUzMGFvd0UvK2ZtUm5LSXYxRE9Rc3NvZnBOUFZqTHJqWkF2WVFKa1JVRENETFk9");
                 InitializeComponent();

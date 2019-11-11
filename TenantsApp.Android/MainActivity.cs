@@ -24,7 +24,9 @@ namespace TenantsApp.Droid
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.SetFlags("Visual_Experimental"); 
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            global::Xamarin.Forms.FormsMaterial.Init(this, savedInstanceState);           
+            global::Xamarin.Forms.FormsMaterial.Init(this, savedInstanceState);
+
+            Syncfusion.XForms.Android.PopupLayout.SfPopupLayoutRenderer.Init();
 
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init(true);
             var config = new FFImageLoading.Config.Configuration()

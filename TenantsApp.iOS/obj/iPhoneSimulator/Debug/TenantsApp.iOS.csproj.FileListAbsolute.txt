@@ -119,3 +119,5 @@ C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\obj\iPhoneS
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\obj\iPhoneSimulator\Debug\TenantsApp.iOS.csproj.CopyComplete
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\obj\iPhoneSimulator\Debug\TenantsApp.iOS.exe
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\obj\iPhoneSimulator\Debug\TenantsApp.iOS.pdb
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\bin\iPhoneSimulator\Debug\Syncfusion.SfPopupLayout.XForms.dll
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\bin\iPhoneSimulator\Debug\Syncfusion.SfPopupLayout.XForms.iOS.dll

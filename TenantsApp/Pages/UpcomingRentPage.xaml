@@ -5,6 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:card="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:sync="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
     xmlns:viewmodels="clr-namespace:TenantsApp"
@@ -66,13 +67,46 @@
                 x:Name="listView"
                 Margin="0,20,0,0"
                 AllowKeyboardNavigation="True"
+                AllowSwiping="True"
                 AutoFitMode="Height"
                 ItemTemplate="{StaticResource ItemTemplate}"
                 ItemsSource="{Binding Rents}"
                 SelectedItem="{Binding RentSelected}"
                 SelectionBackgroundColor="#E4E4E4"
                 SelectionGesture="Tap"
-                SelectionMode="Single" />
+                SelectionMode="Single">
+                <sync:SfListView.LeftSwipeTemplate>
+                    <DataTemplate x:Name="LeftSwipeTemplate">
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+
+                            <Grid
+                                Grid.Column="0"
+                                BackgroundColor="SkyBlue"
+                                HorizontalOptions="Fill"
+                                VerticalOptions="Fill">
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={x:Reference listView}, Path=BindingContext.PayRentCommand}" CommandParameter="{Binding RentID}" />
+                                </Grid.GestureRecognizers>
+                                <Grid HorizontalOptions="Center" VerticalOptions="Center">
+                                    <ffimageloadingsvg:SvgCachedImage
+                                        Margin="0,0,10,10"
+                                        HeightRequest="35"
+                                        HorizontalOptions="CenterAndExpand"
+                                        Source="resource://TenantsApp.Resources.payment.svg?assembly=TenantsApp"
+                                        VerticalOptions="CenterAndExpand"
+                                        WidthRequest="35" />
+                                </Grid>
+                            </Grid>
+
+                        </Grid>
+                    </DataTemplate>
+                </sync:SfListView.LeftSwipeTemplate>
+            </sync:SfListView>
 
         </StackLayout>
     </ContentPage.Content>

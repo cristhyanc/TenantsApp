@@ -12,7 +12,7 @@ namespace TenantsApp.Repository
         private SQLiteConnection _connection;
 
         private bool _isOnTransaction=false;
-        string dbFileName = "TenantsAppDb.db";
+        string dbFileName = "TenantsAppDbV1.db";
         
 
         public DBContext()
@@ -23,6 +23,7 @@ namespace TenantsApp.Repository
                 _connection.CreateTable<Place>();
                 _connection.CreateTable<Rent>();
                 _connection.CreateTable<Tenant>();
+                _connection.CreateTable<ScheduleRent >();
 
             }
             catch (Exception ex)

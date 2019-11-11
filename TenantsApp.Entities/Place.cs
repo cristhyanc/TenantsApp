@@ -1,6 +1,7 @@
 ﻿using SQLite;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using TenantsApp.Entities.Interfaces;
 using TenantsApp.Shared.Exceptions;
@@ -18,11 +19,25 @@ namespace TenantsApp.Entities
         public int Bathrooms { get; set; }
         public int Carparks { get; set; }
         public int TenantsCapacity { get; set; }
+        public decimal Rent { get; set; }
+        public decimal TotalSaved { get; set; }
 
         [Ignore ]
         public List<Tenant> Tenants  { get; set; }
 
-        
+        [Ignore]
+        public int TotalTenants
+        {
+            get
+            {
+                if (this.Tenants?.Count > 0)
+                {
+                    return this.Tenants.Count;
+
+                }
+                return 0;
+            }
+        }
 
         public Place( )
         {
@@ -83,27 +98,27 @@ namespace TenantsApp.Entities
         }
 
         public bool Delete(IUnitOfWork uow)
-        {
-            try
-            {
+        {           
                 if (this.PlaceID == Guid.Empty)
                 {
                     throw new ValidationException("The place ID is required");
                 }
                 var tenants = uow.TenantRepository.GetAll(x => x.PlaceID == this.PlaceID);
-
-                uow.Begin();
+              
                 if(tenants?.Count>0)
                 {
-                    uow.TenantRepository.Delete(tenants);
+                    foreach (var item in tenants)
+                    {
+                        item.Delete(uow);
+                    }
                 }
+                return uow.PlaceRepository.Delete(this);           
+        }
 
-                return uow.PlaceRepository.Delete(this);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+        public void LoadTenants(IUnitOfWork uow)
+        {
+            this.Tenants = uow.TenantRepository.GetAll(x => x.PlaceID == this.PlaceID);
+           
         }
     }
 }

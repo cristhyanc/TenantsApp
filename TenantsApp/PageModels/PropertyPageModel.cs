@@ -2,6 +2,7 @@
 using FreshMvvm;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -21,8 +22,10 @@ namespace TenantsApp
 
         public ICommand SaveCommand { get; set; }
         public ICommand AddTenatCommand { get; set; }
-
+        public ICommand GoToRentsCommand { get; set; }
         public int TotalTenants { get; set; }
+
+        public decimal?  TotalBond { get; set; }
 
         public Place Place { get; set; }
 
@@ -35,7 +38,23 @@ namespace TenantsApp
             _placesBl = placesBl;
             SaveCommand = new Command(Save);
             AddTenatCommand = new Command(GoToTenants);
+            GoToRentsCommand = new Command(GoToRents);
         }
+
+        private async void GoToRents()
+        {
+            try
+            {
+                var para = new RentsPageModelParameters();
+                para.Place = this.Place;
+                await CoreMethods.PushPageModel<RentsPageModel>(para);
+            }
+            catch (Exception ex)
+            {
+                Helpers.ExceptionHelper.ProcessException(ex, _userDialogs, nameof(PropertyPageModel));
+            }
+        }
+
 
         private void GoToTenants()
         {
@@ -49,6 +68,25 @@ namespace TenantsApp
             }
         }
 
+        protected override void ViewIsAppearing(object sender, EventArgs e)
+        {
+            try
+            {
+                if (this.Place != null && this.Place.PlaceID !=Guid.Empty )
+                {
+                    this.Place = _placesBl.GetPlace(this.Place.PlaceID);
+                    TotalTenants = this.Place.Tenants.Count;
+                    TotalBond = this.Place.Tenants?.Sum(x => x.Bond);
+                }
+            }
+            catch (Exception ex)
+            {
+                Helpers.ExceptionHelper.ProcessException(ex, _userDialogs, nameof(PropertyPageModel));
+            }
+        }
+
+      
+
         public override void Init(object initData)
         {
             try
@@ -58,8 +96,7 @@ namespace TenantsApp
 
                 if (initData != null)
                 {
-                    this.Place = (Place)initData;
-                    TotalTenants = this.Place.Tenants.Count;
+                    this.Place = (Place)initData;                  
                 }
             }
             catch (Exception ex)
@@ -74,7 +111,7 @@ namespace TenantsApp
             {
                 if(_placesBl.SavePlace(this.Place))
                 {
-                  await  CoreMethods.PopPageModel();
+                    await CoreMethods.PopPageModel();
                 }
             }           
             catch (Exception ex)

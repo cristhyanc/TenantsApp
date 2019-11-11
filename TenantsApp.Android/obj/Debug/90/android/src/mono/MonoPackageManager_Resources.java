@@ -43,6 +43,8 @@ public class MonoPackageManager_Resources {
 		"Syncfusion.SfNumericTextBox.XForms.dll",
 		"Syncfusion.SfNumericUpDown.XForms.Android.dll",
 		"Syncfusion.SfNumericUpDown.XForms.dll",
+		"Syncfusion.SfPopupLayout.XForms.Android.dll",
+		"Syncfusion.SfPopupLayout.XForms.dll",
 		"Syncfusion.SfTabView.XForms.Android.dll",
 		"Syncfusion.SfTabView.XForms.dll",
 		"System.Reactive.dll",

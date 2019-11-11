@@ -20,7 +20,7 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Resources>
         <ResourceDictionary>
-            <DataTemplate x:Key="ItemTemplate" x:Name="ItemTemplate">
+            <DataTemplate x:Key="ItemTemplate">
                 <card:SfCardView
                     Margin="10,0"
                     HeightRequest="100"
@@ -65,6 +65,8 @@
                                 Source="resource://TenantsApp.Resources.people.svg?assembly=TenantsApp"
                                 WidthRequest="20" />
 
+                            <Label Text="{Binding TotalTenants}" />
+                            <Label Text="/" />
                             <Label Text="{Binding TenantsCapacity}" />
                         </StackLayout>
 
@@ -116,12 +118,22 @@
                 SelectedItem="{Binding PlaceSelected}"
                 SelectionBackgroundColor="#E4E4E4"
                 SelectionGesture="Tap"
-                SelectionMode="Single"
-                SwipeEnded="listView_SwipeEnded"
-                SwipeStarted="listView_SwipeStarted">
+                SelectionMode="Single">
                 <sync:SfListView.HeaderTemplate>
                     <DataTemplate>
                         <StackLayout Orientation="Horizontal">
+
+                            <StackLayout Margin="10,0,0,0">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label FontSize="Large" Text="Bond:" />
+                                    <Label FontSize="Large" Text="{Binding TotalBond}" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label FontSize="Large" Text="Saved:" />
+                                    <Label FontSize="Large" Text="{Binding TotalSaved}" />
+                                </StackLayout>
+                            </StackLayout>
+
                             <ffimageloadingsvg:SvgCachedImage
                                 Margin="0,0,10,10"
                                 HeightRequest="30"
@@ -147,7 +159,6 @@
                             <Grid
                                 Grid.Column="0"
                                 BackgroundColor="#DC595F"
-                                BindingContextChanged="Grid_BindingContextChanged"
                                 HorizontalOptions="Fill"
                                 VerticalOptions="Fill">
                                 <Grid.GestureRecognizers>

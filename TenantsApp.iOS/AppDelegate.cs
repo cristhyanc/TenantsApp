@@ -31,7 +31,7 @@ namespace TenantsApp.iOS
             Syncfusion.XForms.iOS.TabView.SfTabViewRenderer.Init();
             Syncfusion.SfNumericUpDown.XForms.iOS.SfNumericUpDownRenderer.Init();
             global::Xamarin.Forms.Forms.Init();
-
+            Syncfusion.XForms.iOS.PopupLayout.SfPopupLayoutRenderer.Init();
             new SfNumericTextBoxRenderer();
             LoadApplication(new App());
 

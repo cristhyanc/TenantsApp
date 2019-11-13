@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using TenantsApp.Entities;
 using TenantsApp.Entities.Interfaces;
@@ -30,7 +31,7 @@ namespace TenantsApp.Bl
             }
             catch (Exception ex)
             {
-                throw ex;
+                throw;
             }
         }
 
@@ -42,7 +43,7 @@ namespace TenantsApp.Bl
             }
             catch (Exception ex)
             {
-                throw ex;
+                throw;
             }
         }
 
@@ -50,11 +51,13 @@ namespace TenantsApp.Bl
         {
             try
             {
-                return _uow.TenantRepository.GetAll(x => x.PlaceID == placeId);
+                var tenan= _uow.TenantRepository.GetAll(x => x.PlaceID == placeId);
+                tenan = tenan.OrderByDescending(x => x.End).ToList();
+                return tenan;
             }
             catch (Exception ex)
             {
-                throw ex;
+                throw;
             }
         }
     }

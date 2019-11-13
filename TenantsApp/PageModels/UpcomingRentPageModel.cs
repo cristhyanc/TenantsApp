@@ -67,12 +67,12 @@ namespace TenantsApp
             LoadRents();
         }
 
-        private void PayRent(Guid rentId)
+        private async void PayRent(Guid rentId)
         {
             try
             {
-              
-                if(!_scheduleBl.PayRent(rentId))
+                this.IsBusy = true;
+                if(!await _scheduleBl.PayRent(rentId))
                 {
                     _userDialogs.Alert("The rent could not be proccessed");
                 }
@@ -85,6 +85,10 @@ namespace TenantsApp
             catch (Exception ex)
             {
                 Helpers.ExceptionHelper.ProcessException(ex, _userDialogs, nameof(RentsPageModel));
+            }
+            finally
+            {
+                this.IsBusy = false;
             }
         }
     }

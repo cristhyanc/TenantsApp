@@ -10,6 +10,8 @@
     <None Remove="Resources\bed.svg" />
     <None Remove="Resources\counter.svg" />
     <None Remove="Resources\delete.svg" />
+    <None Remove="Resources\deleteCross.svg" />
+    <None Remove="Resources\edit.svg" />
     <None Remove="Resources\parking.svg" />
     <None Remove="Resources\payment.svg" />
     <None Remove="Resources\people.svg" />
@@ -23,6 +25,8 @@
     <EmbeddedResource Include="Resources\bed.svg" />
     <EmbeddedResource Include="Resources\counter.svg" />
     <EmbeddedResource Include="Resources\delete.svg" />
+    <EmbeddedResource Include="Resources\deleteCross.svg" />
+    <EmbeddedResource Include="Resources\edit.svg" />
     <EmbeddedResource Include="Resources\parking.svg" />
     <EmbeddedResource Include="Resources\payment.svg" />
     <EmbeddedResource Include="Resources\people.svg" />

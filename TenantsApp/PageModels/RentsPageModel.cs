@@ -34,8 +34,11 @@ namespace TenantsApp
 
         public ICommand OpenAddCommand { get; set; }
         public ICommand SaveScheduleCommand { get; set; }
+        public ICommand DeleteScheduleCommand { get; set; }
         public bool DisplayPopup { get; set; }
         public bool ShowAddButton { get; set; }
+        public bool IsEditButtonVisible { get; set; }
+        public bool IsDeleteButtonVisible { get; set; }
         public decimal Total { get; set; }
 
         Rent rentSelected;
@@ -64,15 +67,38 @@ namespace TenantsApp
             _placesBl = placesBl;
             OpenAddCommand = new Command(OpenPopup);
             SaveScheduleCommand = new Command(SaveSchedule);
+            DeleteScheduleCommand = new Command(DeleteSchedule);
         }
 
-        private void SaveSchedule()
+        private async void DeleteSchedule()
         {
             try
             {
-               if(_scheduleBl.CreateNewScheduleRent(this.ScheduleRent ))
+                if (await _userDialogs.ConfirmAsync("Do you want to delete this rent schedule?"))
                 {
-                    this.LoadSchedulaRents();
+                    if(_scheduleBl.DeleteSchedule(this.ScheduleRent.ScheduleID))
+                    {
+                        await CoreMethods.PopPageModel();
+                    }
+                    else
+                    {
+                        _userDialogs.Alert("It Could not be deleted");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Helpers.ExceptionHelper.ProcessException(ex, _userDialogs, nameof(RentsPageModel));
+            }
+        }
+
+        private async void SaveSchedule()
+        {
+            try
+            {
+               if(_scheduleBl.SavecheduleRent(this.ScheduleRent ))
+                {
+                    await CoreMethods.PopPageModel();
                 }
                 else
                 {
@@ -161,6 +187,8 @@ namespace TenantsApp
              
                 if (this.ScheduleRent != null && this.ScheduleRent.ScheduleID != Guid.Empty)
                 {
+                    this.IsDeleteButtonVisible = true;
+                    this.IsEditButtonVisible = true;
                     var rent = _scheduleBl.GetRents(this.ScheduleRent.ScheduleID);
                     rent.ForEach(x => x.Tenant = this.parameters.Tenant);
                     this.Rents = new ObservableCollection<Rent>(rent);

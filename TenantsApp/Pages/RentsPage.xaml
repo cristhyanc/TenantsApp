@@ -196,8 +196,35 @@
                             Orientation="Horizontal"
                             Spacing="30">
                             <Label FontSize="Large" Text="Total $:" />
-                            <Label FontSize="Large" Text="{Binding Total}" />
+                            <Label
+                                FontSize="Large"
+                                HorizontalOptions="StartAndExpand"
+                                Text="{Binding Total}" />
+
+                            <ffimageloadingsvg:SvgCachedImage
+                                Margin="0,0,0,10"
+                                HeightRequest="30"
+                                HorizontalOptions="End"
+                                IsVisible="{Binding IsEditButtonVisible}"
+                                Source="resource://TenantsApp.Resources.edit.svg?assembly=TenantsApp"
+                                WidthRequest="30">
+                                <ffimageloadingsvg:SvgCachedImage.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding OpenAddCommand}" />
+                                </ffimageloadingsvg:SvgCachedImage.GestureRecognizers>
+                            </ffimageloadingsvg:SvgCachedImage>
+
+                            <ffimageloadingsvg:SvgCachedImage
+                                Margin="0,0,10,10"
+                                HeightRequest="30"
+                                IsVisible="{Binding IsDeleteButtonVisible}"
+                                Source="resource://TenantsApp.Resources.deleteCross.svg?assembly=TenantsApp"
+                                WidthRequest="30">
+                                <ffimageloadingsvg:SvgCachedImage.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding DeleteScheduleCommand}" />
+                                </ffimageloadingsvg:SvgCachedImage.GestureRecognizers>
+                            </ffimageloadingsvg:SvgCachedImage>
                         </StackLayout>
+
                     </DataTemplate>
                 </sync:SfListView.HeaderTemplate>
             </sync:SfListView>

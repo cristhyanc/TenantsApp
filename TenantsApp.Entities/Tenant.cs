@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using TenantsApp.Entities.Interfaces;
 using TenantsApp.Shared.Exceptions;
+using Xamarin.Forms;
 
 namespace TenantsApp.Entities
 {
@@ -13,11 +14,33 @@ namespace TenantsApp.Entities
         public Guid TenantID { get; set; }
         public Guid PlaceID { get; set; }
         public string Name { get; set; }
+        public string Email { get; set; }
         public decimal Rent { get; set; }
         public decimal Bond { get; set; }
         public int PayWeekPeriod { get; set; }
         public DateTime Start { get; set; }
         public DateTime? End { get; set; }
+
+
+        [Ignore]
+        public Color ItemBackgroundColor
+        {
+            get
+            {
+                if(this.End.HasValue )
+                {
+                    DateTime dateNow = DateTime.Parse(DateTime.Now.ToShortDateString());
+                    this.End = DateTime.Parse(this.End.Value .ToShortDateString());
+
+                    if (this.End < dateNow)
+                    {
+                        return Color.WhiteSmoke; ;
+                    }
+                }
+               
+                return Color.White;
+            }
+        }
 
         [Ignore]
         public ScheduleRent ScheduleRent { get; set; }

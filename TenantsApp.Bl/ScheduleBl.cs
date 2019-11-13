@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using TenantsApp.Entities;
 using TenantsApp.Entities.Interfaces;
 using TenantsApp.Shared.Exceptions;
+using TenantsApp.Shared.Interfaces;
 
 namespace TenantsApp.Bl
 {
@@ -12,11 +14,39 @@ namespace TenantsApp.Bl
     {
 
         IUnitOfWork _uow;
-        public ScheduleBl(IUnitOfWork uow)
+        IEmailService _emailService;
+        public ScheduleBl(IUnitOfWork uow, IEmailService emailService )
         {
             _uow = uow;
+            _emailService = emailService;
         }
 
+
+        public bool DeleteSchedule(Guid scheduleId)
+        {
+            try
+            {
+                var schedu = _uow.ScheduleRentRepositoy.Get(scheduleId);
+                if (schedu == null)
+                {
+                    throw new ValidationException("Schedule does not exist");
+                }
+
+                _uow.Begin();
+                if (schedu.Delete(_uow))
+                {
+                    _uow.Commit();
+                    return true;
+                }
+                _uow.RollBack();
+                return false;
+            }
+            catch (Exception)
+            {
+                _uow.RollBack();
+                throw;
+            }
+        }
 
         public ScheduleRent GetTenantSchedule(Guid tenantID)
         {
@@ -30,33 +60,40 @@ namespace TenantsApp.Bl
         }
 
 
-        public bool CreateNewScheduleRent(ScheduleRent schedule)
+        public bool SavecheduleRent(ScheduleRent schedule)
         {
             try
             {
+                bool  isNew = false; ;
                 if (schedule == null)
                 {
                     throw new ArgumentNullException(nameof(schedule));
                 }
 
+                if (schedule.ScheduleID == Guid.Empty)
+                {
+                    isNew = true;
+                }
+
                 _uow.Begin();
                 if (schedule.Save(_uow))
                 {
-                    if (schedule.CreateNextRent(_uow))
+                    if (isNew)
+                    {
+                        if (schedule.CreateNextRent(_uow))
+                        {
+                            _uow.Commit();
+                            return true;
+                        }
+                    }
+                    else
                     {
                         _uow.Commit();
                         return true;
                     }
-                    else
-                    {
-                        _uow.RollBack();
+                }                
 
-                    }
-                }
-                else
-                {
-                    _uow.RollBack();
-                }
+                _uow.RollBack();
                 return false;
             }
             catch (Exception ex)
@@ -94,7 +131,7 @@ namespace TenantsApp.Bl
 
       
 
-        public bool PayRent(Guid rentID)
+        public async Task<bool > PayRent(Guid rentID)
         {
             try
             {
@@ -103,6 +140,8 @@ namespace TenantsApp.Bl
                 {
                     throw new ValidationException("Rent could not be found");
                 }
+
+                var tenant = _uow.TenantRepository.Get(rent.TenantID);
 
                 var schedule = _uow.ScheduleRentRepositoy.Get(rent.ScheduleID);
 
@@ -132,6 +171,9 @@ namespace TenantsApp.Bl
                         if (place.Save(_uow))
                         {
                             _uow.Commit();
+
+                           await  _emailService.SendRentEmail(rent.Price, tenant.Name, tenant.Email, place.Address);
+
                             return true;
                         }
                     }

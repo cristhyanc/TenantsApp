@@ -65,7 +65,7 @@
                                 Source="resource://TenantsApp.Resources.people.svg?assembly=TenantsApp"
                                 WidthRequest="20" />
 
-                            <Label Text="{Binding TotalTenants}" />
+                            <Label Text="{Binding TotalCurrentTenants}" />
                             <Label Text="/" />
                             <Label Text="{Binding TenantsCapacity}" />
                         </StackLayout>

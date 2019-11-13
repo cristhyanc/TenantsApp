@@ -7,6 +7,8 @@ using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 using TenantsApp.Entities.Interfaces;
 using TenantsApp.Repository;
 using Acr.UserDialogs;
+using TenantsApp.Services;
+using TenantsApp.Shared.Interfaces;
 
 namespace TenantsApp
 {
@@ -21,6 +23,8 @@ namespace TenantsApp
                 FreshIOC.Container.Register<ITenantRepository, TenantRepository>();
                 FreshIOC.Container.Register<IRentRepository, RentRepository>();
                 FreshIOC.Container.Register<IPlaceRepository, PlaceRepository>();
+                FreshIOC.Container.Register<IEmailService, EmailService>();
+                
                 FreshIOC.Container.Register<IUnitOfWork, UnitOfWork>().AsSingleton();
                 FreshIOC.Container.Register<IUserDialogs>(UserDialogs.Instance);
                 FreshIOC.Container.Register<Bl.IPlacesBl, Bl.PlacesBl>();

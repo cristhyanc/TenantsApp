@@ -39,6 +39,20 @@ namespace TenantsApp.Entities
             }
         }
 
+        [Ignore]
+        public int TotalCurrentTenants
+        {
+            get
+            {
+                if (this.Tenants?.Count > 0)
+                {
+                    return this.Tenants.Where(x=> !x.End.HasValue || DateTime.Compare(x.End.Value ,DateTime.Now)>0 ).ToList().Count;
+
+                }
+                return 0;
+            }
+        }
+
         public Place( )
         {
             

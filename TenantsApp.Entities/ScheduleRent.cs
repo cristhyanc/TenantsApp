@@ -76,30 +76,38 @@ namespace TenantsApp.Entities
             if (uow == null)
             {
                 throw new ArgumentNullException(nameof(uow));
-            }          
-            
+            }
+
 
             var lastRent = uow.RentRepository.GetAll(x => x.ScheduleID == this.ScheduleID && x.Paid).OrderByDescending(x => x.PaidDate).FirstOrDefault();
             DateTime startDate = DateTime.Parse(this.StartDate.ToShortDateString());
 
-            if(lastRent !=null)
+            if (lastRent != null)
             {
                 startDate = lastRent.ExpiryDate;
             }
 
             var tenant = uow.TenantRepository.Get(this.TenantID);
 
-            if(tenant==null)
+            if (tenant == null)
             {
                 throw new ValidationException("Tenant does not exist");
             }
 
             var rent = new Rent();
-            rent.Price = tenant.Rent;            
+            rent.Price = tenant.Rent;
             rent.Paid = false;
             rent.ScheduleID = this.ScheduleID;
             rent.TenantID = this.TenantID;
             rent.ExpiryDate = startDate.AddDays(7 * this.Period);
+
+            if (DateTime.Compare(rent.ExpiryDate, this.EndDate) > 0)
+            {
+                rent.ExpiryDate = this.EndDate;
+                var days = rent.ExpiryDate - startDate;
+                rent.Price = Math.Round((tenant.Rent / 7) * days.Days, 0);
+
+            }
             return rent.Save(uow);
         }
 

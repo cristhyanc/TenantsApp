@@ -45,6 +45,14 @@
                     <Entry x:Name="description" Text="{Binding Tenant.Name}" />
                 </inputLayout:SfTextInputLayout>
 
+                <inputLayout:SfTextInputLayout
+                    ContainerBackgroundColor="White"
+                    ContainerType="Filled"
+                    FocusedColor="Aqua"
+                    Hint="Email">
+                    <Entry Text="{Binding Tenant.Email}" />
+                </inputLayout:SfTextInputLayout>
+
                 <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
                     <inputLayout:SfTextInputLayout
                         ContainerBackgroundColor="White"

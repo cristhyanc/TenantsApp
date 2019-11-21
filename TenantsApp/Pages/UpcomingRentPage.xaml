@@ -6,8 +6,12 @@
     xmlns:card="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:numericUp="clr-namespace:Syncfusion.SfNumericUpDown.XForms;assembly=Syncfusion.SfNumericUpDown.XForms"
+    xmlns:sfpopup="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms"
     xmlns:sync="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+    xmlns:syncNumeric="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
     xmlns:viewmodels="clr-namespace:TenantsApp"
     Title="Upcoming"
     Visual="Material"
@@ -62,6 +66,72 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
+
+
+            <sfpopup:SfPopupLayout x:Name="popup" IsOpen="{Binding DisplayPayConfirmation}">
+                <sfpopup:SfPopupLayout.PopupView>
+                    <sfpopup:PopupView
+                        AcceptCommand="{Binding ConfirmPaymentCommand}"
+                        HeaderTitle="Rent to pay"
+                        HeightRequest="300">
+                        <sfpopup:PopupView.ContentTemplate>
+                            <DataTemplate>
+                                <StackLayout>
+
+                                    <inputLayout:SfTextInputLayout
+                                        ContainerBackgroundColor="White"
+                                        ContainerType="Filled"
+                                        FocusedColor="Aqua"
+                                        Hint="Total Weeks"
+                                        HorizontalOptions="FillAndExpand"
+                                        LeadingViewPosition="Inside">
+
+                                        <numericUp:SfNumericUpDown
+                                            x:Name="numericUpDown"
+                                            FormatString="n"
+                                            Value="{Binding Weeks}" />
+
+                                        <inputLayout:SfTextInputLayout.LeadingView>
+                                            <ffimageloadingsvg:SvgCachedImage
+                                                Margin="0,0,30,0"
+                                                BackgroundColor="Transparent"
+                                                HeightRequest="20"
+                                                Source="resource://TenantsApp.Resources.counter.svg?assembly=TenantsApp"
+                                                WidthRequest="20" />
+                                        </inputLayout:SfTextInputLayout.LeadingView>
+                                    </inputLayout:SfTextInputLayout>
+
+
+                                    <inputLayout:SfTextInputLayout
+                                        ContainerBackgroundColor="White"
+                                        ContainerType="Filled"
+                                        FocusedColor="Aqua"
+                                        Hint="Total Rent"
+                                        HorizontalOptions="FillAndExpand"
+                                        LeadingViewPosition="Inside">
+
+                                        <syncNumeric:SfNumericTextBox
+                                            AllowNull="true"
+                                            FormatString="n"
+                                            MaximumNumberDecimalDigits="0"
+                                            Value="{Binding TotalPaid}" />
+                                        <inputLayout:SfTextInputLayout.LeadingView>
+                                            <ffimageloadingsvg:SvgCachedImage
+                                                Margin="0,0,30,0"
+                                                BackgroundColor="Transparent"
+                                                HeightRequest="20"
+                                                Source="resource://TenantsApp.Resources.toilet.svg?assembly=TenantsApp"
+                                                WidthRequest="20" />
+                                        </inputLayout:SfTextInputLayout.LeadingView>
+                                    </inputLayout:SfTextInputLayout>
+
+
+                                </StackLayout>
+                            </DataTemplate>
+                        </sfpopup:PopupView.ContentTemplate>
+                    </sfpopup:PopupView>
+                </sfpopup:SfPopupLayout.PopupView>
+            </sfpopup:SfPopupLayout>
 
             <sync:SfListView
                 x:Name="listView"

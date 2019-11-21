@@ -6,6 +6,6 @@ namespace TenantsApp.Shared.Interfaces
 {
     public interface IEmailService
     {
-        Task<bool> SendRentEmail(decimal totalRent, string name, string email, string address);
+        Task<bool> SendRentEmail( string email, string address, string body);
     }
 }

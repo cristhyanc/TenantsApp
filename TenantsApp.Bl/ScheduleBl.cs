@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using TenantsApp.Entities;
@@ -53,9 +55,20 @@ namespace TenantsApp.Bl
             return _uow.ScheduleRentRepositoy.Get(x => x.TenantID == tenantID);
         }
 
+        public ScheduleRent GetScheduleByRent(Guid rentId)
+        {
+            var rent = _uow.RentRepository.Get(rentId);
+            if (rent != null)
+            {
+                var sched = _uow.ScheduleRentRepositoy.Get(rent.ScheduleID);
+                return sched;
+            }
+            return null;
+        }
+
         public List<Rent> GetRents(Guid scheduleID)
         {
-            var rents = _uow.RentRepository.GetAll(x => x.ScheduleID == scheduleID).OrderBy (x => x.ExpiryDate).ToList();
+            var rents = _uow.RentRepository.GetAll(x => x.ScheduleID == scheduleID).OrderByDescending  (x => x.ExpiryDate).ToList();
             return rents;
         }
 
@@ -131,7 +144,7 @@ namespace TenantsApp.Bl
 
       
 
-        public async Task<bool > PayRent(Guid rentID)
+        public async Task<bool > PayRent(Guid rentID, bool sendEmail, string sender, int weeks, decimal totalPaid)
         {
             try
             {
@@ -141,6 +154,8 @@ namespace TenantsApp.Bl
                     throw new ValidationException("Rent could not be found");
                 }
 
+                rent.Price = totalPaid;
+                
                 var tenant = _uow.TenantRepository.Get(rent.TenantID);
 
                 var schedule = _uow.ScheduleRentRepositoy.Get(rent.ScheduleID);
@@ -149,6 +164,18 @@ namespace TenantsApp.Bl
                 {
                     throw new ValidationException("Schedule could not be found");
                 }
+
+                rent.TotalPaidWeeks = weeks;
+                //if (schedule.Period != weeks)
+                //{
+                //    rent.ExpiryDate = rent.ExpiryDate.AddDays(-7 * schedule.Period);
+                //    rent.ExpiryDate = rent.ExpiryDate.AddDays(7 * weeks);
+                //}
+
+                //else if(schedule.Period<weeks) 
+                //{
+                //    rent.ExpiryDate = rent.ExpiryDate.AddDays(7 * ( weeks- schedule.Period));
+                //}
 
                 var place = (from tn in _uow.TenantRepository.GetAll()
                              join pl in _uow.PlaceRepository.GetAll()
@@ -172,8 +199,27 @@ namespace TenantsApp.Bl
                         {
                             _uow.Commit();
 
-                           await  _emailService.SendRentEmail(rent.Price, tenant.Name, tenant.Email, place.Address);
+                            if (sendEmail)
+                            {
+                                var assembly = Assembly.GetExecutingAssembly();
+                                var resourceName = "TenantsApp.Bl.ReceiptTemplate.txt";
+                                var body = "";
+                                using (Stream stream = assembly.GetManifestResourceStream(resourceName))
+                                using (StreamReader reader = new StreamReader(stream))
+                                {
+                                    body = reader.ReadToEnd();
+                                }
 
+                                body = body.Replace("{TenantName}", tenant.Name);
+                                body = body.Replace("{Amount}", "$ " + rent.Price.ToString());
+                                body = body.Replace("{Description}", "Rent From" + rent.ExpiryDate.ToShortDateString () + " To " + rent.ExpiryDate.AddDays(7*weeks).ToShortDateString());
+                                body = body.Replace("{ReceivedBy}", sender);
+                                body = body.Replace("{Date}", DateTime.Now.ToShortDateString());
+
+                                await _emailService.SendRentEmail(tenant.Email, place.Address, body);
+                            }
+
+                           
                             return true;
                         }
                     }

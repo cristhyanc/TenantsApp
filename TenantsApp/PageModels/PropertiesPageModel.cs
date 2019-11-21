@@ -20,7 +20,7 @@ namespace TenantsApp
         IUserDialogs _userDialogs;
 
         
-             public ICommand DeletePlaceCommand { get; set; }
+        public ICommand DeletePlaceCommand { get; set; }
 
         public ICommand AddCommand { get; set; }
 

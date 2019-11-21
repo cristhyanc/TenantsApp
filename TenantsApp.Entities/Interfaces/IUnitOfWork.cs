@@ -10,7 +10,7 @@ namespace TenantsApp.Entities.Interfaces
         ITenantRepository TenantRepository { get; }
         IScheduleRentRepositoy ScheduleRentRepositoy { get; }
         IRentRepository RentRepository { get; }
-
+        void RestartConnection();
         void Begin();
         void Commit();
         void RollBack();

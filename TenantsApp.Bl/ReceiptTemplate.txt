@@ -1,0 +1,55 @@
+﻿
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+
+<table style="height: 40px; width: 597px; border: 1px solid black;">
+<tbody>
+<tr style="height: 58px;">
+<td style="width: 572px; height: 58px;">
+<table style="height: 21px; width: 100%; border: 1px solid black;">
+<tbody>
+<tr>
+<td style="width: 121px;">
+<h3><span style="color: #008080;">Rent Receipt</span></h3>
+</td>
+<td style="width: 283px; text-align: right;">&nbsp;Date Received: {Date}</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr style="height: 198px;">
+<td style="width: 572px; height: 198px;">
+<table style="height: 151px; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 130px; text-align: center;"><strong>On behalf of:</strong></td>
+<td style="width: 305px;"><span style="text-decoration: underline;">{TenantName}</span></td>
+</tr>
+<tr>
+<td style="width: 130px; text-align: center;"><strong>Amount:</strong></td>
+<td style="width: 305px;"><span style="text-decoration: underline;">{Amount}</span></td>
+</tr>
+<tr>
+<td style="width: 130px; text-align: center;"><strong>For Payment of:</strong></td>
+<td style=" width: 305px;"><span style="text-decoration: underline;">{Description}</span></td>
+</tr>
+<tr>
+<td style="width: 130px; text-align: center;"><strong>Received By"</strong></td>
+<td style="width: 305px;"><span style="text-decoration: underline;">{ReceivedBy}</span></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

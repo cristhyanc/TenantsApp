@@ -20,6 +20,9 @@ namespace TenantsApp {
         private global::Xamarin.Forms.DataTemplate ItemTemplate;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Syncfusion.XForms.PopupLayout.SfPopupLayout popup;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Syncfusion.ListView.XForms.SfListView listView;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
@@ -29,6 +32,7 @@ namespace TenantsApp {
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(UpcomingRentPage));
             ItemTemplate = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.DataTemplate>(this, "ItemTemplate");
+            popup = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Syncfusion.XForms.PopupLayout.SfPopupLayout>(this, "popup");
             listView = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Syncfusion.ListView.XForms.SfListView>(this, "listView");
             LeftSwipeTemplate = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.DataTemplate>(this, "LeftSwipeTemplate");
         }

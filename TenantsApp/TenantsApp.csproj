@@ -57,6 +57,7 @@
     <PackageReference Include="Syncfusion.Xamarin.SfNumericUpDown" Version="17.3.0.26" />
     <PackageReference Include="Syncfusion.Xamarin.SfPopupLayout" Version="17.3.0.26" />
     <PackageReference Include="Syncfusion.Xamarin.SfTabView" Version="17.3.0.26" />
+    <PackageReference Include="Xamarin.Dropbox.Api" Version="4.5.3.1" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Svg" Version="2.4.11.982" />
@@ -89,6 +90,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Pages\RentsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\SettingsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Pages\TenantPage.xaml">

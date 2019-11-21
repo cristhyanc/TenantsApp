@@ -22,7 +22,7 @@ namespace TenantsApp.Bl
                        on tn.TenantID equals rent.TenantID where tn.PlaceID == placeID select rent ).ToList();
 
             rents.ForEach(x => x.Tenant = _uow.TenantRepository.Get(x.TenantID));
-            rents = rents.OrderBy (x => x.ExpiryDate).ToList();
+            rents = rents.OrderByDescending  (x => x.ExpiryDate).ToList();
             return rents;
         }
 
@@ -69,7 +69,12 @@ namespace TenantsApp.Bl
         public bool DeletePlace(Guid placeId)
         {
             try
-            {               
+            {       
+                if(placeId==null)
+                {
+                    throw new ValidationException("The place ID is required");
+                }
+
                 var place = _uow.PlaceRepository.Get(placeId);
                 if(place!=null)
                 {
@@ -77,14 +82,15 @@ namespace TenantsApp.Bl
                     if( place.Delete(_uow))
                     {
                         _uow.Commit();
+                        return true;
                     }
                     else
                     {
                         _uow.RollBack();
                     }
                 }
-
-                throw new ValidationException("The place ID is required");
+                return false;
+                
             }
             catch (Exception ex)
             {

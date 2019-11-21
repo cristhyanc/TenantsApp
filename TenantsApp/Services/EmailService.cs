@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using TenantsApp.Entities;
@@ -10,7 +11,7 @@ namespace TenantsApp.Services
 {
     public class EmailService: IEmailService
     {
-        public async Task<bool> SendRentEmail(decimal totalRent, string name, string email, string address)
+        public async Task<bool> SendRentEmail( string email, string address, string body)
         {
             try
             {
@@ -25,10 +26,17 @@ namespace TenantsApp.Services
                     throw new ValidationException("The Tenant has not got an Email");
                 }
 
+                var fn = "Rent Receipt.html";
+                var file = Path.Combine(FileSystem.CacheDirectory, fn);
+                File.WriteAllText(file,body);
+
                 message.To = new List<string>();
                 message.To.Add(email);
                 message.Subject = "Rent Paid " + address;
-                message.Body = "Thanks for paying the rent, see you later";
+                message.Body = "Please check the attachment, Thanks";
+                message.BodyFormat = EmailBodyFormat.Html;
+                message.Attachments.Add(new EmailAttachment(file));
+
                 await Email.ComposeAsync(message);
 
                 return true;

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using TenantsApp.Entities.Interfaces;
+using TenantsApp.Shared.Interfaces;
 
 namespace TenantsApp.Repository
 {
@@ -11,12 +13,25 @@ namespace TenantsApp.Repository
         ITenantRepository _tenantRepository;
         IScheduleRentRepositoy _scheduleRentRepositoy;
         IRentRepository _rentRepository;
+        IDropboxService _dropbox;
+
         private DBContext _context;
 
-        public UnitOfWork()
+        public UnitOfWork(IDropboxService dropbox)
         {
             _context = new DBContext();
+           
         }
+
+        public void RestartConnection()
+        {
+            _context.RestartConnection();
+        }
+
+        //public async Task<Boolean> BackUpDatabase()
+        //{
+        //   Stream 
+        //}
 
         public IRentRepository RentRepository
         {

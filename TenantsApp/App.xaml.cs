@@ -24,7 +24,11 @@ namespace TenantsApp
                 FreshIOC.Container.Register<IRentRepository, RentRepository>();
                 FreshIOC.Container.Register<IPlaceRepository, PlaceRepository>();
                 FreshIOC.Container.Register<IEmailService, EmailService>();
+                FreshIOC.Container.Register<IDropboxService, DropBoxService>();
+
                 
+
+
                 FreshIOC.Container.Register<IUnitOfWork, UnitOfWork>().AsSingleton();
                 FreshIOC.Container.Register<IUserDialogs>(UserDialogs.Instance);
                 FreshIOC.Container.Register<Bl.IPlacesBl, Bl.PlacesBl>();
@@ -42,7 +46,8 @@ namespace TenantsApp
 
                 mainPage.AddTab<UpcomingRentPageModel>("Upcoming", null);
                 mainPage.AddTab<PropertiesPageModel>("Properties", null);
-               
+                mainPage.AddTab<SettingsPageModel>("Setting", null);
+
 
                 MainPage = mainPage;
             }

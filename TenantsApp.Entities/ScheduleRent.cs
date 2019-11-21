@@ -77,14 +77,14 @@ namespace TenantsApp.Entities
             {
                 throw new ArgumentNullException(nameof(uow));
             }
-
-
+            var totalWeeks = this.Period;
             var lastRent = uow.RentRepository.GetAll(x => x.ScheduleID == this.ScheduleID && x.Paid).OrderByDescending(x => x.PaidDate).FirstOrDefault();
             DateTime startDate = DateTime.Parse(this.StartDate.ToShortDateString());
 
             if (lastRent != null)
             {
                 startDate = lastRent.ExpiryDate;
+                totalWeeks = lastRent.TotalPaidWeeks;
             }
 
             var tenant = uow.TenantRepository.Get(this.TenantID);
@@ -95,11 +95,11 @@ namespace TenantsApp.Entities
             }
 
             var rent = new Rent();
-            rent.Price = tenant.Rent;
+            rent.Price = tenant.Rent*this.Period ;
             rent.Paid = false;
             rent.ScheduleID = this.ScheduleID;
             rent.TenantID = this.TenantID;
-            rent.ExpiryDate = startDate.AddDays(7 * this.Period);
+            rent.ExpiryDate = startDate.AddDays(7 * totalWeeks);
 
             if (DateTime.Compare(rent.ExpiryDate, this.EndDate) > 0)
             {

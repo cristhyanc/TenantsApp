@@ -18,6 +18,7 @@ namespace TenantsApp.Entities
         public DateTime ExpiryDate { get; set; }
         public bool Paid { get; set; }
         public DateTime? PaidDate { get; set; }
+        public int TotalPaidWeeks { get; set; }
 
         [Ignore]
         public Tenant Tenant { get; set; }
@@ -30,6 +31,11 @@ namespace TenantsApp.Entities
                 DateTime dateNow = DateTime.Parse(DateTime.Now.ToShortDateString());
                 this.ExpiryDate = DateTime.Parse(this.ExpiryDate.ToShortDateString());
 
+                if (this.Paid)
+                {
+                    return Color.LightGreen;
+                }
+
                 if (this.ExpiryDate < dateNow)
                 {
                     return Color.LightPink;
@@ -41,11 +47,7 @@ namespace TenantsApp.Entities
                         return Color.LightYellow;
                     }
                     else
-                    {
-                        if(this.Paid )
-                        {
-                            return Color.LightGreen;
-                        }
+                    {                       
                         return Color.White;
                     }
                 }

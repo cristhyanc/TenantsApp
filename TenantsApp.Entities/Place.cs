@@ -8,13 +8,13 @@ using TenantsApp.Shared.Exceptions;
 
 namespace TenantsApp.Entities
 {
-   
-  public  class Place
+
+    public class Place
     {
         [PrimaryKey]
         public Guid PlaceID { get; set; }
         public string Description { get; set; }
-        public string  Address { get; set; }
+        public string Address { get; set; }
         public int Rooms { get; set; }
         public int Bathrooms { get; set; }
         public int Carparks { get; set; }
@@ -22,8 +22,8 @@ namespace TenantsApp.Entities
         public decimal Rent { get; set; }
         public decimal TotalSaved { get; set; }
 
-        [Ignore ]
-        public List<Tenant> Tenants  { get; set; }
+        [Ignore]
+        public List<Tenant> Tenants { get; set; }
 
         [Ignore]
         public int TotalTenants
@@ -46,39 +46,39 @@ namespace TenantsApp.Entities
             {
                 if (this.Tenants?.Count > 0)
                 {
-                    return this.Tenants.Where(x=> !x.End.HasValue || DateTime.Compare(x.End.Value ,DateTime.Now)>0 ).ToList().Count;
+                    return this.Tenants.Where(x => !x.End.HasValue || DateTime.Compare(x.End.Value, DateTime.Now) > 0).ToList().Count;
 
                 }
                 return 0;
             }
         }
 
-        public Place( )
+        public Place()
         {
-            
+
         }
 
         public bool Save(IUnitOfWork uow)
         {
             try
             {
-                if(string.IsNullOrEmpty(this.Description ))
+                if (string.IsNullOrEmpty(this.Description))
                 {
                     throw new ValidationException("The Description is required");
                 }
 
-                if(string.IsNullOrEmpty(this.Address ))
+                if (string.IsNullOrEmpty(this.Address))
                 {
                     throw new ValidationException("The Address is required");
                 }
 
-                if(this.PlaceID ==Guid.Empty )
+                if (this.PlaceID == Guid.Empty)
                 {
                     this.PlaceID = Guid.NewGuid();
-                    return uow.PlaceRepository.Insert (this);
+                    return uow.PlaceRepository.Insert(this);
                 }
 
-                return uow.PlaceRepository.Update (this);
+                return uow.PlaceRepository.Update(this);
 
             }
             catch (Exception ex)
@@ -94,7 +94,7 @@ namespace TenantsApp.Entities
                 tenant.PlaceID = this.PlaceID;
                 if (tenant.Save(uow))
                 {
-                    if(this.Tenants==null)
+                    if (this.Tenants == null)
                     {
                         this.Tenants = new List<Tenant>();
                     }
@@ -112,27 +112,47 @@ namespace TenantsApp.Entities
         }
 
         public bool Delete(IUnitOfWork uow)
-        {           
-                if (this.PlaceID == Guid.Empty)
-                {
-                    throw new ValidationException("The place ID is required");
-                }
-                var tenants = uow.TenantRepository.GetAll(x => x.PlaceID == this.PlaceID);
-              
-                if(tenants?.Count>0)
-                {
-                    foreach (var item in tenants)
-                    {
-                        item.Delete(uow);
-                    }
-                }
-                return uow.PlaceRepository.Delete(this);           
+        {
+            if (this.PlaceID == Guid.Empty)
+            {
+                throw new ValidationException("The place ID is required");
+            }
+
+            var tenants = uow.TenantRepository.GetAll(x => x.PlaceID == this.PlaceID);
+
+            var schedules = (from sch in uow.ScheduleRentRepositoy.GetAll()
+                             join ten in tenants
+                             on sch.TenantID equals ten.TenantID
+                             select sch).ToList();
+
+            var rents = (from rent in uow.RentRepository.GetAll()
+                             join ten in tenants
+                             on rent.TenantID equals ten.TenantID
+                             select rent).ToList();
+
+
+            if (tenants?.Count > 0)
+            {
+                uow.TenantRepository.Delete(tenants);
+            }
+
+            if(schedules?.Count>0)
+            {
+                uow.ScheduleRentRepositoy .Delete(schedules);
+            }
+
+            if (rents?.Count > 0)
+            {
+                uow.RentRepository.Delete(rents);
+            }
+
+            return uow.PlaceRepository.Delete(this);
         }
 
         public void LoadTenants(IUnitOfWork uow)
         {
             this.Tenants = uow.TenantRepository.GetAll(x => x.PlaceID == this.PlaceID);
-           
+
         }
     }
 }

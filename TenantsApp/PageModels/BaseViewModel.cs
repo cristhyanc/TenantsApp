@@ -36,7 +36,8 @@ namespace TenantsApp
                
             }
         }
-        IUserDialogs _userDialogs;
+
+        protected  IUserDialogs _userDialogs;
 
         public BaseViewModel(IUserDialogs userDialogs)
         {

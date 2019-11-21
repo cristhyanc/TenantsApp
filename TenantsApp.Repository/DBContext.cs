@@ -12,7 +12,7 @@ namespace TenantsApp.Repository
         private SQLiteConnection _connection;
 
         private bool _isOnTransaction=false;
-        string dbFileName = "TenantsAppDbV1.db";
+        
         
 
         public DBContext()
@@ -32,12 +32,17 @@ namespace TenantsApp.Repository
             }
         }
 
+        public void RestartConnection()
+        {
+            _connection = null;
+            GetConnection();
+        }
 
         public SQLiteConnection GetConnection()
         {
             if (_connection == null)
             {
-                var databasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), dbFileName);
+                var databasePath = TenantsApp.Shared.Helper.DBFilePath;
 
                 _connection = new SQLiteConnection(databasePath);
 

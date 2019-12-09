@@ -25,6 +25,18 @@
                         Margin="0,0,10,10"
                         HeightRequest="30"
                         HorizontalOptions="End"
+                        Source="resource://TenantsApp.Resources.bill.svg?assembly=TenantsApp"
+                        VerticalOptions="CenterAndExpand"
+                        WidthRequest="30">
+                        <ffimageloadingsvg:SvgCachedImage.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding GoToBillsCommand}" />
+                        </ffimageloadingsvg:SvgCachedImage.GestureRecognizers>
+                    </ffimageloadingsvg:SvgCachedImage>
+
+                    <ffimageloadingsvg:SvgCachedImage
+                        Margin="0,0,10,10"
+                        HeightRequest="30"
+                        HorizontalOptions="End"
                         Source="resource://TenantsApp.Resources.payment.svg?assembly=TenantsApp"
                         VerticalOptions="CenterAndExpand"
                         WidthRequest="30">

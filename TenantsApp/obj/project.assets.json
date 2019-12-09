@@ -1087,7 +1087,7 @@
           "lib/netstandard1.0/FFImageLoading.Transformations.dll": {}
         }
       },
-      "Xamarin.Forms/4.3.0.947036": {
+      "Xamarin.Forms/4.3.0.991221": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {},
@@ -1134,7 +1134,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "TenantsApp.Shared": "1.0.0",
-          "Xamarin.Forms": "4.3.0.947036",
+          "Xamarin.Forms": "4.3.0.991221",
           "sqlite-net-pcl": "1.6.292"
         },
         "compile": {
@@ -5063,10 +5063,10 @@
         "xamarin.ffimageloading.transformations.nuspec"
       ]
     },
-    "Xamarin.Forms/4.3.0.947036": {
-      "sha512": "oEAwwHfaZesC+VvP07UoctI1DGIgewZlKMr/sHPl/hNMRM6ZfccPgOY19Yw017asj9z7PKXqpDDUbFFOJ2jN4A==",
+    "Xamarin.Forms/4.3.0.991221": {
+      "sha512": "Yh3kxXj+fnERLZfh8gNbcFWflSL0PvPh3aHtq2tpXInInVNeWDUb0qitChUm2hgJSSOpn3MBa/55nxcqPM4Kog==",
       "type": "package",
-      "path": "xamarin.forms/4.3.0.947036",
+      "path": "xamarin.forms/4.3.0.991221",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5296,6 +5296,7 @@
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/MasterDetailControlStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/Microsoft.UI.Xaml/DensityStyles/Compact.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/PageControlStyle.xbf",
+        "lib/uap10.0/Xamarin.Forms.Platform.UAP/PickerStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/Properties/Xamarin.Forms.Platform.UAP.rd.xml",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/Resources.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/Shell/ShellStyles.xbf",
@@ -5307,7 +5308,7 @@
         "lib/uap10.0/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.4.3.0.947036.nupkg.sha512",
+        "xamarin.forms.4.3.0.991221.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
@@ -5380,7 +5381,7 @@
       "Xamarin.FFImageLoading.Svg >= 2.4.11.982",
       "Xamarin.FFImageLoading.Svg.Forms >= 2.4.11.982",
       "Xamarin.FFImageLoading.Transformations >= 2.4.11.982",
-      "Xamarin.Forms >= 4.3.0.947036",
+      "Xamarin.Forms >= 4.3.0.991221",
       "Xamarin.Forms.Visual.Material >= 4.3.0.947036"
     ]
   },
@@ -5538,7 +5539,7 @@
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[4.3.0.947036, )"
+            "version": "[4.3.0.991221, )"
           },
           "Xamarin.Forms.Visual.Material": {
             "target": "Package",

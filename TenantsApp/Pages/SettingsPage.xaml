@@ -24,10 +24,12 @@
                 Command="{Binding RestoreDatabaseCommand}"
                 IsVisible="{Binding DisconnectionButtonVisible}"
                 Text="Restore DB" />
-            <Label
-                HorizontalOptions="CenterAndExpand"
-                Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" />
+
+            <Button
+                Command="{Binding CleanDatabaseCommand}"
+                IsVisible="{Binding DisconnectionButtonVisible}"
+                Text="Clean DB" />
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage> 

@@ -8,20 +8,15 @@ using Xamarin.Forms;
 
 namespace TenantsApp.Entities
 {
-  public  class Rent
+  public  class Rent: IPayment
     {
-        [PrimaryKey]
-        public Guid RentID { get; set; }
-        public Guid TenantID { get; set; }
+        [PrimaryKey]     
+        public Guid PaymentID { get; set; }
         public Guid ScheduleID { get; set; }
-        public decimal  Price { get; set; }
+        public decimal Price { get; set; }
         public DateTime ExpiryDate { get; set; }
         public bool Paid { get; set; }
         public DateTime? PaidDate { get; set; }
-        public int TotalPaidWeeks { get; set; }
-
-        [Ignore]
-        public Tenant Tenant { get; set; }
 
         [Ignore]
         public Color ItemBackgroundColor
@@ -42,18 +37,26 @@ namespace TenantsApp.Entities
                 }
                 else
                 {
-                    if(this.ExpiryDate>= dateNow && this.ExpiryDate< dateNow.AddDays(3))
+                    if (this.ExpiryDate >= dateNow && this.ExpiryDate < dateNow.AddDays(3))
                     {
                         return Color.LightYellow;
                     }
                     else
-                    {                       
+                    {
                         return Color.White;
                     }
                 }
             }
         }
 
+        public Guid TenantID { get; set; }       
+        public DateTime RentToDate { get; set; }        
+        public int TotalPaidWeeks { get; set; }
+
+        [Ignore]
+        public Tenant Tenant { get; set; }
+
+       
         public bool PayRent(IUnitOfWork uow)
         {
             if (uow == null)
@@ -84,9 +87,9 @@ namespace TenantsApp.Entities
                 throw new ValidationException("The ScheduleID is invalid");
             }
 
-            if (this.RentID == Guid.Empty)
+            if (this.PaymentID == Guid.Empty)
             {
-                this.RentID = Guid.NewGuid();
+                this.PaymentID = Guid.NewGuid();
                 return uow.RentRepository .Insert(this);
             }
 

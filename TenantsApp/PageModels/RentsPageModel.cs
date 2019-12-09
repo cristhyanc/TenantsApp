@@ -54,7 +54,7 @@ namespace TenantsApp
             }
         }
 
-        public ScheduleRent ScheduleRent { get; set; }
+        public SchedulePayment ScheduleRent { get; set; }
         
         RentsPageModelParameters parameters { get;  set; }
         IScheduleBl _scheduleBl;
@@ -96,7 +96,8 @@ namespace TenantsApp
         {
             try
             {
-               if(_scheduleBl.SavecheduleRent(this.ScheduleRent ))
+                this.ScheduleRent.ScheduleType = Shared.ScheduleType.Rent;
+               if (_scheduleBl.SaveSchedule(this.ScheduleRent ))
                 {
                     await CoreMethods.PopPageModel();
                 }
@@ -144,11 +145,11 @@ namespace TenantsApp
                     this.ScheduleRent = _scheduleBl.GetTenantSchedule(this.parameters.Tenant.TenantID);
                     if (this.ScheduleRent == null)
                     {
-                        this.ScheduleRent = new ScheduleRent();
+                        this.ScheduleRent = new SchedulePayment();
                         this.ScheduleRent.StartDate = DateTime.Now;
                         this.ScheduleRent.EndDate = DateTime.Now.AddYears(1);
                         this.ScheduleRent.Period = this.parameters.Tenant.PayWeekPeriod;
-                        this.ScheduleRent.TenantID = this.parameters.Tenant.TenantID;
+                        this.ScheduleRent.ParentID = this.parameters.Tenant.TenantID;
                     }
                     LoadSchedulaRents();
                 }

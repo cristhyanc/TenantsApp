@@ -123,27 +123,52 @@
                     <DataTemplate>
                         <StackLayout Orientation="Horizontal">
 
-                            <StackLayout Margin="10,0,0,0">
-                                <StackLayout Orientation="Horizontal">
-                                    <Label FontSize="Large" Text="Bond:" />
-                                    <Label FontSize="Large" Text="{Binding TotalBond}" />
-                                </StackLayout>
-                                <StackLayout Orientation="Horizontal">
-                                    <Label FontSize="Large" Text="Saved:" />
-                                    <Label FontSize="Large" Text="{Binding TotalSaved}" />
-                                </StackLayout>
-                            </StackLayout>
 
-                            <ffimageloadingsvg:SvgCachedImage
-                                Margin="0,0,10,10"
-                                HeightRequest="30"
-                                HorizontalOptions="EndAndExpand"
-                                Source="resource://TenantsApp.Resources.addIcon.svg?assembly=TenantsApp"
-                                WidthRequest="30">
-                                <ffimageloadingsvg:SvgCachedImage.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding AddCommand}" />
-                                </ffimageloadingsvg:SvgCachedImage.GestureRecognizers>
-                            </ffimageloadingsvg:SvgCachedImage>
+                            <Grid Margin="10,0,0,0" HorizontalOptions="FillAndExpand">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+
+                                <StackLayout HorizontalOptions="StartAndExpand">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label FontSize="Default" Text="Rent Price:" />
+                                        <Label FontSize="Default" Text="{Binding TotalRentPrice}" />
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label FontSize="Default" Text="Bond:" />
+                                        <Label FontSize="Default" Text="{Binding TotalBond}" />
+                                    </StackLayout>
+                                </StackLayout>
+
+                                <StackLayout Grid.Column="1">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label FontSize="Default" Text="Saved:" />
+                                        <Label FontSize="Default" Text="{Binding TotalSaved}" />
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label FontSize="Default" Text="Grant Total:" />
+                                        <Label FontSize="Default" Text="{Binding GrantTotal}" />
+                                    </StackLayout>
+                                </StackLayout>
+
+                                <ffimageloadingsvg:SvgCachedImage
+                                    Grid.Column="2"
+                                    Margin="0,0,10,10"
+                                    HeightRequest="30"
+                                    HorizontalOptions="EndAndExpand"
+                                    Source="resource://TenantsApp.Resources.addIcon.svg?assembly=TenantsApp"
+                                    WidthRequest="30">
+                                    <ffimageloadingsvg:SvgCachedImage.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding AddCommand}" />
+                                    </ffimageloadingsvg:SvgCachedImage.GestureRecognizers>
+                                </ffimageloadingsvg:SvgCachedImage>
+                            </Grid>
+
+
+
+
                         </StackLayout>
                     </DataTemplate>
                 </sync:SfListView.HeaderTemplate>

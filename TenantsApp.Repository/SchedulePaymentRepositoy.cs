@@ -7,9 +7,9 @@ using TenantsApp.Entities.Interfaces;
 
 namespace TenantsApp.Repository
 {
- public   class ScheduleRentRepositoy : Repository<ScheduleRent>, IScheduleRentRepositoy
+ public   class SchedulePaymentRepositoy : Repository<SchedulePayment>, ISchedulePaymentRepositoy
     {
-        public ScheduleRentRepositoy(DBContext context) : base(context)
+        public SchedulePaymentRepositoy(DBContext context) : base(context)
         {
 
         }

@@ -74,26 +74,26 @@
           }
         }
       },
-      "Xamarin.Forms/4.3.0.947036": {
+      "Xamarin.Forms/4.3.0.991221": {
         "runtime": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "4.3.0.356"
+            "fileVersion": "4.3.0.389"
           },
           "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "4.3.0.356"
+            "fileVersion": "4.3.0.389"
           },
           "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "4.3.0.356"
+            "fileVersion": "4.3.0.389"
           }
         }
       },
       "TenantsApp.Entities/1.0.0": {
         "dependencies": {
           "TenantsApp.Shared": "1.0.0",
-          "Xamarin.Forms": "4.3.0.947036",
+          "Xamarin.Forms": "4.3.0.991221",
           "sqlite-net-pcl": "1.6.292"
         },
         "runtime": {
@@ -183,12 +183,12 @@
       "path": "sqlitepclraw.core/1.1.13",
       "hashPath": "sqlitepclraw.core.1.1.13.nupkg.sha512"
     },
-    "Xamarin.Forms/4.3.0.947036": {
+    "Xamarin.Forms/4.3.0.991221": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-oEAwwHfaZesC+VvP07UoctI1DGIgewZlKMr/sHPl/hNMRM6ZfccPgOY19Yw017asj9z7PKXqpDDUbFFOJ2jN4A==",
-      "path": "xamarin.forms/4.3.0.947036",
-      "hashPath": "xamarin.forms.4.3.0.947036.nupkg.sha512"
+      "sha512": "sha512-Yh3kxXj+fnERLZfh8gNbcFWflSL0PvPh3aHtq2tpXInInVNeWDUb0qitChUm2hgJSSOpn3MBa/55nxcqPM4Kog==",
+      "path": "xamarin.forms/4.3.0.991221",
+      "hashPath": "xamarin.forms.4.3.0.991221.nupkg.sha512"
     },
     "TenantsApp.Entities/1.0.0": {
       "type": "project",

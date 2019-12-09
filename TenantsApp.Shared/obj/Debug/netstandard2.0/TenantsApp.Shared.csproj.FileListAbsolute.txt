@@ -5,4 +5,3 @@ C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Shared\obj\Debu
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Shared\obj\Debug\netstandard2.0\TenantsApp.Shared.AssemblyInfo.cs
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Shared\obj\Debug\netstandard2.0\TenantsApp.Shared.dll
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Shared\obj\Debug\netstandard2.0\TenantsApp.Shared.pdb
-C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Shared\obj\Debug\netstandard2.0\TenantsApp.Shared.csprojAssemblyReference.cache

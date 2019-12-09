@@ -23,6 +23,9 @@ namespace TenantsApp
         public ICommand SaveCommand { get; set; }
         public ICommand AddTenatCommand { get; set; }
         public ICommand GoToRentsCommand { get; set; }
+        public ICommand GoToBillsCommand { get; set; }
+
+        
         public int TotalTenants { get; set; }
 
         public decimal?  TotalBond { get; set; }
@@ -39,6 +42,19 @@ namespace TenantsApp
             SaveCommand = new Command(Save);
             AddTenatCommand = new Command(GoToTenants);
             GoToRentsCommand = new Command(GoToRents);
+            GoToBillsCommand = new Command(GoToBills);
+        }
+
+        private async void GoToBills()
+        {
+            try
+            {               
+                await CoreMethods.PushPageModel<BillsPageModel>(this.Place);
+            }
+            catch (Exception ex)
+            {
+                Helpers.ExceptionHelper.ProcessException(ex, _userDialogs, nameof(PropertyPageModel));
+            }
         }
 
         private async void GoToRents()

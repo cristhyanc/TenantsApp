@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="TenantsApp.BillPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:syncNumeric="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
+    Title="Bill"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <ScrollView VerticalOptions="FillAndExpand">
+            <StackLayout Margin="15,20" VerticalOptions="FillAndExpand">
+
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        FontSize="Title"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Bill Details" />
+
+
+                    <ffimageloadingsvg:SvgCachedImage
+                        Margin="0,0,10,10"
+                        HeightRequest="30"
+                        HorizontalOptions="End"
+                        Source="resource://TenantsApp.Resources.bill.svg?assembly=TenantsApp"
+                        VerticalOptions="CenterAndExpand"
+                        WidthRequest="30">
+                        <ffimageloadingsvg:SvgCachedImage.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding GoToBillsCommand}" />
+                        </ffimageloadingsvg:SvgCachedImage.GestureRecognizers>
+                    </ffimageloadingsvg:SvgCachedImage>
+
+
+                </StackLayout>
+
+                <inputLayout:SfTextInputLayout
+                    ContainerBackgroundColor="White"
+                    ContainerType="Filled"
+                    FocusedColor="Aqua"
+                    Hint="Description">
+                    <Entry x:Name="description" Text="{Binding Bill.Description}" />
+                </inputLayout:SfTextInputLayout>
+
+                <inputLayout:SfTextInputLayout
+                    ContainerBackgroundColor="White"
+                    ContainerType="Filled"
+                    FocusedColor="Aqua"
+                    Hint="Biller">
+                    <Entry x:Name="address" Text="{Binding Bill.Biller}" />
+                </inputLayout:SfTextInputLayout>
+
+                <inputLayout:SfTextInputLayout
+                    ContainerBackgroundColor="White"
+                    ContainerType="Filled"
+                    FocusedColor="Aqua"
+                    Hint="Expiry Date"
+                    HorizontalOptions="FillAndExpand"
+                    LeadingViewPosition="Inside">
+
+                    <DatePicker Date="{Binding Bill.ExpiryDate}" />
+
+                    <inputLayout:SfTextInputLayout.LeadingView>
+                        <ffimageloadingsvg:SvgCachedImage
+                            Margin="0,0,30,0"
+                            BackgroundColor="Transparent"
+                            HeightRequest="20"
+                            Source="resource://TenantsApp.Resources.timetable.svg?assembly=TenantsApp"
+                            WidthRequest="20" />
+                    </inputLayout:SfTextInputLayout.LeadingView>
+                </inputLayout:SfTextInputLayout>
+
+                <buttons:SfCheckBox
+                    x:Name="chkPaid"
+                    IsChecked="{Binding Bill.Paid}"
+                    Text="Bill Paid" />
+
+                <inputLayout:SfTextInputLayout
+                    ContainerBackgroundColor="White"
+                    ContainerType="Filled"
+                    FocusedColor="Aqua"
+                    Hint="Paid Date"
+                    HorizontalOptions="FillAndExpand"
+                    LeadingViewPosition="Inside">
+
+
+
+                    <DatePicker Date="{Binding Bill.PaidDate}">
+                        <DatePicker.Triggers>
+                            <DataTrigger
+                                Binding="{Binding Source={x:Reference chkPaid}, Path=IsChecked}"
+                                TargetType="DatePicker"
+                                Value="true">
+                                <Setter Property="IsEnabled" Value="true" />
+                            </DataTrigger>
+                            <DataTrigger
+                                Binding="{Binding Source={x:Reference chkPaid}, Path=IsChecked}"
+                                TargetType="DatePicker"
+                                Value="false">
+                                <Setter Property="IsEnabled" Value="false" />
+                            </DataTrigger>
+                        </DatePicker.Triggers>
+
+                    </DatePicker>
+
+                    <inputLayout:SfTextInputLayout.LeadingView>
+                        <ffimageloadingsvg:SvgCachedImage
+                            Margin="0,0,30,0"
+                            BackgroundColor="Transparent"
+                            HeightRequest="20"
+                            Source="resource://TenantsApp.Resources.timetable.svg?assembly=TenantsApp"
+                            WidthRequest="20" />
+                    </inputLayout:SfTextInputLayout.LeadingView>
+                </inputLayout:SfTextInputLayout>
+
+                <inputLayout:SfTextInputLayout
+                    ContainerBackgroundColor="White"
+                    ContainerType="Filled"
+                    FocusedColor="Aqua"
+                    Hint="Price"
+                    HorizontalOptions="FillAndExpand"
+                    LeadingViewPosition="Inside">
+
+                    <syncNumeric:SfNumericTextBox
+                        AllowNull="true"
+                        FormatString="n"
+                        MaximumNumberDecimalDigits="2"
+                        Value="{Binding Bill.Price}" />
+                    <inputLayout:SfTextInputLayout.LeadingView>
+                        <ffimageloadingsvg:SvgCachedImage
+                            Margin="0,0,30,0"
+                            BackgroundColor="Transparent"
+                            HeightRequest="20"
+                            Source="resource://TenantsApp.Resources.toilet.svg?assembly=TenantsApp"
+                            WidthRequest="20" />
+                    </inputLayout:SfTextInputLayout.LeadingView>
+                </inputLayout:SfTextInputLayout>
+
+                <buttons:SfButton
+                    x:Name="SfButton"
+                    BackgroundColor="Black"
+                    Command="{Binding SaveCommand}"
+                    CornerRadius="5"
+                    Text="Save" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

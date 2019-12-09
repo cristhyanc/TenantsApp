@@ -23,7 +23,8 @@ namespace TenantsApp.Repository
                 _connection.CreateTable<Place>();
                 _connection.CreateTable<Rent>();
                 _connection.CreateTable<Tenant>();
-                _connection.CreateTable<ScheduleRent >();
+                _connection.CreateTable<Bill>();
+                _connection.CreateTable<SchedulePayment >();
 
             }
             catch (Exception ex)

@@ -16,6 +16,12 @@ namespace TenantsApp.Bl
             _uow = uow;
         }
 
+        public IList<Bill> GetBills(Guid placeId)
+        {
+            return _uow.BillRepository.GetAll(x => x.PlaceID == placeId).OrderByDescending(x=>!x.Paid).OrderByDescending(x=> x.ExpiryDate ).ToList() ;
+        }
+
+
         public IList<Rent> GetRents(Guid placeID)
         {
             var rents = (from tn in _uow.TenantRepository.GetAll() join rent in _uow.RentRepository.GetAll() 
@@ -34,10 +40,10 @@ namespace TenantsApp.Bl
                 result.LoadTenants(_uow);
                 foreach (var item in result.Tenants )
                 {
-                    item.ScheduleRent = _uow.ScheduleRentRepositoy.GetAll(x => x.TenantID == item.TenantID).FirstOrDefault();
+                    item.ScheduleRent = _uow.ScheduleRentRepositoy.GetAll(x => x.ParentID == item.TenantID).FirstOrDefault();
                     if(item.ScheduleRent!=null)
                     {
-                        item.ScheduleRent.Rents = _uow.RentRepository.GetAll(x => x.ScheduleID == item.ScheduleRent.ScheduleID);
+                        item.ScheduleRent.Payments = _uow.RentRepository.GetAll(x => x.ScheduleID == item.ScheduleRent.ScheduleID);
                     }
                 }
             }

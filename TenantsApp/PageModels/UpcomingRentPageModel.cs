@@ -80,7 +80,7 @@ namespace TenantsApp
                 this.IsBusy = true;
                 bool email = await _userDialogs.ConfirmAsync("Do you want to send an email?", "", "Yes", "No");
 
-                if (!await _scheduleBl.PayRent(this.RentSelected.RentID , email, "Cristhyan",this.Weeks,this.TotalPaid ))
+                if (!await _scheduleBl.PayRent(this.RentSelected.PaymentID , email, "Cristhyan",this.Weeks,this.TotalPaid ))
                 {
                     _userDialogs.Alert("The rent could not be proccessed");
                 }
@@ -100,12 +100,12 @@ namespace TenantsApp
             }
         }
 
-        private async void PrepartePayRent(Guid rentId)
+        private async void PrepartePayRent(Guid paymentID)
         {
             try
             {
-                this.RentSelected = this.Rents.Where(x => x.RentID == rentId).FirstOrDefault();
-                var sched = _scheduleBl.GetScheduleByRent(rentId);
+                this.RentSelected = this.Rents.Where(x => x.PaymentID == paymentID).FirstOrDefault();
+                var sched = _scheduleBl.GetScheduleByRent(paymentID);
                 this.Weeks = sched.Period;
                 this.TotalPaid = this.RentSelected.Price;
                 DisplayPayConfirmation = true;

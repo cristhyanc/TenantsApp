@@ -15,9 +15,7 @@
     Title="Rents"
     Visual="Material"
     mc:Ignorable="d">
-    <d:ContentPage.BindingContext>
-        <viewmodels:UpcomingRentPageModel />
-    </d:ContentPage.BindingContext>
+
     <ContentPage.Resources>
         <ResourceDictionary>
             <DataTemplate x:Key="ItemTemplate">

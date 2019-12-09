@@ -7,6 +7,7 @@ C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\bin\iPhoneS
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\bin\iPhoneSimulator\Debug\FreshIOC.pdb
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\bin\iPhoneSimulator\Debug\FreshMvvm.dll
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\bin\iPhoneSimulator\Debug\FreshMvvm.pdb
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\bin\iPhoneSimulator\Debug\Newtonsoft.Json.dll
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\bin\iPhoneSimulator\Debug\PropertyChanged.dll
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\bin\iPhoneSimulator\Debug\SkiaSharp.dll
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\bin\iPhoneSimulator\Debug\SQLite-net.dll
@@ -40,6 +41,7 @@ C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\bin\iPhoneS
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\bin\iPhoneSimulator\Debug\Syncfusion.SfTabView.XForms.iOS.dll
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\bin\iPhoneSimulator\Debug\System.Reactive.dll
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\bin\iPhoneSimulator\Debug\WebP.Touch.dll
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\bin\iPhoneSimulator\Debug\Dropbox.Api.dll
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\bin\iPhoneSimulator\Debug\Xamarin.Essentials.dll
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\bin\iPhoneSimulator\Debug\Xamarin.Essentials.pdb
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\bin\iPhoneSimulator\Debug\FFImageLoading.Platform.dll
@@ -121,5 +123,3 @@ C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\obj\iPhoneS
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\obj\iPhoneSimulator\Debug\TenantsApp.iOS.csproj.CopyComplete
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\obj\iPhoneSimulator\Debug\TenantsApp.iOS.exe
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\obj\iPhoneSimulator\Debug\TenantsApp.iOS.pdb
-C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\bin\iPhoneSimulator\Debug\Newtonsoft.Json.dll
-C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.iOS\bin\iPhoneSimulator\Debug\Dropbox.Api.dll

@@ -18,7 +18,7 @@ namespace TenantsApp.Services
 
         private const string dropboxFolder = "/";
         private const string AppKeyDropboxtoken = "";
-        private const string ClientId = "";
+        private const string ClientId = "ktofhdhh55mybuv";
         private const string RedirectUri = "https://www.google.com.au/";
 
         #endregion

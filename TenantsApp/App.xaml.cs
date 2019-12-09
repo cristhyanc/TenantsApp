@@ -9,6 +9,7 @@ using TenantsApp.Repository;
 using Acr.UserDialogs;
 using TenantsApp.Services;
 using TenantsApp.Shared.Interfaces;
+using TenantsApp.Bl;
 
 namespace TenantsApp
 {
@@ -19,13 +20,13 @@ namespace TenantsApp
             try
             {
 
-                FreshIOC.Container.Register<IScheduleRentRepositoy, ScheduleRentRepositoy>();
+                FreshIOC.Container.Register<ISchedulePaymentRepositoy, SchedulePaymentRepositoy>();
                 FreshIOC.Container.Register<ITenantRepository, TenantRepository>();
                 FreshIOC.Container.Register<IRentRepository, RentRepository>();
                 FreshIOC.Container.Register<IPlaceRepository, PlaceRepository>();
                 FreshIOC.Container.Register<IEmailService, EmailService>();
                 FreshIOC.Container.Register<IDropboxService, DropBoxService>();
-
+                FreshIOC.Container.Register<IBillsBl, BillsBl>();
                 
 
 
@@ -40,12 +41,13 @@ namespace TenantsApp
 
                 var mainPage = new FreshTabbedNavigationContainer();
 
-                 mainPage.On<Xamarin.Forms.PlatformConfiguration.Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
+               //  mainPage.On<Xamarin.Forms.PlatformConfiguration.Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
                 //mainPage.UnselectedTabColor = Color.Black;
                 //mainPage.SelectedTabColor = Color.DodgerBlue;
 
-                mainPage.AddTab<UpcomingRentPageModel>("Upcoming", null);
-                mainPage.AddTab<PropertiesPageModel>("Properties", null);
+                mainPage.AddTab<UpcomingRentPageModel>("Rents", null);
+                mainPage.AddTab<UpcomingBillsPageModel>("Bills", null);             
+                mainPage.AddTab<PropertiesPageModel>("Places", null);
                 mainPage.AddTab<SettingsPageModel>("Setting", null);
 
 

@@ -43,7 +43,7 @@ namespace TenantsApp.Entities
         }
 
         [Ignore]
-        public ScheduleRent ScheduleRent { get; set; }
+        public SchedulePayment ScheduleRent { get; set; }
 
         [Ignore]
         public Place Place { get; set; }
@@ -80,7 +80,7 @@ namespace TenantsApp.Entities
                 throw new ValidationException("The Tenant ID is required");
             }
 
-            var schedules = uow.ScheduleRentRepositoy.GetAll(x => x.TenantID == this.TenantID);
+            var schedules = uow.ScheduleRentRepositoy.GetAll(x => x.ParentID == this.TenantID);
             if(schedules?.Count>0)
             {
                 schedules.ForEach(x => x.Delete(uow));

@@ -17,8 +17,7 @@ namespace TenantsApp
     public class PropertiesPageModel : BaseViewModel
     {
 
-        IUserDialogs _userDialogs;
-
+       
         
         public ICommand DeletePlaceCommand { get; set; }
 
@@ -33,6 +32,8 @@ namespace TenantsApp
 
         public decimal  TotalBond { get; set; }
         public decimal TotalSaved { get; set; }
+        public decimal GrantTotal { get; set; }
+        public decimal TotalRentPrice { get; set; }
 
         Place placeSelected;
         public Place PlaceSelected
@@ -62,7 +63,7 @@ namespace TenantsApp
             AddCommand = new Command(AddPlace);
             DeletePlaceCommand = new Command<Guid>((x) => { AttempToDeleteProperty(x); });
             _placesBl = placesBl;
-            _userDialogs = userDialogs;           
+                    
         }
 
         private async Task AttempToDeleteProperty(Guid placeId)
@@ -108,8 +109,9 @@ namespace TenantsApp
             {
                 this.TotalBond = 0;
                 this.TotalSaved = 0;
-
-                this.IsBusy = true;                
+                this.TotalRentPrice = 0;
+                this.IsBusy = true;     
+                
                 Places = new ObservableCollection<Place>(_placesBl.GetCurrentPlaces());
                if(this.Places?.Count>0)
                 {
@@ -117,7 +119,10 @@ namespace TenantsApp
                     {
                         this.TotalBond += item.Tenants.Sum(x => x.Bond);
                         this.TotalSaved += item.TotalSaved;
+                        this.TotalRentPrice += item.Rent;
                     }
+
+                    this.GrantTotal = this.TotalBond + TotalSaved;
                 }
             }
             catch (Exception ex)

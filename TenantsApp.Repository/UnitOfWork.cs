@@ -11,9 +11,10 @@ namespace TenantsApp.Repository
     {
         IPlaceRepository _placeRepository;
         ITenantRepository _tenantRepository;
-        IScheduleRentRepositoy _scheduleRentRepositoy;
+        ISchedulePaymentRepositoy _scheduleRentRepositoy;
         IRentRepository _rentRepository;
         IDropboxService _dropbox;
+        IBillRepository _billRepository;
 
         private DBContext _context;
 
@@ -28,10 +29,17 @@ namespace TenantsApp.Repository
             _context.RestartConnection();
         }
 
-        //public async Task<Boolean> BackUpDatabase()
-        //{
-        //   Stream 
-        //}
+        public IBillRepository BillRepository
+        {
+            get
+            {
+                if (_billRepository == null)
+                {
+                    _billRepository = new BillRepository(_context);
+                }
+                return _billRepository;
+            }
+        }
 
         public IRentRepository RentRepository
         {
@@ -45,13 +53,13 @@ namespace TenantsApp.Repository
             }
         }
 
-        public IScheduleRentRepositoy ScheduleRentRepositoy
+        public ISchedulePaymentRepositoy ScheduleRentRepositoy
         {
             get
             {
                 if (_scheduleRentRepositoy == null)
                 {
-                    _scheduleRentRepositoy = new ScheduleRentRepositoy(_context);
+                    _scheduleRentRepositoy = new SchedulePaymentRepositoy(_context);
                 }
                 return _scheduleRentRepositoy;
             }

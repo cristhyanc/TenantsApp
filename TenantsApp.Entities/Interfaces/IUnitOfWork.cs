@@ -8,8 +8,9 @@ namespace TenantsApp.Entities.Interfaces
     {
         IPlaceRepository PlaceRepository { get; }
         ITenantRepository TenantRepository { get; }
-        IScheduleRentRepositoy ScheduleRentRepositoy { get; }
+        ISchedulePaymentRepositoy ScheduleRentRepositoy { get; }
         IRentRepository RentRepository { get; }
+        IBillRepository BillRepository { get; }
         void RestartConnection();
         void Begin();
         void Commit();

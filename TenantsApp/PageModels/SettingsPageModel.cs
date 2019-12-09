@@ -18,7 +18,8 @@ namespace TenantsApp
         public ICommand DisconnectToDropboxCommand { get; set; }
         public ICommand BackupDatabaseCommand { get; set; }
         public ICommand RestoreDatabaseCommand { get; set; }
-        
+        public ICommand CleanDatabaseCommand { get; set; }
+
         public bool ConnectionButtonVisible { get; set; }
         public bool DisconnectionButtonVisible { get; set; }
 
@@ -31,6 +32,8 @@ namespace TenantsApp
             DisconnectToDropboxCommand = new Command(Disconnect);
             BackupDatabaseCommand = new Command(BackupDb);
             RestoreDatabaseCommand = new Command(RestoreDB);
+            CleanDatabaseCommand = new Command(CleanDB);
+          
             _dropbox = dropbox;
             _unitOfWork = unitOfWork;
         }
@@ -128,6 +131,11 @@ namespace TenantsApp
         {
             try
             {
+                if (!await _userDialogs.ConfirmAsync("Do you want to backup the database?"))
+                {
+                    return;
+                }
+
                 this.IsBusy = true;
                 var file = File.ReadAllBytes(TenantsApp.Shared.Helper.DBFilePath);
                 if (file != null)
@@ -168,6 +176,32 @@ namespace TenantsApp
                     _userDialogs.Alert("Done");
                 }
              
+            }
+            catch (Exception ex)
+            {
+                Helpers.ExceptionHelper.ProcessException(ex, _userDialogs, nameof(TenantsPageModel));
+            }
+            finally
+            {
+                this.IsBusy = false;
+            }
+        }
+
+        private async void CleanDB()
+        {
+            try
+            {
+
+                if (!await _userDialogs.ConfirmAsync("Do you want to Clean the database?"))
+                {
+                    return;
+                }
+
+                this.IsBusy = true;
+                File.WriteAllBytes(TenantsApp.Shared.Helper.DBFilePath, new byte[0]);
+                _unitOfWork.RestartConnection();
+                _userDialogs.Alert("Done");
+
             }
             catch (Exception ex)
             {

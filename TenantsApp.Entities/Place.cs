@@ -46,7 +46,7 @@ namespace TenantsApp.Entities
             {
                 if (this.Tenants?.Count > 0)
                 {
-                    return this.Tenants.Where(x => !x.End.HasValue || DateTime.Compare(x.End.Value, DateTime.Now) > 0).ToList().Count;
+                    return this.Tenants.Where(x => (!x.End.HasValue || DateTime.Compare(x.End.Value, DateTime.Now) > 0) && DateTime.Now>x.Start  ).ToList().Count;
 
                 }
                 return 0;
@@ -122,7 +122,7 @@ namespace TenantsApp.Entities
 
             var schedules = (from sch in uow.ScheduleRentRepositoy.GetAll()
                              join ten in tenants
-                             on sch.TenantID equals ten.TenantID
+                             on sch.ParentID equals ten.TenantID
                              select sch).ToList();
 
             var rents = (from rent in uow.RentRepository.GetAll()

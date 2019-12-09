@@ -50,14 +50,14 @@ namespace TenantsApp.Bl
             }
         }
 
-        public ScheduleRent GetTenantSchedule(Guid tenantID)
+        public SchedulePayment GetTenantSchedule(Guid tenantID)
         {
-            return _uow.ScheduleRentRepositoy.Get(x => x.TenantID == tenantID);
+            return _uow.ScheduleRentRepositoy.Get(x => x.ParentID == tenantID);
         }
 
-        public ScheduleRent GetScheduleByRent(Guid rentId)
+        public SchedulePayment GetScheduleByRent(Guid paymentID)
         {
-            var rent = _uow.RentRepository.Get(rentId);
+            var rent = _uow.RentRepository.Get(paymentID);
             if (rent != null)
             {
                 var sched = _uow.ScheduleRentRepositoy.Get(rent.ScheduleID);
@@ -73,11 +73,11 @@ namespace TenantsApp.Bl
         }
 
 
-        public bool SavecheduleRent(ScheduleRent schedule)
+        public bool SaveSchedule(SchedulePayment schedule)
         {
             try
             {
-                bool  isNew = false; ;
+                bool  isNew = false; 
                 if (schedule == null)
                 {
                     throw new ArgumentNullException(nameof(schedule));
@@ -93,7 +93,7 @@ namespace TenantsApp.Bl
                 {
                     if (isNew)
                     {
-                        if (schedule.CreateNextRent(_uow))
+                        if (schedule.CreateNextPayment(_uow))
                         {
                             _uow.Commit();
                             return true;
@@ -120,12 +120,6 @@ namespace TenantsApp.Bl
         {
             var rents = _uow.RentRepository.GetAll(x => !x.Paid);
 
-            //var rest2 = _uow.RentRepository.GetAll();
-            //_uow.RentRepository.Delete(rest2);
-
-            //var sche = _uow.ScheduleRentRepositoy.GetAll();
-            //_uow.ScheduleRentRepositoy.Delete(sche);
-
             if (rents.Count > 0)
             {
                 var ids = rents.Select(x => x.TenantID).ToList();
@@ -144,11 +138,12 @@ namespace TenantsApp.Bl
 
       
 
-        public async Task<bool > PayRent(Guid rentID, bool sendEmail, string sender, int weeks, decimal totalPaid)
+        public async Task<bool > PayRent(Guid paymentID, bool sendEmail, string sender, int weeks, decimal totalPaid)
         {
             try
             {
-                var rent = _uow.RentRepository.Get(rentID);
+                DateTime todate;
+                var rent = _uow.RentRepository.Get(paymentID);
                 if (rent == null)
                 {
                     throw new ValidationException("Rent could not be found");
@@ -166,16 +161,12 @@ namespace TenantsApp.Bl
                 }
 
                 rent.TotalPaidWeeks = weeks;
-                //if (schedule.Period != weeks)
-                //{
-                //    rent.ExpiryDate = rent.ExpiryDate.AddDays(-7 * schedule.Period);
-                //    rent.ExpiryDate = rent.ExpiryDate.AddDays(7 * weeks);
-                //}
+                todate = rent.ExpiryDate.AddDays(7 * weeks);
+                if (todate>schedule.EndDate)
+                {
+                    todate = schedule.EndDate;
+                }
 
-                //else if(schedule.Period<weeks) 
-                //{
-                //    rent.ExpiryDate = rent.ExpiryDate.AddDays(7 * ( weeks- schedule.Period));
-                //}
 
                 var place = (from tn in _uow.TenantRepository.GetAll()
                              join pl in _uow.PlaceRepository.GetAll()
@@ -193,7 +184,7 @@ namespace TenantsApp.Bl
                 _uow.Begin();
                 if (rent.PayRent(_uow))
                 {
-                    if (schedule.CreateNextRent(_uow))
+                    if (schedule.CreateNextPayment(_uow))
                     {
                         if (place.Save(_uow))
                         {
@@ -212,7 +203,7 @@ namespace TenantsApp.Bl
 
                                 body = body.Replace("{TenantName}", tenant.Name);
                                 body = body.Replace("{Amount}", "$ " + rent.Price.ToString());
-                                body = body.Replace("{Description}", "Rent From" + rent.ExpiryDate.ToShortDateString () + " To " + rent.ExpiryDate.AddDays(7*weeks).ToShortDateString());
+                                body = body.Replace("{Description}", "Rent From " + rent.ExpiryDate.ToShortDateString () + " To " + todate.ToShortDateString());
                                 body = body.Replace("{ReceivedBy}", sender);
                                 body = body.Replace("{Date}", DateTime.Now.ToShortDateString());
 

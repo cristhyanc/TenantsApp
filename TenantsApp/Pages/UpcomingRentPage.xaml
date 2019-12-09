@@ -13,7 +13,7 @@
     xmlns:sync="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
     xmlns:syncNumeric="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
     xmlns:viewmodels="clr-namespace:TenantsApp"
-    Title="Upcoming"
+    Title="Upcoming Rents"
     Visual="Material"
     mc:Ignorable="d">
     <d:ContentPage.BindingContext>
@@ -32,29 +32,45 @@
                             <RowDefinition Height="auto" />
                             <RowDefinition Height="auto" />
                             <RowDefinition Height="auto" />
+
                         </Grid.RowDefinitions>
 
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="auto" />
-                            <ColumnDefinition />
+                            <ColumnDefinition Width="auto" />
                         </Grid.ColumnDefinitions>
 
-                        <Label Grid.ColumnSpan="2" Text="{Binding Tenant.Name}" />
+
+
+                        <StackLayout
+                            Grid.ColumnSpan="2"
+                            HorizontalOptions="FillAndExpand"
+                            Orientation="Horizontal">
+
+                            <Label HorizontalOptions="StartAndExpand" Text="{Binding Tenant.Name}" />
+                            <Label HorizontalOptions="End" Text="Total:" />
+                            <Label Text="{Binding Price}" />
+                        </StackLayout>
+
+
                         <Label
                             Grid.Row="1"
                             Grid.ColumnSpan="2"
                             Text="{Binding Tenant.Place.Description}" />
 
-                        <Label Grid.Row="2" Text="{Binding ExpiryDate, StringFormat='{0:MMMM dd, yyyy}'}" />
 
                         <StackLayout
                             Grid.Row="2"
-                            Grid.Column="1"
-                            HorizontalOptions="EndAndExpand"
+                            HorizontalOptions="CenterAndExpand"
                             Orientation="Horizontal">
-                            <Label Text="Total:" />
-                            <Label Text="{Binding Price}" />
+                            <Label Text="Expiry Date" />
+                            <Label Margin="0,0,10,0" Text="{Binding ExpiryDate, StringFormat='{0:MMM dd, yyyy}'}" />
+                            <Label Text="Rent to" />
+                            <Label Text="{Binding RentToDate, StringFormat='{0:MMM dd, yyyy}'}" />
                         </StackLayout>
+
+
+
 
 
                     </Grid>
@@ -160,7 +176,7 @@
                                 HorizontalOptions="Fill"
                                 VerticalOptions="Fill">
                                 <Grid.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding Source={x:Reference listView}, Path=BindingContext.PayRentCommand}" CommandParameter="{Binding RentID}" />
+                                    <TapGestureRecognizer Command="{Binding Source={x:Reference listView}, Path=BindingContext.PayRentCommand}" CommandParameter="{Binding PaymentID}" />
                                 </Grid.GestureRecognizers>
                                 <Grid HorizontalOptions="Center" VerticalOptions="Center">
                                     <ffimageloadingsvg:SvgCachedImage

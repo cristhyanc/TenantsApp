@@ -78,7 +78,7 @@ namespace TenantsApp
             }
             catch (Exception ex)
             {
-                Helpers.ExceptionHelper.ProcessException(ex, _userDialogs, nameof(PropertyPageModel));
+                Helpers.ExceptionHelper.ProcessException(ex, _userDialogs, nameof(PropertiesPageModel));
             }
         }
 
@@ -94,7 +94,7 @@ namespace TenantsApp
             }
             catch (Exception ex)
             {
-                Helpers.ExceptionHelper.ProcessException(ex, _userDialogs, nameof(PropertyPageModel));
+                Helpers.ExceptionHelper.ProcessException(ex, _userDialogs, nameof(PropertiesPageModel));
             }
         }
 
@@ -127,7 +127,7 @@ namespace TenantsApp
             }
             catch (Exception ex)
             {
-                Helpers.ExceptionHelper.ProcessException(ex, _userDialogs, nameof(PropertyPageModel));
+                Helpers.ExceptionHelper.ProcessException(ex, _userDialogs, nameof(PropertiesPageModel));
             }
             finally
             {
@@ -143,7 +143,7 @@ namespace TenantsApp
             }
             catch (Exception ex)
             {
-                Helpers.ExceptionHelper.ProcessException(ex, _userDialogs, nameof(PropertyPageModel));
+                Helpers.ExceptionHelper.ProcessException(ex, _userDialogs, nameof(PropertiesPageModel));
             }
         }
     }

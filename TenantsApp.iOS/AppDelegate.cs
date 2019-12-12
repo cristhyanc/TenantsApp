@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using Syncfusion.ListView.XForms.iOS;
 using Syncfusion.SfNumericTextBox.XForms.iOS;
+using Syncfusion.XForms.iOS.EffectsView;
 using UIKit;
 
 namespace TenantsApp.iOS
@@ -26,8 +28,12 @@ namespace TenantsApp.iOS
             global::Xamarin.Forms.Forms.SetFlags("Visual_Experimental");
             global::Xamarin.Forms.Forms.Init();
             global::Xamarin.Forms.FormsMaterial.Init();
+
+            SfListViewRenderer.Init();
+            SfEffectsViewRenderer.Init();
             Syncfusion.XForms.iOS.Border.SfBorderRenderer.Init();
-            //Syncfusion.SfChart.XForms.iOS.Renderers.SfChartRenderer.Init();
+            Syncfusion.XForms.iOS.Cards.SfCardViewRenderer.Init();
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
             Syncfusion.XForms.iOS.TabView.SfTabViewRenderer.Init();
             Syncfusion.SfNumericUpDown.XForms.iOS.SfNumericUpDownRenderer.Init();
             global::Xamarin.Forms.Forms.Init();

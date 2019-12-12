@@ -12,7 +12,7 @@
     xmlns:sfpopup="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms"
     xmlns:sync="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
     xmlns:viewmodels="clr-namespace:TenantsApp"
-    Title="Bills"
+    Title="Bills" 
     Visual="Material"
     mc:Ignorable="d">
     <ContentPage.Resources>

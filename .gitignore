@@ -1,0 +1,6 @@
+
+TenantsApp.Android/obj/
+TenantsApp.Android/bin/
+*.dll
+TenantsApp.iOS/bin/
+TenantsApp.iOS/obj/

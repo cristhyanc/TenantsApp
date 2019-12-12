@@ -14,7 +14,7 @@
     xmlns:syncNumeric="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
     xmlns:viewmodels="clr-namespace:TenantsApp"
     Title="Upcoming Rents"
-    Visual="Material"
+    BackgroundColor="#f3f3f3"
     mc:Ignorable="d">
     <d:ContentPage.BindingContext>
         <viewmodels:UpcomingRentPageModel />
@@ -23,7 +23,7 @@
         <ResourceDictionary>
             <DataTemplate x:Key="ItemTemplate" x:Name="ItemTemplate">
                 <card:SfCardView
-                    Margin="10,0"
+                    Margin="10,5"
                     BackgroundColor="{Binding ItemBackgroundColor}"
                     HeightRequest="100"
                     VerticalOptions="Start">
@@ -150,7 +150,7 @@
             </sfpopup:SfPopupLayout>
 
             <sync:SfListView
-                x:Name="listView"
+                x:Name="listView" BackgroundColor="Transparent"
                 Margin="0,20,0,0"
                 AllowKeyboardNavigation="True"
                 AllowSwiping="True"

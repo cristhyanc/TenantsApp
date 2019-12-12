@@ -3760,39 +3760,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\crist\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "/Users/operations/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Android\\TenantsApp.Android.csproj",
+      "projectUniqueName": "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Android/TenantsApp.Android.csproj",
       "projectName": "TenantsApp.Android",
-      "projectPath": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Android\\TenantsApp.Android.csproj",
-      "packagesPath": "C:\\Users\\crist\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Android\\obj\\",
+      "projectPath": "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Android/TenantsApp.Android.csproj",
+      "packagesPath": "/Users/operations/.nuget/packages/",
+      "outputPath": "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Android/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\crist\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "/Users/operations/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "monoandroid90"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp\\TenantsApp.csproj": {
-              "projectPath": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp\\TenantsApp.csproj"
+            "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp/TenantsApp.csproj": {
+              "projectPath": "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp/TenantsApp.csproj"
             }
           }
         }

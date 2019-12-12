@@ -15,7 +15,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
@@ -150,7 +149,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TenantsApp\TenantsApp.csproj">
-      <Project>{DC24FD2B-9C58-4948-B597-C80975FA2AB5}</Project>
+      <Project>{2FDFC045-6C0B-438F-9576-33DD5E4F22BF}</Project>
       <Name>TenantsApp</Name>
     </ProjectReference>
   </ItemGroup>

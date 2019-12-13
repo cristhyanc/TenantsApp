@@ -4,6 +4,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+    xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
     xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
@@ -42,7 +43,7 @@
                     ContainerType="Filled"
                     FocusedColor="Aqua"
                     Hint="Description">
-                    <Entry x:Name="description" Text="{Binding Bill.Description}" />
+                    <Entry x:Name="description" Text="{Binding Bill.Description, Mode=TwoWay}" />
                 </inputLayout:SfTextInputLayout>
 
                 <inputLayout:SfTextInputLayout
@@ -50,7 +51,7 @@
                     ContainerType="Filled"
                     FocusedColor="Aqua"
                     Hint="Biller">
-                    <Entry x:Name="address" Text="{Binding Bill.Biller}" />
+                    <Entry x:Name="address" Text="{Binding Bill.Biller, Mode=TwoWay}" />
                 </inputLayout:SfTextInputLayout>
 
                 <inputLayout:SfTextInputLayout
@@ -61,7 +62,7 @@
                     HorizontalOptions="FillAndExpand"
                     LeadingViewPosition="Inside">
 
-                    <DatePicker Date="{Binding Bill.ExpiryDate}" />
+                    <DatePicker Date="{Binding Bill.ExpiryDate, Mode=TwoWay}" />
 
                     <inputLayout:SfTextInputLayout.LeadingView>
                         <ffimageloadingsvg:SvgCachedImage
@@ -75,7 +76,7 @@
 
                 <buttons:SfCheckBox
                     x:Name="chkPaid"
-                    IsChecked="{Binding Bill.Paid}"
+                    IsChecked="{Binding Bill.Paid, Mode=TwoWay}"
                     Text="Bill Paid" />
 
                 <inputLayout:SfTextInputLayout
@@ -88,7 +89,7 @@
 
 
 
-                    <DatePicker Date="{Binding Bill.PaidDate}">
+                    <DatePicker Date="{Binding Bill.PaidDate, Mode=TwoWay}">
                         <DatePicker.Triggers>
                             <DataTrigger
                                 Binding="{Binding Source={x:Reference chkPaid}, Path=IsChecked}"
@@ -128,7 +129,7 @@
                         AllowNull="true"
                         FormatString="n"
                         MaximumNumberDecimalDigits="2"
-                        Value="{Binding Bill.Price}" />
+                        Value="{Binding Bill.Price, Mode=TwoWay}" />
                     <inputLayout:SfTextInputLayout.LeadingView>
                         <ffimageloadingsvg:SvgCachedImage
                             Margin="0,0,30,0"
@@ -139,8 +140,125 @@
                     </inputLayout:SfTextInputLayout.LeadingView>
                 </inputLayout:SfTextInputLayout>
 
+                <buttons:SfCheckBox
+                    x:Name="chkSchedule"
+                    IsChecked="{Binding Bill.IsScheduled, Mode=TwoWay}"
+                    Text="Is Scheduled?" />
+
+                <StackLayout>
+
+                    <StackLayout.Triggers>
+                        <DataTrigger
+                            Binding="{Binding Source={x:Reference chkSchedule}, Path=IsChecked}"
+                            TargetType="StackLayout"
+                            Value="true">
+                            <Setter Property="IsVisible" Value="true" />
+                        </DataTrigger>
+                        <DataTrigger
+                            Binding="{Binding Source={x:Reference chkSchedule}, Path=IsChecked}"
+                            TargetType="StackLayout"
+                            Value="false">
+                            <Setter Property="IsVisible" Value="false" />
+                        </DataTrigger>
+                    </StackLayout.Triggers>
+
+                    <inputLayout:SfTextInputLayout
+                        ContainerBackgroundColor="White"
+                        ContainerType="Filled"
+                        FocusedColor="Aqua"
+                        Hint="Schedule Last Date"
+                        HorizontalOptions="FillAndExpand"
+                        LeadingViewPosition="Inside">
+
+                        <DatePicker Date="{Binding Bill.ScheduleLastDate, Mode=TwoWay}" />
+
+                        <inputLayout:SfTextInputLayout.LeadingView>
+                            <ffimageloadingsvg:SvgCachedImage
+                                Margin="0,0,30,0"
+                                BackgroundColor="Transparent"
+                                HeightRequest="20"
+                                Source="resource://TenantsApp.Resources.timetable.svg?assembly=TenantsApp"
+                                WidthRequest="20" />
+                        </inputLayout:SfTextInputLayout.LeadingView>
+                    </inputLayout:SfTextInputLayout>
+
+
+                    <inputLayout:SfTextInputLayout
+                        ContainerBackgroundColor="White"
+                        ContainerType="Filled"
+                        FocusedColor="Aqua"
+                        Hint="Schedule Period Type"
+                        HorizontalOptions="FillAndExpand"
+                        LeadingViewPosition="Inside">
+
+                        <!--<inputLayout:SfTextInputLayout.Triggers>
+                        <DataTrigger
+                            Binding="{Binding Source={x:Reference chkSchedule}, Path=IsChecked}"
+                            TargetType="inputLayout:SfTextInputLayout"
+                            Value="true">
+                            <Setter Property="IsVisible" Value="true" />
+                        </DataTrigger>
+                        <DataTrigger
+                            Binding="{Binding Source={x:Reference chkSchedule}, Path=IsChecked}"
+                            TargetType="DatePicker"
+                            Value="false">
+                            <Setter Property="IsVisible" Value="false" />
+                        </DataTrigger>
+                    </inputLayout:SfTextInputLayout.Triggers>-->
+
+                        <combobox:SfComboBox DataSource="{Binding SchedulePeriodTypeList}" SelectedItem="{Binding SelectedSchedulePeriodType, Mode=TwoWay}">
+                            <combobox:SfComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackLayout Margin="4,0" Orientation="Horizontal">
+                                        <ffimageloadingsvg:SvgCachedImage
+                                            Margin="20,0,0,0"
+                                            BackgroundColor="Transparent"
+                                            HeightRequest="20"
+                                            Source="resource://TenantsApp.Resources.timetable.svg?assembly=TenantsApp"
+                                            VerticalOptions="Center"
+                                            WidthRequest="20" />
+                                        <Label Text="{Binding .}" VerticalOptions="Center" />
+                                    </StackLayout>
+                                </DataTemplate>
+                            </combobox:SfComboBox.ItemTemplate>
+                        </combobox:SfComboBox>
+                    </inputLayout:SfTextInputLayout>
+
+
+                    <inputLayout:SfTextInputLayout
+                        ContainerBackgroundColor="White"
+                        ContainerType="Filled"
+                        FocusedColor="Aqua"
+                        Hint="Schedule Period"
+                        HorizontalOptions="FillAndExpand"
+                        LeadingViewPosition="Inside">
+
+                        <!--<inputLayout:SfTextInputLayout.Triggers>
+                        <DataTrigger
+                            Binding="{Binding Source={x:Reference chkSchedule}, Path=IsChecked}"
+                            TargetType="inputLayout:SfTextInputLayout"
+                            Value="true">
+                            <Setter Property="IsVisible" Value="true" />
+                        </DataTrigger>
+                        <DataTrigger
+                            Binding="{Binding Source={x:Reference chkSchedule}, Path=IsChecked}"
+                            TargetType="DatePicker"
+                            Value="false">
+                            <Setter Property="IsVisible" Value="false" />
+                        </DataTrigger>
+                    </inputLayout:SfTextInputLayout.Triggers>-->
+
+                        <syncNumeric:SfNumericTextBox
+                            AllowNull="true"
+                            FormatString="n"
+                            MaximumNumberDecimalDigits="0"
+                            Value="{Binding Bill.SchedulePeriod}" />
+                    </inputLayout:SfTextInputLayout>
+
+                </StackLayout>
                 <buttons:SfButton
                     x:Name="SfButton"
+                    Margin="0,10"
                     BackgroundColor="Black"
                     Command="{Binding SaveCommand}"
                     CornerRadius="5"

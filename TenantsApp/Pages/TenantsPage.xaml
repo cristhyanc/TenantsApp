@@ -16,11 +16,7 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <DataTemplate x:Key="ItemTemplate" x:Name="ItemTemplate">
-                <card:SfCardView
-                    Margin="10,0"
-                    BackgroundColor="{Binding ItemBackgroundColor}"
-                    HeightRequest="100"
-                    VerticalOptions="Start">
+                <card:SfCardView BackgroundColor="{Binding ItemBackgroundColor}" Style="{StaticResource ListCard}">
                     <Grid Margin="10" VerticalOptions="Start">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto" />
@@ -63,20 +59,14 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout VerticalOptions="FillAndExpand">
 
             <sync:SfListView
                 x:Name="listView"
-                Margin="0,20,0,0"
-                AllowKeyboardNavigation="True"
                 AllowSwiping="true"
-                AutoFitMode="Height"
                 ItemTemplate="{StaticResource ItemTemplate}"
                 ItemsSource="{Binding Tenants}"
-                SelectedItem="{Binding TenantSelected}"
-                SelectionBackgroundColor="#E4E4E4"
-                SelectionGesture="Tap"
-                SelectionMode="Single">
+                SelectedItem="{Binding TenantSelected}">
                 <sync:SfListView.HeaderTemplate>
                     <DataTemplate>
 

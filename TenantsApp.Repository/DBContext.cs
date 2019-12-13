@@ -20,11 +20,7 @@ namespace TenantsApp.Repository
             try
             {
                 GetConnection();
-                _connection.CreateTable<Place>();
-                _connection.CreateTable<Rent>();
-                _connection.CreateTable<Tenant>();
-                _connection.CreateTable<Bill>();
-                _connection.CreateTable<SchedulePayment >();
+                InitTables();
 
             }
             catch (Exception ex)
@@ -33,10 +29,33 @@ namespace TenantsApp.Repository
             }
         }
 
+        private void InitTables()
+        {
+            _connection.CreateTable<Place>();
+            _connection.CreateTable<Rent>();
+            _connection.CreateTable<Tenant>();
+            _connection.CreateTable<Bill>();
+            _connection.CreateTable<SchedulePayment>();
+        }
+
+
+        public void CloseConnection()
+        {
+            _connection.Close();
+            _connection = null;
+
+        }
+
         public void RestartConnection()
         {
-            _connection = null;
+            if(_connection!=null)
+            {
+                _connection.Close();
+                _connection = null;
+            }
+           
             GetConnection();
+            InitTables();
         }
 
         public SQLiteConnection GetConnection()
@@ -44,8 +63,8 @@ namespace TenantsApp.Repository
             if (_connection == null)
             {
                 var databasePath = TenantsApp.Shared.Helper.DBFilePath;
-
                 _connection = new SQLiteConnection(databasePath);
+                
 
             }
             return _connection;

@@ -252,6 +252,21 @@
           "lib/Xamarin.iOS10/Syncfusion.SfChart.XForms.iOS.dll": {}
         }
       },
+      "Syncfusion.Xamarin.SfComboBox/17.3.0.26": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
+          "Xamarin.Forms": "3.6.0.344457"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.iOS.dll": {}
+        }
+      },
       "Syncfusion.Xamarin.SfListView/17.3.0.26": {
         "type": "package",
         "dependencies": {
@@ -671,6 +686,7 @@
           "Syncfusion.Xamarin.Cards": "17.3.0.26",
           "Syncfusion.Xamarin.Core": "17.3.0.26",
           "Syncfusion.Xamarin.SfChart": "17.3.0.26",
+          "Syncfusion.Xamarin.SfComboBox": "17.3.0.26",
           "Syncfusion.Xamarin.SfListView": "17.3.0.26",
           "Syncfusion.Xamarin.SfMaskedEdit": "17.3.0.26",
           "Syncfusion.Xamarin.SfNumericTextBox": "17.3.0.26",
@@ -979,6 +995,21 @@
           "lib/Xamarin.iOS10/Syncfusion.SfChart.XForms.iOS.dll": {}
         }
       },
+      "Syncfusion.Xamarin.SfComboBox/17.3.0.26": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
+          "Xamarin.Forms": "3.6.0.344457"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.iOS.dll": {}
+        }
+      },
       "Syncfusion.Xamarin.SfListView/17.3.0.26": {
         "type": "package",
         "dependencies": {
@@ -1398,6 +1429,7 @@
           "Syncfusion.Xamarin.Cards": "17.3.0.26",
           "Syncfusion.Xamarin.Core": "17.3.0.26",
           "Syncfusion.Xamarin.SfChart": "17.3.0.26",
+          "Syncfusion.Xamarin.SfComboBox": "17.3.0.26",
           "Syncfusion.Xamarin.SfListView": "17.3.0.26",
           "Syncfusion.Xamarin.SfMaskedEdit": "17.3.0.26",
           "Syncfusion.Xamarin.SfNumericTextBox": "17.3.0.26",
@@ -1709,6 +1741,21 @@
           "lib/Xamarin.iOS10/Syncfusion.SfChart.XForms.iOS.dll": {}
         }
       },
+      "Syncfusion.Xamarin.SfComboBox/17.3.0.26": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
+          "Xamarin.Forms": "3.6.0.344457"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.iOS.dll": {}
+        }
+      },
       "Syncfusion.Xamarin.SfListView/17.3.0.26": {
         "type": "package",
         "dependencies": {
@@ -2128,6 +2175,7 @@
           "Syncfusion.Xamarin.Cards": "17.3.0.26",
           "Syncfusion.Xamarin.Core": "17.3.0.26",
           "Syncfusion.Xamarin.SfChart": "17.3.0.26",
+          "Syncfusion.Xamarin.SfComboBox": "17.3.0.26",
           "Syncfusion.Xamarin.SfListView": "17.3.0.26",
           "Syncfusion.Xamarin.SfMaskedEdit": "17.3.0.26",
           "Syncfusion.Xamarin.SfNumericTextBox": "17.3.0.26",
@@ -2439,6 +2487,21 @@
           "lib/Xamarin.iOS10/Syncfusion.SfChart.XForms.iOS.dll": {}
         }
       },
+      "Syncfusion.Xamarin.SfComboBox/17.3.0.26": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "17.3.0.26",
+          "Xamarin.Forms": "3.6.0.344457"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.iOS.dll": {}
+        }
+      },
       "Syncfusion.Xamarin.SfListView/17.3.0.26": {
         "type": "package",
         "dependencies": {
@@ -2858,6 +2921,7 @@
           "Syncfusion.Xamarin.Cards": "17.3.0.26",
           "Syncfusion.Xamarin.Core": "17.3.0.26",
           "Syncfusion.Xamarin.SfChart": "17.3.0.26",
+          "Syncfusion.Xamarin.SfComboBox": "17.3.0.26",
           "Syncfusion.Xamarin.SfListView": "17.3.0.26",
           "Syncfusion.Xamarin.SfMaskedEdit": "17.3.0.26",
           "Syncfusion.Xamarin.SfNumericTextBox": "17.3.0.26",
@@ -3446,6 +3510,37 @@
         "lib/uap10.0/Syncfusion.SfChart.XForms.xml",
         "syncfusion.xamarin.sfchart.17.3.0.26.nupkg.sha512",
         "syncfusion.xamarin.sfchart.nuspec"
+      ]
+    },
+    "Syncfusion.Xamarin.SfComboBox/17.3.0.26": {
+      "sha512": "at5Ptj0r/eZ5fXorPwpBgETKoG2DTfltzjk+xCNZvVan5ebVXQqv3wL7GPSyDpoZg8fBXUnGRDs0qeUBALJfIw==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfcombobox/17.3.0.26",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/Syncfusion.SfComboBox.XForms.Android.dll",
+        "lib/MonoAndroid10/Syncfusion.SfComboBox.XForms.XML",
+        "lib/MonoAndroid10/Syncfusion.SfComboBox.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.XML",
+        "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.iOS.dll",
+        "lib/netstandard2.0/Syncfusion.SfComboBox.XForms.XML",
+        "lib/netstandard2.0/Syncfusion.SfComboBox.XForms.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfComboBox.XForms.XML",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfComboBox.XForms.dll",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP.XML",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP.pri",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/Properties/Syncfusion.SfComboBox.XForms.UWP.rd.xml",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/Syncfusion.SfComboBox.XForms.UWP.xr.xml",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/Themes/Generic.xaml",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/darkthemeimage.png",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/dropdownbuttonimage.png",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.XML",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.dll",
+        "syncfusion.xamarin.sfcombobox.17.3.0.26.nupkg.sha512",
+        "syncfusion.xamarin.sfcombobox.nuspec"
       ]
     },
     "Syncfusion.Xamarin.SfListView/17.3.0.26": {
@@ -4543,6 +4638,7 @@
       "Syncfusion.Xamarin.Cards >= 17.3.0.26",
       "Syncfusion.Xamarin.Core >= 17.3.0.26",
       "Syncfusion.Xamarin.SfChart >= 17.3.0.26",
+      "Syncfusion.Xamarin.SfComboBox >= 17.3.0.26",
       "Syncfusion.Xamarin.SfListView >= 17.3.0.26",
       "Syncfusion.Xamarin.SfMaskedEdit >= 17.3.0.26",
       "Syncfusion.Xamarin.SfNumericTextBox >= 17.3.0.26",
@@ -4562,32 +4658,39 @@
     ]
   },
   "packageFolders": {
-    "/Users/operations/.nuget/packages/": {}
+    "C:\\Users\\crist\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.iOS/TenantsApp.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.iOS\\TenantsApp.iOS.csproj",
       "projectName": "TenantsApp.iOS",
-      "projectPath": "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.iOS/TenantsApp.iOS.csproj",
-      "packagesPath": "/Users/operations/.nuget/packages/",
-      "outputPath": "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.iOS/obj/",
+      "projectPath": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.iOS\\TenantsApp.iOS.csproj",
+      "packagesPath": "C:\\Users\\crist\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "/Users/operations/.config/NuGet/NuGet.Config"
+        "C:\\Users\\crist\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "xamarinios10"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp/TenantsApp.csproj": {
-              "projectPath": "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp/TenantsApp.csproj"
+            "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp\\TenantsApp.csproj": {
+              "projectPath": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp\\TenantsApp.csproj"
             }
           }
         }
@@ -4617,6 +4720,10 @@
             "version": "[17.3.0.26, )"
           },
           "Syncfusion.Xamarin.SfChart": {
+            "target": "Package",
+            "version": "[17.3.0.26, )"
+          },
+          "Syncfusion.Xamarin.SfComboBox": {
             "target": "Package",
             "version": "[17.3.0.26, )"
           },

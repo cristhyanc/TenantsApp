@@ -1,11 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             x:Class="TenantsApp.App">
+<Application
+    x:Class="TenantsApp.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:card="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sync="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+    mc:Ignorable="d">
     <Application.Resources>
-        
+
+        <Style TargetType="ContentPage">
+            <Setter Property="BackgroundColor" Value="{OnPlatform iOS=#f5f5f5}" />
+        </Style>
+
+        <Style x:Key="ListCard" TargetType="card:SfCardView">
+            <Setter Property="Margin" Value="{OnPlatform Android='10,0', iOS='10,5'}" />
+            <Setter Property="HeightRequest" Value="100" />
+            <Setter Property="VerticalOptions" Value="Start" />
+        </Style>
+
+        <Style TargetType="sync:SfListView">
+            <Setter Property="Margin" Value="0,20,0,0" />
+            <Setter Property="AllowKeyboardNavigation" Value="True" />
+            <Setter Property="AutoFitMode" Value="Height" />
+            <Setter Property="SelectionBackgroundColor" Value="#E4E4E4" />
+            <Setter Property="SelectionGesture" Value="Tap" />
+            <Setter Property="SelectionMode" Value="Single" />
+            <Setter Property="VerticalOptions" Value="FillAndExpand" />
+            <Setter Property="BackgroundColor" Value="Transparent" />
+        </Style>
     </Application.Resources>
 </Application>

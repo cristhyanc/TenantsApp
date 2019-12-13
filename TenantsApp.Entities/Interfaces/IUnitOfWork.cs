@@ -16,5 +16,6 @@ namespace TenantsApp.Entities.Interfaces
         void Commit();
         void RollBack();
         void RollBack(string savePoint);
+        void CloseConnection();
     }
 }

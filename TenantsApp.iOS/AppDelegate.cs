@@ -33,6 +33,7 @@ namespace TenantsApp.iOS
             SfEffectsViewRenderer.Init();
             Syncfusion.XForms.iOS.Border.SfBorderRenderer.Init();
             Syncfusion.XForms.iOS.Cards.SfCardViewRenderer.Init();
+            new Syncfusion.XForms.iOS.ComboBox.SfComboBoxRenderer();
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
             Syncfusion.XForms.iOS.TabView.SfTabViewRenderer.Init();
             Syncfusion.SfNumericUpDown.XForms.iOS.SfNumericUpDownRenderer.Init();

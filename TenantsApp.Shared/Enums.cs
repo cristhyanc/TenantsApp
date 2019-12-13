@@ -10,5 +10,11 @@ namespace TenantsApp.Shared
         Bill=2
     }
 
-   
+    public enum SchedulePeriodType
+    {
+        Days=1,
+        Weeks=2,
+        Months=3
+          
+    }
 }

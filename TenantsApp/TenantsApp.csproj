@@ -53,6 +53,7 @@
     <PackageReference Include="Syncfusion.Xamarin.Cards" Version="17.3.0.26" />
     <PackageReference Include="Syncfusion.Xamarin.Core" Version="17.3.0.26" />
     <PackageReference Include="Syncfusion.Xamarin.SfChart" Version="17.3.0.26" />
+    <PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="17.3.0.26" />
     <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="17.3.0.26" />
     <PackageReference Include="Syncfusion.Xamarin.SfMaskedEdit" Version="17.3.0.26" />
     <PackageReference Include="Syncfusion.Xamarin.SfNumericTextBox" Version="17.3.0.26" />

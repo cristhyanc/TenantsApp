@@ -14,7 +14,6 @@
     xmlns:syncNumeric="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
     xmlns:viewmodels="clr-namespace:TenantsApp"
     Title="Upcoming Rents"
-    BackgroundColor="#f3f3f3"
     mc:Ignorable="d">
     <d:ContentPage.BindingContext>
         <viewmodels:UpcomingRentPageModel />
@@ -22,11 +21,7 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <DataTemplate x:Key="ItemTemplate" x:Name="ItemTemplate">
-                <card:SfCardView
-                    Margin="10,5"
-                    BackgroundColor="{Binding ItemBackgroundColor}"
-                    HeightRequest="100"
-                    VerticalOptions="Start">
+                <card:SfCardView BackgroundColor="{Binding ItemBackgroundColor}" Style="{StaticResource ListCard}">
                     <Grid Margin="10" VerticalOptions="Start">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto" />
@@ -150,17 +145,11 @@
             </sfpopup:SfPopupLayout>
 
             <sync:SfListView
-                x:Name="listView" BackgroundColor="Transparent"
-                Margin="0,20,0,0"
-                AllowKeyboardNavigation="True"
+                x:Name="listView"
                 AllowSwiping="True"
-                AutoFitMode="Height"
                 ItemTemplate="{StaticResource ItemTemplate}"
                 ItemsSource="{Binding Rents}"
-                SelectedItem="{Binding RentSelected}"
-                SelectionBackgroundColor="#E4E4E4"
-                SelectionGesture="Tap"
-                SelectionMode="Single">
+                SelectedItem="{Binding RentSelected}">
                 <sync:SfListView.LeftSwipeTemplate>
                     <DataTemplate x:Name="LeftSwipeTemplate">
                         <Grid>

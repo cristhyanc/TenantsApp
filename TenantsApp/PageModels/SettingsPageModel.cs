@@ -161,7 +161,7 @@ namespace TenantsApp
             try
             {
 
-                if(! await _userDialogs.ConfirmAsync("Do you want to restore the database?") )
+                if (!await _userDialogs.ConfirmAsync("Do you want to restore the database?"))
                 {
                     return;
                 }
@@ -169,13 +169,13 @@ namespace TenantsApp
                 this.IsBusy = true;
                 var file = await _dropbox.ReadFile(TenantsApp.Shared.Helper.DBFileName);
 
-                if(file !=null)
+                if (file != null)
                 {
                     File.WriteAllBytes(TenantsApp.Shared.Helper.DBFilePath, file);
-                    _unitOfWork.RestartConnection();
                     _userDialogs.Alert("Done");
+                    App.InitApp();
                 }
-             
+
             }
             catch (Exception ex)
             {
@@ -197,11 +197,10 @@ namespace TenantsApp
                     return;
                 }
 
-                this.IsBusy = true;
-                File.WriteAllBytes(TenantsApp.Shared.Helper.DBFilePath, new byte[0]);
-                _unitOfWork.RestartConnection();
+                this.IsBusy = true;             
+                File.WriteAllBytes(TenantsApp.Shared.Helper.DBFilePath, new byte[0]);               
                 _userDialogs.Alert("Done");
-
+                App.InitApp();
             }
             catch (Exception ex)
             {

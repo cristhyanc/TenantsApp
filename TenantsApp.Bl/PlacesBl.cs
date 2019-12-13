@@ -18,7 +18,7 @@ namespace TenantsApp.Bl
 
         public IList<Bill> GetBills(Guid placeId)
         {
-            return _uow.BillRepository.GetAll(x => x.PlaceID == placeId).OrderByDescending(x=>!x.Paid).OrderByDescending(x=> x.ExpiryDate ).ToList() ;
+            return _uow.BillRepository.GetAll(x => x.PlaceID == placeId).OrderByDescending(x=> x.ExpiryDate ).ToList() ;
         }
 
 

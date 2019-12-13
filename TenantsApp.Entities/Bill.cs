@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using TenantsApp.Entities.Interfaces;
+using TenantsApp.Shared;
 using TenantsApp.Shared.Exceptions;
 using Xamarin.Forms;
 
@@ -20,6 +21,10 @@ namespace TenantsApp.Entities
         public Guid PlaceID { get; set; }
         public string Description { get; set; }
         public string Biller { get; set; }
+        public bool IsScheduled { get; set; }
+        public DateTime ScheduleLastDate { get; set; }
+        public int SchedulePeriod { get; set; }
+        public SchedulePeriodType SchedulePeriodType { get; set; }      
 
         [Ignore ]
         public Place Place { get; set; }
@@ -109,6 +114,32 @@ namespace TenantsApp.Entities
             var place = uow.PlaceRepository.Get(this.PlaceID);
             place.TotalSaved -= this.Price;
             
+            if(this.IsScheduled)
+            {
+                SchedulePayment schedule;
+                if(this.ScheduleID==Guid.Empty )
+                {
+                    schedule = new SchedulePayment();
+                    schedule.EndDate = this.ScheduleLastDate;
+                    schedule.ParentID = this.PlaceID;
+                    schedule.Period = this.SchedulePeriod;
+                    schedule.ScheduleID = Guid.NewGuid();
+                    this.ScheduleID = schedule.ScheduleID;
+                    schedule.ScheduleType = ScheduleType.Bill;
+                    schedule.StartDate = DateTime.Now;
+                    schedule.SchedulePeriodType = this.SchedulePeriodType;
+                    uow.ScheduleRentRepositoy.Insert(schedule);
+                    uow.BillRepository.Update(this);
+
+                }
+                else
+                {
+                    schedule = uow.ScheduleRentRepositoy.Get(this.ScheduleID);
+                }
+
+                schedule.CreateNextPayment(uow);
+            }
+
             return uow.PlaceRepository.Update(place);
 
         }

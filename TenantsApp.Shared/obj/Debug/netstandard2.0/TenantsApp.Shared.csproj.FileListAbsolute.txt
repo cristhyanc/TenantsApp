@@ -1,10 +1,3 @@
-C:/Users/crist/Documents/GitHub/TenantsApp/TenantsApp/TenantsApp.Shared/bin/Debug/netstandard2.0/TenantsApp.Shared.deps.json
-C:/Users/crist/Documents/GitHub/TenantsApp/TenantsApp/TenantsApp.Shared/bin/Debug/netstandard2.0/TenantsApp.Shared.dll
-C:/Users/crist/Documents/GitHub/TenantsApp/TenantsApp/TenantsApp.Shared/bin/Debug/netstandard2.0/TenantsApp.Shared.pdb
-C:/Users/crist/Documents/GitHub/TenantsApp/TenantsApp/TenantsApp.Shared/obj/Debug/netstandard2.0/TenantsApp.Shared.AssemblyInfoInputs.cache
-C:/Users/crist/Documents/GitHub/TenantsApp/TenantsApp/TenantsApp.Shared/obj/Debug/netstandard2.0/TenantsApp.Shared.AssemblyInfo.cs
-C:/Users/crist/Documents/GitHub/TenantsApp/TenantsApp/TenantsApp.Shared/obj/Debug/netstandard2.0/TenantsApp.Shared.dll
-C:/Users/crist/Documents/GitHub/TenantsApp/TenantsApp/TenantsApp.Shared/obj/Debug/netstandard2.0/TenantsApp.Shared.pdb
 /Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Shared/bin/Debug/netstandard2.0/TenantsApp.Shared.deps.json
 /Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Shared/bin/Debug/netstandard2.0/TenantsApp.Shared.dll
 /Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Shared/bin/Debug/netstandard2.0/TenantsApp.Shared.pdb
@@ -13,3 +6,10 @@ C:/Users/crist/Documents/GitHub/TenantsApp/TenantsApp/TenantsApp.Shared/obj/Debu
 /Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Shared/obj/Debug/netstandard2.0/TenantsApp.Shared.AssemblyInfo.cs
 /Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Shared/obj/Debug/netstandard2.0/TenantsApp.Shared.dll
 /Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Shared/obj/Debug/netstandard2.0/TenantsApp.Shared.pdb
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Shared\bin\Debug\netstandard2.0\TenantsApp.Shared.deps.json
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Shared\bin\Debug\netstandard2.0\TenantsApp.Shared.dll
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Shared\bin\Debug\netstandard2.0\TenantsApp.Shared.pdb
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Shared\obj\Debug\netstandard2.0\TenantsApp.Shared.AssemblyInfoInputs.cache
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Shared\obj\Debug\netstandard2.0\TenantsApp.Shared.AssemblyInfo.cs
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Shared\obj\Debug\netstandard2.0\TenantsApp.Shared.dll
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Shared\obj\Debug\netstandard2.0\TenantsApp.Shared.pdb

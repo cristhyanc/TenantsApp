@@ -15,17 +15,12 @@
     xmlns:viewmodels="clr-namespace:TenantsApp"
     Title="Upcoming Bills"
     Visual="Material"
-    BackgroundColor="#f5f5f5"
     mc:Ignorable="d">
-    
+
     <ContentPage.Resources>
         <ResourceDictionary>
             <DataTemplate x:Key="ItemTemplate" x:Name="ItemTemplate">
-                <card:SfCardView
-                    Margin="10,5"
-                    BackgroundColor="{Binding ItemBackgroundColor}"
-                    HeightRequest="100"
-                    VerticalOptions="Start">
+                <card:SfCardView BackgroundColor="{Binding ItemBackgroundColor}" Style="{StaticResource ListCard}">
                     <Grid Margin="10" VerticalOptions="Start">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto" />
@@ -145,16 +140,10 @@
 
             <sync:SfListView
                 x:Name="listView"
-                Margin="0,20,0,0"
-                AllowKeyboardNavigation="True" VerticalOptions="FillAndExpand"
                 AllowSwiping="True"
-                AutoFitMode="Height"
                 ItemTemplate="{StaticResource ItemTemplate}"
                 ItemsSource="{Binding Bills}"
-                SelectedItem="{Binding BillSelected}"
-                SelectionBackgroundColor="#E4E4E4"
-                SelectionGesture="Tap"
-                SelectionMode="Single">
+                SelectedItem="{Binding BillSelected}">
                 <sync:SfListView.LeftSwipeTemplate>
                     <DataTemplate x:Name="LeftSwipeTemplate">
                         <Grid>

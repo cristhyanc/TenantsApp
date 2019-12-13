@@ -11,6 +11,7 @@ namespace TenantsApp.Entities
 {
    public class SchedulePayment
     {
+      
         [PrimaryKey]
         public Guid ScheduleID { get; set; }
         public DateTime StartDate { get; set; }
@@ -18,6 +19,7 @@ namespace TenantsApp.Entities
         public Guid ParentID { get; set; }
         public int Period { get; set; }
         public ScheduleType ScheduleType { get; set; }
+        public SchedulePeriodType SchedulePeriodType { get; set; } = SchedulePeriodType.Weeks;
 
         [Ignore]
         public Tenant Tenant { get; set; }
@@ -122,7 +124,7 @@ namespace TenantsApp.Entities
         private bool CreateNextBill(IUnitOfWork uow)
         {
 
-          
+
             if (uow == null)
             {
                 throw new ArgumentNullException(nameof(uow));
@@ -132,18 +134,39 @@ namespace TenantsApp.Entities
             DateTime startDate = DateTime.Parse(this.StartDate.ToShortDateString());
 
 
-            var lastBill = uow.RentRepository.GetAll(x => x.ScheduleID == this.ScheduleID && x.Paid).OrderByDescending(x => x.PaidDate).FirstOrDefault();
-            if (lastBill != null)
-            {              
-                startDate = lastBill.ExpiryDate.AddDays(7 * totalWeeks);
-                if (startDate >= this.EndDate)
-                {
-                    return true;
-                }
+            var lastBill = uow.BillRepository.GetAll(x => x.ScheduleID == this.ScheduleID && x.Paid).OrderByDescending(x => x.PaidDate).FirstOrDefault();
+            if (lastBill == null)
+            {
+                return false;
             }
 
+
+            startDate = lastBill.ExpiryDate.AddDays(7 * totalWeeks);
+            switch (this.SchedulePeriodType)
+            {
+                case SchedulePeriodType.Days:
+                    startDate = lastBill.ExpiryDate.AddDays(totalWeeks);
+                    break;
+                case SchedulePeriodType.Weeks:
+                    startDate = lastBill.ExpiryDate.AddDays(7 * totalWeeks);
+                    break;
+                case SchedulePeriodType.Months:
+                    startDate = lastBill.ExpiryDate.AddMonths ( totalWeeks);
+                    break;
+                default:
+                    break;
+            }
+
+
+
+            if (startDate >= this.EndDate)
+            {
+                return true;
+            }
+
+
             DateTime paymentToDate = startDate.AddDays(7 * this.Period);
-            var place = uow.PlaceRepository .Get(this.ParentID);
+            var place = uow.PlaceRepository.Get(this.ParentID);
 
             if (place == null)
             {
@@ -151,12 +174,19 @@ namespace TenantsApp.Entities
             }
 
             var bill = new Bill();
-            bill.Price = place.Rent * this.Period;
+            bill.Price = lastBill.Price;
             bill.Paid = false;
             bill.ScheduleID = this.ScheduleID;
-            bill.PlaceID  = this.ParentID;
+            bill.PlaceID = this.ParentID;
             bill.ExpiryDate = startDate;
             bill.RentToDate = paymentToDate;
+            bill.Biller = lastBill.Biller;
+            bill.Description = lastBill.Description;
+            bill.IsScheduled = lastBill.IsScheduled;
+            bill.ScheduleLastDate = lastBill.ScheduleLastDate;
+            bill.SchedulePeriod = lastBill.SchedulePeriod;
+            bill.SchedulePeriodType = lastBill.SchedulePeriodType;
+
 
             if (DateTime.Compare(paymentToDate, this.EndDate) > 0)
             {

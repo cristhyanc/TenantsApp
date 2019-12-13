@@ -19,39 +19,9 @@ namespace TenantsApp
         {
             try
             {
-
-                FreshIOC.Container.Register<ISchedulePaymentRepositoy, SchedulePaymentRepositoy>();
-                FreshIOC.Container.Register<ITenantRepository, TenantRepository>();
-                FreshIOC.Container.Register<IRentRepository, RentRepository>();
-                FreshIOC.Container.Register<IPlaceRepository, PlaceRepository>();
-                FreshIOC.Container.Register<IEmailService, EmailService>();
-                FreshIOC.Container.Register<IDropboxService, DropBoxService>();
-                FreshIOC.Container.Register<IBillsBl, BillsBl>();
-                
-
-
-                FreshIOC.Container.Register<IUnitOfWork, UnitOfWork>().AsSingleton();
-                FreshIOC.Container.Register<IUserDialogs>(UserDialogs.Instance);
-                FreshIOC.Container.Register<Bl.IPlacesBl, Bl.PlacesBl>();
-                FreshIOC.Container.Register<Bl.ITenantsBl, Bl.TenantsBl>();
-                FreshIOC.Container.Register<Bl.IScheduleBl, Bl.ScheduleBl>();
-                
-                Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MTU5MTk4QDMxMzcyZTMzMmUzMGFvd0UvK2ZtUm5LSXYxRE9Rc3NvZnBOUFZqTHJqWkF2WVFKa1JVRENETFk9");
                 InitializeComponent();
-
-                var mainPage = new FreshTabbedNavigationContainer();
-
-               //  mainPage.On<Xamarin.Forms.PlatformConfiguration.Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
-                //mainPage.UnselectedTabColor = Color.Black;
-                //mainPage.SelectedTabColor = Color.DodgerBlue;
-
-                mainPage.AddTab<UpcomingRentPageModel>("Rents", null);
-                mainPage.AddTab<UpcomingBillsPageModel>("Bills", null);             
-                mainPage.AddTab<PropertiesPageModel>("Places", null);
-                mainPage.AddTab<SettingsPageModel>("Setting", null);
-
-
-                MainPage = mainPage;
+                MainPage = new ContentPage();
+                InitApp();
             }
             catch (Exception ex)
             {
@@ -59,6 +29,52 @@ namespace TenantsApp
                 throw ex;
             }
         }
+
+       public static  void InitApp()
+        {
+            try
+            {
+
+                IFreshIOC container = new FreshMvvm.FreshTinyIOCBuiltIn();
+
+                container.Register<ISchedulePaymentRepositoy, SchedulePaymentRepositoy>();
+                container.Register<ITenantRepository, TenantRepository>();
+                container.Register<IRentRepository, RentRepository>();
+                container.Register<IPlaceRepository, PlaceRepository>();
+                container.Register<IEmailService, EmailService>();
+                container.Register<IDropboxService, DropBoxService>();
+                container.Register<IBillsBl, BillsBl>();
+                container.Register<IUnitOfWork, UnitOfWork>().AsSingleton();
+                container.Register<IUserDialogs>(UserDialogs.Instance);
+                container.Register<Bl.IPlacesBl, Bl.PlacesBl>();
+                container.Register<Bl.ITenantsBl, Bl.TenantsBl>();
+                container.Register<Bl.IScheduleBl, Bl.ScheduleBl>();
+
+                FreshIOC.OverrideContainer(container);
+
+                Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MTU5MTk4QDMxMzcyZTMzMmUzMGFvd0UvK2ZtUm5LSXYxRE9Rc3NvZnBOUFZqTHJqWkF2WVFKa1JVRENETFk9");
+
+                var mainPage = new FreshTabbedNavigationContainer();
+
+                //  mainPage.On<Xamarin.Forms.PlatformConfiguration.Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
+                //mainPage.UnselectedTabColor = Color.Black;
+                //mainPage.SelectedTabColor = Color.DodgerBlue;
+
+                mainPage.AddTab<UpcomingRentPageModel>("Rents", null);
+                mainPage.AddTab<UpcomingBillsPageModel>("Bills", null);
+                mainPage.AddTab<PropertiesPageModel>("Places", null);
+                mainPage.AddTab<SettingsPageModel>("Setting", null);
+
+                Xamarin.Forms.Application.Current.MainPage = mainPage;
+                GC.Collect();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
 
         protected override void OnStart()
         {

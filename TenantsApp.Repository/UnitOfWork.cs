@@ -24,6 +24,11 @@ namespace TenantsApp.Repository
            
         }
 
+        public void CloseConnection()
+        {
+            _context.CloseConnection();
+        }
+
         public void RestartConnection()
         {
             _context.RestartConnection();

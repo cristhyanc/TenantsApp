@@ -259,6 +259,7 @@
 
                 <buttons:SfButton
                     x:Name="SfButton"
+                    Margin="0,5"
                     BackgroundColor="Black"
                     Command="{Binding SaveCommand}"
                     CornerRadius="5"

@@ -13,14 +13,11 @@
 namespace TenantsApp {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Pages/UpcomingBillsPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Pages\\UpcomingBillsPage.xaml")]
     public partial class UpcomingBillsPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.DataTemplate ItemTemplate;
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Syncfusion.XForms.PopupLayout.SfPopupLayout popup;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Syncfusion.ListView.XForms.SfListView listView;
@@ -32,7 +29,6 @@ namespace TenantsApp {
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(UpcomingBillsPage));
             ItemTemplate = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.DataTemplate>(this, "ItemTemplate");
-            popup = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Syncfusion.XForms.PopupLayout.SfPopupLayout>(this, "popup");
             listView = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Syncfusion.ListView.XForms.SfListView>(this, "listView");
             LeftSwipeTemplate = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.DataTemplate>(this, "LeftSwipeTemplate");
         }

@@ -13,6 +13,12 @@ C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Android\obj\Deb
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Android\obj\Debug\90\android\assets\FreshIOC.dll
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Android\obj\Debug\90\android\assets\FreshMvvm.dll
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Android\obj\Debug\90\android\assets\Java.Interop.dll
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Android\obj\Debug\90\android\assets\Microsoft.AppCenter.Analytics.Android.Bindings.dll
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Android\obj\Debug\90\android\assets\Microsoft.AppCenter.Analytics.dll
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Android\obj\Debug\90\android\assets\Microsoft.AppCenter.Android.Bindings.dll
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Android\obj\Debug\90\android\assets\Microsoft.AppCenter.Crashes.Android.Bindings.dll
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Android\obj\Debug\90\android\assets\Microsoft.AppCenter.Crashes.dll
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Android\obj\Debug\90\android\assets\Microsoft.AppCenter.dll
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Android\obj\Debug\90\android\assets\Microsoft.CSharp.dll
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Android\obj\Debug\90\android\assets\Mono.Android.dll
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Android\obj\Debug\90\android\assets\mscorlib.dll
@@ -36,6 +42,8 @@ C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Android\obj\Deb
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Android\obj\Debug\90\android\assets\Syncfusion.Licensing.dll
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Android\obj\Debug\90\android\assets\Syncfusion.SfChart.XForms.Android.dll
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Android\obj\Debug\90\android\assets\Syncfusion.SfChart.XForms.dll
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Android\obj\Debug\90\android\assets\Syncfusion.SfComboBox.XForms.Android.dll
+C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Android\obj\Debug\90\android\assets\Syncfusion.SfComboBox.XForms.dll
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Android\obj\Debug\90\android\assets\Syncfusion.SfListView.XForms.Android.dll
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Android\obj\Debug\90\android\assets\Syncfusion.SfListView.XForms.dll
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Android\obj\Debug\90\android\assets\Syncfusion.SfMaskedEdit.XForms.Android.dll

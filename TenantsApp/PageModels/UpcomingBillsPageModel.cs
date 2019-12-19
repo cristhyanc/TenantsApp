@@ -42,7 +42,7 @@ namespace TenantsApp
         public decimal TotalPaid { get; set; }
 
         public ICommand PayBillCommand { get; set; }
-        public ICommand ConfirmPaymentCommand { get; set; }
+        
 
         IBillsBl _billBl;
 
@@ -50,15 +50,15 @@ namespace TenantsApp
         {
             _billBl = billBl;
             _userDialogs = userDialogs;
-            PayBillCommand = new Command<Guid>((x) => { PrepartePayRent(x); });
-            ConfirmPaymentCommand = new Command(PayBill);
+            PayBillCommand = new Command<Guid>((x) => { PayBill(x); });
+            
         }
 
         private void LoadBills()
         {
             try
             {
-                this.Bills = new ObservableCollection<Bill>(_billBl.GetUpcomingBills());
+                this.Bills = new ObservableCollection<Bill>(_billBl.GetUpcomingBills());               
             }
             catch (Exception ex)
             {
@@ -73,51 +73,36 @@ namespace TenantsApp
             LoadBills();
         }
 
-        private async void PayBill()
+        private async void PayBill(Guid paymentID)
         {
-            //try
-            //{
-            //    this.IsBusy = true;
-            //    bool email = await _userDialogs.ConfirmAsync("Do you want to send an email?", "", "Yes", "No");
+            try
+            {
+                this.IsBusy = true;
+                if(await _userDialogs.ConfirmAsync("Do you want to mark this bill as paid?", "", "Yes", "No"))
+                {
+                    if (!_billBl.PaidBill(paymentID))
+                    {
+                        _userDialogs.Alert("The rent could not be proccessed");
+                    }
+                    else
+                    {
+                        _userDialogs.Alert("Done");
+                       
+                    }
+                    LoadBills();
+                }
 
-            //    if (!await _billBl.PayRent(this.BillSelected.PaymentID, email, "Cristhyan", this.Weeks, this.TotalPaid))
-            //    {
-            //        _userDialogs.Alert("The rent could not be proccessed");
-            //    }
-            //    else
-            //    {
-            //        _userDialogs.Alert("Done");
-            //        LoadBills();
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    Helpers.ExceptionHelper.ProcessException(ex, _userDialogs, nameof(RentsPageModel));
-            //}
-            //finally
-            //{
-            //    this.IsBusy = false;
-            //}
+              
+            }
+            catch (Exception ex)
+            {
+                Helpers.ExceptionHelper.ProcessException(ex, _userDialogs, nameof(RentsPageModel));
+            }
+            finally
+            {
+                this.IsBusy = false;
+            }
         }
-
-        private async void PrepartePayRent(Guid paymentID)
-        {
-            //try
-            //{
-            //    this.BillSelected = this.Bills.Where(x => x.PaymentID == paymentID).FirstOrDefault();
-            //    var sched = _billBl.GetScheduleByRent(paymentID);
-            //    this.Weeks = sched.Period;
-            //    this.TotalPaid = this.BillSelected.Price;
-            //    DisplayPayConfirmation = true;
-            //}
-            //catch (Exception ex)
-            //{
-            //    Helpers.ExceptionHelper.ProcessException(ex, _userDialogs, nameof(RentsPageModel));
-            //}
-            //finally
-            //{
-            //    this.IsBusy = false;
-            //}
-        }
+               
     }
 }

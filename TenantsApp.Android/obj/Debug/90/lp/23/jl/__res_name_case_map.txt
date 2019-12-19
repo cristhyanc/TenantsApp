@@ -1,5 +1,9 @@
-Values/Strings.xml;values/strings.xml
-Drawable/popup_forms_android_shadow.xml;drawable/popup_forms_android_shadow.xml
-Drawable/popup_forms_android_close_icon.png;drawable/popup_forms_android_close_icon.png
-Drawable/popup_forms_light_theme_close_icon.png;drawable/popup_forms_light_theme_close_icon.png
-Drawable/popup_forms_dark_theme_close_icon.png;drawable/popup_forms_dark_theme_close_icon.png
+Anim/SfChart_Fade_In.xml;anim/sfchart_fade_in.xml
+Anim/SfChart_Fade_Out.xml;anim/sfchart_fade_out.xml
+Anim/SfChart_Scale_In.xml;anim/sfchart_scale_in.xml
+Anim/SfChart_Scale_Out.xml;anim/sfchart_scale_out.xml
+layout/chart_layout.axml;layout/chart_layout.xml
+layout/chart_legend_item.xml;layout/chart_legend_item.xml
+layout/chart_legend.xml;layout/chart_legend.xml
+layout/range_navigator_layout.axml;layout/range_navigator_layout.xml
+values/Strings.xml;values/strings.xml

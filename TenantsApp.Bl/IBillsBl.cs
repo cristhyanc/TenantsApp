@@ -8,8 +8,9 @@ namespace TenantsApp.Bl
   public  interface IBillsBl
     {
         bool Save(Bill bill);
-
         IList  <Bill> GetUpcomingBills();
-       
+        bool PaidBill(Guid billId);
+
+
     }
 }

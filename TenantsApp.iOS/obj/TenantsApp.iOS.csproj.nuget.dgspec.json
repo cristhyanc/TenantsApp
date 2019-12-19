@@ -198,6 +198,18 @@
               "target": "Package",
               "version": "[3.0.0, )"
             },
+            "Microsoft.AppCenter": {
+              "target": "Package",
+              "version": "[2.6.2, )"
+            },
+            "Microsoft.AppCenter.Analytics": {
+              "target": "Package",
+              "version": "[2.6.2, )"
+            },
+            "Microsoft.AppCenter.Crashes": {
+              "target": "Package",
+              "version": "[2.6.2, )"
+            },
             "Syncfusion.Xamarin.Buttons": {
               "target": "Package",
               "version": "[17.3.0.26, )"
@@ -495,6 +507,18 @@
             "FreshMvvm": {
               "target": "Package",
               "version": "[3.0.0, )"
+            },
+            "Microsoft.AppCenter": {
+              "target": "Package",
+              "version": "[2.6.2, )"
+            },
+            "Microsoft.AppCenter.Analytics": {
+              "target": "Package",
+              "version": "[2.6.2, )"
+            },
+            "Microsoft.AppCenter.Crashes": {
+              "target": "Package",
+              "version": "[2.6.2, )"
             },
             "Microsoft.CodeAnalysis.FxCopAnalyzers": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

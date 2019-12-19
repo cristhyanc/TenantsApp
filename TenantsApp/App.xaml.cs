@@ -10,6 +10,9 @@ using Acr.UserDialogs;
 using TenantsApp.Services;
 using TenantsApp.Shared.Interfaces;
 using TenantsApp.Bl;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 namespace TenantsApp
 {
@@ -78,7 +81,9 @@ namespace TenantsApp
 
         protected override void OnStart()
         {
-            // Handle when your app starts
+            //AppCenter.Start("android=5060fb64-b8e8-468f-8b30-5e0153e35200;" +
+            //       "ios=015a7051-88a2-4ea9-8ef5-3224acfdfd2b",
+            //       typeof(Analytics), typeof(Crashes));
         }
 
         protected override void OnSleep()

@@ -8,7 +8,9 @@ using Android.Widget;
 using Android.OS;
 using FFImageLoading;
 using Acr.UserDialogs;
-
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 namespace TenantsApp.Droid
 {
     [Activity(Label = "TenantsApp", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
@@ -38,9 +40,13 @@ namespace TenantsApp.Droid
                 Logger = new CustomLogger(),
             };
 
+            AppCenter.Start("5060fb64-b8e8-468f-8b30-5e0153e35200",
+                   typeof(Analytics), typeof(Crashes));
+
             ImageService.Instance.Initialize(config);
             UserDialogs.Init(this);
             LoadApplication(new App());
+
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {

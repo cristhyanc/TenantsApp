@@ -48,6 +48,35 @@ namespace TenantsApp.Bl
            
         }
 
-      
+        public bool PaidBill(Guid billId)
+        {
+
+            var bill = _uow.BillRepository.Get(billId);
+            if (bill == null)
+            {
+                throw new ArgumentNullException(nameof(bill));
+            }
+
+            try
+            {
+                _uow.Begin();
+
+                if (bill.PaidBill(_uow))
+                {
+                    _uow.Commit();
+                    return true;
+                }
+                _uow.RollBack();
+                return false;
+            }
+            catch (Exception)
+            {
+                _uow.RollBack();
+                throw;
+            }
+
+        }
+
+
     }
 }

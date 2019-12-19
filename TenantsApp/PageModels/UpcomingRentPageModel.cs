@@ -77,9 +77,9 @@ namespace TenantsApp
         {
             try
             {
-                this.IsBusy = true;
+              
                 bool email = await _userDialogs.ConfirmAsync("Do you want to send an email?", "", "Yes", "No");
-
+                this.IsBusy = true;
                 if (!await _scheduleBl.PayRent(this.RentSelected.PaymentID , email, "Cristhyan",this.Weeks,this.TotalPaid ))
                 {
                     _userDialogs.Alert("The rent could not be proccessed");

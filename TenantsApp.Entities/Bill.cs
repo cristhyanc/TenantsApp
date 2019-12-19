@@ -113,8 +113,12 @@ namespace TenantsApp.Entities
 
             var place = uow.PlaceRepository.Get(this.PlaceID);
             place.TotalSaved -= this.Price;
-            
-            if(this.IsScheduled)
+
+            this.Paid = true;
+            this.PaidDate = DateTime.Now;
+            uow.BillRepository.Update(this);
+
+            if (this.IsScheduled)
             {
                 SchedulePayment schedule;
                 if(this.ScheduleID==Guid.Empty )
@@ -130,7 +134,6 @@ namespace TenantsApp.Entities
                     schedule.SchedulePeriodType = this.SchedulePeriodType;
                     uow.ScheduleRentRepositoy.Insert(schedule);
                     uow.BillRepository.Update(this);
-
                 }
                 else
                 {

@@ -1,33 +1,39 @@
 {
   "format": 1,
   "restore": {
-    "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Android/TenantsApp.Android.csproj": {}
+    "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Android\\TenantsApp.Android.csproj": {}
   },
   "projects": {
-    "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Android/TenantsApp.Android.csproj": {
+    "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Android\\TenantsApp.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Android/TenantsApp.Android.csproj",
+        "projectUniqueName": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Android\\TenantsApp.Android.csproj",
         "projectName": "TenantsApp.Android",
-        "projectPath": "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Android/TenantsApp.Android.csproj",
-        "packagesPath": "/Users/operations/.nuget/packages/",
-        "outputPath": "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Android/obj/",
+        "projectPath": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Android\\TenantsApp.Android.csproj",
+        "packagesPath": "C:\\Users\\crist\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "/Users/operations/.config/NuGet/NuGet.Config"
+          "C:\\Users\\crist\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "monoandroid90"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp/TenantsApp.csproj": {
-                "projectPath": "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp/TenantsApp.csproj"
+              "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp\\TenantsApp.csproj": {
+                "projectPath": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp\\TenantsApp.csproj"
               }
             }
           }
@@ -44,6 +50,18 @@
               "target": "Package",
               "version": "[3.0.0, )"
             },
+            "Microsoft.AppCenter": {
+              "target": "Package",
+              "version": "[2.6.2, )"
+            },
+            "Microsoft.AppCenter.Analytics": {
+              "target": "Package",
+              "version": "[2.6.2, )"
+            },
+            "Microsoft.AppCenter.Crashes": {
+              "target": "Package",
+              "version": "[2.6.2, )"
+            },
             "Syncfusion.Xamarin.Buttons": {
               "target": "Package",
               "version": "[17.3.0.26, )"
@@ -57,6 +75,10 @@
               "version": "[17.3.0.26, )"
             },
             "Syncfusion.Xamarin.SfChart": {
+              "target": "Package",
+              "version": "[17.3.0.26, )"
+            },
+            "Syncfusion.Xamarin.SfComboBox": {
               "target": "Package",
               "version": "[17.3.0.26, )"
             },
@@ -128,32 +150,36 @@
         }
       }
     },
-    "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Bl/TenantsApp.Bl.csproj": {
+    "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Bl\\TenantsApp.Bl.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Bl/TenantsApp.Bl.csproj",
+        "projectUniqueName": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Bl\\TenantsApp.Bl.csproj",
         "projectName": "TenantsApp.Bl",
-        "projectPath": "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Bl/TenantsApp.Bl.csproj",
-        "packagesPath": "/Users/operations/.nuget/packages/",
-        "outputPath": "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Bl/obj/",
+        "projectPath": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Bl\\TenantsApp.Bl.csproj",
+        "packagesPath": "C:\\Users\\crist\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Bl\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/operations/.config/NuGet/NuGet.Config"
+          "C:\\Users\\crist\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Entities/TenantsApp.Entities.csproj": {
-                "projectPath": "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Entities/TenantsApp.Entities.csproj"
+              "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Entities\\TenantsApp.Entities.csproj": {
+                "projectPath": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Entities\\TenantsApp.Entities.csproj"
               }
             }
           }
@@ -190,36 +216,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Entities/TenantsApp.Entities.csproj": {
+    "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Entities\\TenantsApp.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Entities/TenantsApp.Entities.csproj",
+        "projectUniqueName": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Entities\\TenantsApp.Entities.csproj",
         "projectName": "TenantsApp.Entities",
-        "projectPath": "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Entities/TenantsApp.Entities.csproj",
-        "packagesPath": "/Users/operations/.nuget/packages/",
-        "outputPath": "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Entities/obj/",
+        "projectPath": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Entities\\TenantsApp.Entities.csproj",
+        "packagesPath": "C:\\Users\\crist\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/operations/.config/NuGet/NuGet.Config"
+          "C:\\Users\\crist\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Shared/TenantsApp.Shared.csproj": {
-                "projectPath": "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Shared/TenantsApp.Shared.csproj"
+              "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Shared\\TenantsApp.Shared.csproj": {
+                "projectPath": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Shared\\TenantsApp.Shared.csproj"
               }
             }
           }
@@ -264,36 +294,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Repository/TenantsApp.Repository.csproj": {
+    "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Repository\\TenantsApp.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Repository/TenantsApp.Repository.csproj",
+        "projectUniqueName": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Repository\\TenantsApp.Repository.csproj",
         "projectName": "TenantsApp.Repository",
-        "projectPath": "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Repository/TenantsApp.Repository.csproj",
-        "packagesPath": "/Users/operations/.nuget/packages/",
-        "outputPath": "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Repository/obj/",
+        "projectPath": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Repository\\TenantsApp.Repository.csproj",
+        "packagesPath": "C:\\Users\\crist\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/operations/.config/NuGet/NuGet.Config"
+          "C:\\Users\\crist\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Entities/TenantsApp.Entities.csproj": {
-                "projectPath": "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Entities/TenantsApp.Entities.csproj"
+              "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Entities\\TenantsApp.Entities.csproj": {
+                "projectPath": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Entities\\TenantsApp.Entities.csproj"
               }
             }
           }
@@ -334,29 +368,33 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Shared/TenantsApp.Shared.csproj": {
+    "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Shared\\TenantsApp.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Shared/TenantsApp.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Shared\\TenantsApp.Shared.csproj",
         "projectName": "TenantsApp.Shared",
-        "projectPath": "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Shared/TenantsApp.Shared.csproj",
-        "packagesPath": "/Users/operations/.nuget/packages/",
-        "outputPath": "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Shared/obj/",
+        "projectPath": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Shared\\TenantsApp.Shared.csproj",
+        "packagesPath": "C:\\Users\\crist\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/operations/.config/NuGet/NuGet.Config"
+          "C:\\Users\\crist\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -396,42 +434,46 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp/TenantsApp.csproj": {
+    "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp\\TenantsApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp/TenantsApp.csproj",
+        "projectUniqueName": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp\\TenantsApp.csproj",
         "projectName": "TenantsApp",
-        "projectPath": "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp/TenantsApp.csproj",
-        "packagesPath": "/Users/operations/.nuget/packages/",
-        "outputPath": "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp/obj/",
+        "projectPath": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp\\TenantsApp.csproj",
+        "packagesPath": "C:\\Users\\crist\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/operations/.config/NuGet/NuGet.Config"
+          "C:\\Users\\crist\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Bl/TenantsApp.Bl.csproj": {
-                "projectPath": "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Bl/TenantsApp.Bl.csproj"
+              "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Bl\\TenantsApp.Bl.csproj": {
+                "projectPath": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Bl\\TenantsApp.Bl.csproj"
               },
-              "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Entities/TenantsApp.Entities.csproj": {
-                "projectPath": "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Entities/TenantsApp.Entities.csproj"
+              "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Entities\\TenantsApp.Entities.csproj": {
+                "projectPath": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Entities\\TenantsApp.Entities.csproj"
               },
-              "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Repository/TenantsApp.Repository.csproj": {
-                "projectPath": "/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Repository/TenantsApp.Repository.csproj"
+              "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Repository\\TenantsApp.Repository.csproj": {
+                "projectPath": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Repository\\TenantsApp.Repository.csproj"
               }
             }
           }
@@ -458,6 +500,18 @@
             "FreshMvvm": {
               "target": "Package",
               "version": "[3.0.0, )"
+            },
+            "Microsoft.AppCenter": {
+              "target": "Package",
+              "version": "[2.6.2, )"
+            },
+            "Microsoft.AppCenter.Analytics": {
+              "target": "Package",
+              "version": "[2.6.2, )"
+            },
+            "Microsoft.AppCenter.Crashes": {
+              "target": "Package",
+              "version": "[2.6.2, )"
             },
             "Microsoft.CodeAnalysis.FxCopAnalyzers": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -488,6 +542,10 @@
               "version": "[17.3.0.26, )"
             },
             "Syncfusion.Xamarin.SfChart": {
+              "target": "Package",
+              "version": "[17.3.0.26, )"
+            },
+            "Syncfusion.Xamarin.SfComboBox": {
               "target": "Package",
               "version": "[17.3.0.26, )"
             },
@@ -562,7 +620,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

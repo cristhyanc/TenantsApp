@@ -13,7 +13,7 @@
 namespace TenantsApp {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Pages/BillsPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Pages\\BillsPage.xaml")]
     public partial class BillsPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

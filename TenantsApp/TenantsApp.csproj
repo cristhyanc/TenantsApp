@@ -44,6 +44,9 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="FreshMvvm" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AppCenter" Version="2.6.2" />
+    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="2.6.2" />
+    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="2.6.2" />
     <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.7">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

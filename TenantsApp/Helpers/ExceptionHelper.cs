@@ -1,4 +1,5 @@
 ﻿using Acr.UserDialogs;
+using Microsoft.AppCenter.Crashes;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -28,7 +29,7 @@ namespace TenantsApp.Helpers
                 {
                     methodName = StringResources.GeneralError;
                 }
-              //  Crashes.TrackError(ex);
+                Crashes.TrackError(ex);
 
                 if (userDialogs != null)
                 {

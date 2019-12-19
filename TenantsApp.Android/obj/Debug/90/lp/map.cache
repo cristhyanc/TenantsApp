@@ -6,6 +6,12 @@ FFImageLoading.Svg.Forms
 FFImageLoading.Svg.Platform
 FFImageLoading.Transformations
 FormsViewGroup
+Microsoft.AppCenter.Analytics.Android.Bindings
+Microsoft.AppCenter.Analytics
+Microsoft.AppCenter.Android.Bindings
+Microsoft.AppCenter.Crashes.Android.Bindings
+Microsoft.AppCenter.Crashes
+Microsoft.AppCenter
 SkiaSharp
 SQLitePCLRaw.batteries_green
 SQLitePCLRaw.batteries_v2
@@ -16,6 +22,7 @@ Syncfusion.Buttons.XForms.Android
 Syncfusion.Cards.XForms.Android
 Syncfusion.Core.XForms.Android
 Syncfusion.SfChart.XForms.Android
+Syncfusion.SfComboBox.XForms.Android
 Syncfusion.SfListView.XForms.Android
 Syncfusion.SfMaskedEdit.XForms.Android
 Syncfusion.SfNumericTextBox.Android

@@ -72,72 +72,6 @@
     <ContentPage.Content>
         <StackLayout VerticalOptions="FillAndExpand">
 
-
-            <sfpopup:SfPopupLayout x:Name="popup" IsOpen="{Binding DisplayPayConfirmation}">
-                <sfpopup:SfPopupLayout.PopupView>
-                    <sfpopup:PopupView
-                        AcceptCommand="{Binding ConfirmPaymentCommand}"
-                        HeaderTitle="Rent to pay"
-                        HeightRequest="300">
-                        <sfpopup:PopupView.ContentTemplate>
-                            <DataTemplate>
-                                <StackLayout>
-
-                                    <inputLayout:SfTextInputLayout
-                                        ContainerBackgroundColor="White"
-                                        ContainerType="Filled"
-                                        FocusedColor="Aqua"
-                                        Hint="Total Weeks"
-                                        HorizontalOptions="FillAndExpand"
-                                        LeadingViewPosition="Inside">
-
-                                        <numericUp:SfNumericUpDown
-                                            x:Name="numericUpDown"
-                                            FormatString="n"
-                                            Value="{Binding Weeks}" />
-
-                                        <inputLayout:SfTextInputLayout.LeadingView>
-                                            <ffimageloadingsvg:SvgCachedImage
-                                                Margin="0,0,30,0"
-                                                BackgroundColor="Transparent"
-                                                HeightRequest="20"
-                                                Source="resource://TenantsApp.Resources.counter.svg?assembly=TenantsApp"
-                                                WidthRequest="20" />
-                                        </inputLayout:SfTextInputLayout.LeadingView>
-                                    </inputLayout:SfTextInputLayout>
-
-
-                                    <inputLayout:SfTextInputLayout
-                                        ContainerBackgroundColor="White"
-                                        ContainerType="Filled"
-                                        FocusedColor="Aqua"
-                                        Hint="Total Rent"
-                                        HorizontalOptions="FillAndExpand"
-                                        LeadingViewPosition="Inside">
-
-                                        <syncNumeric:SfNumericTextBox
-                                            AllowNull="true"
-                                            FormatString="n"
-                                            MaximumNumberDecimalDigits="0"
-                                            Value="{Binding TotalPaid}" />
-                                        <inputLayout:SfTextInputLayout.LeadingView>
-                                            <ffimageloadingsvg:SvgCachedImage
-                                                Margin="0,0,30,0"
-                                                BackgroundColor="Transparent"
-                                                HeightRequest="20"
-                                                Source="resource://TenantsApp.Resources.toilet.svg?assembly=TenantsApp"
-                                                WidthRequest="20" />
-                                        </inputLayout:SfTextInputLayout.LeadingView>
-                                    </inputLayout:SfTextInputLayout>
-
-
-                                </StackLayout>
-                            </DataTemplate>
-                        </sfpopup:PopupView.ContentTemplate>
-                    </sfpopup:PopupView>
-                </sfpopup:SfPopupLayout.PopupView>
-            </sfpopup:SfPopupLayout>
-
             <sync:SfListView
                 x:Name="listView"
                 AllowSwiping="True"
@@ -159,7 +93,7 @@
                                 HorizontalOptions="Fill"
                                 VerticalOptions="Fill">
                                 <Grid.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding Source={x:Reference listView}, Path=BindingContext.PayRentCommand}" CommandParameter="{Binding PaymentID}" />
+                                    <TapGestureRecognizer Command="{Binding Source={x:Reference listView}, Path=BindingContext.PayBillCommand}" CommandParameter="{Binding PaymentID}" />
                                 </Grid.GestureRecognizers>
                                 <Grid HorizontalOptions="Center" VerticalOptions="Center">
                                     <ffimageloadingsvg:SvgCachedImage

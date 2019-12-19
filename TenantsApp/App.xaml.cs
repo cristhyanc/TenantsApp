@@ -24,7 +24,13 @@ namespace TenantsApp
             {
                 InitializeComponent();
                 MainPage = new ContentPage();
+                if(!Xamarin.Forms.Application.Current.Properties.ContainsKey("BILLERNAME"))
+                {
+                    Xamarin.Forms.Application.Current.Properties.Add("BILLERNAME", "John Doe");
+                }
+              
                 InitApp();
+               
             }
             catch (Exception ex)
             {

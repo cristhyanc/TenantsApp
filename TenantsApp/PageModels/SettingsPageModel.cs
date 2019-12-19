@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Reflection;
 using System.Text;
 using System.Windows.Input;
 using TenantsApp.Entities.Interfaces;
@@ -19,9 +20,22 @@ namespace TenantsApp
         public ICommand BackupDatabaseCommand { get; set; }
         public ICommand RestoreDatabaseCommand { get; set; }
         public ICommand CleanDatabaseCommand { get; set; }
-
+        public ICommand SaveCommand { get; set; }
+        
         public bool ConnectionButtonVisible { get; set; }
         public bool DisconnectionButtonVisible { get; set; }
+
+        public string BillerName { get; set; }
+
+        public string Version
+        {
+            get
+            {
+                var assembly = typeof(SettingsPageModel).GetTypeInfo().Assembly;
+                var assemblyName = new AssemblyName(assembly.FullName);
+                return assemblyName.Version.Major + "." + assemblyName.Version.Minor + "." + assemblyName.Version.Build;
+            }
+        }
 
         IDropboxService _dropbox;
         IUnitOfWork _unitOfWork;
@@ -33,9 +47,26 @@ namespace TenantsApp
             BackupDatabaseCommand = new Command(BackupDb);
             RestoreDatabaseCommand = new Command(RestoreDB);
             CleanDatabaseCommand = new Command(CleanDB);
-          
+            SaveCommand = new Command(SaveSettings);
+            this.BillerName = Application.Current.Properties["BILLERNAME"].ToString();
             _dropbox = dropbox;
             _unitOfWork = unitOfWork;
+        }
+
+        private async void SaveSettings()
+        {
+            try
+            {
+                this.IsBusy = true;
+                Application.Current.Properties["BILLERNAME"] = this.BillerName;
+                await Application.Current.SavePropertiesAsync();
+                this.IsBusy = false;
+                _userDialogs.Alert("Done");
+            }
+            catch (Exception ex)
+            {
+                Helpers.ExceptionHelper.ProcessException(ex, _userDialogs, nameof(TenantsPageModel));
+            }
         }
 
         protected override void ViewIsDisappearing(object sender, EventArgs e)

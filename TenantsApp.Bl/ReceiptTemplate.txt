@@ -42,7 +42,7 @@
 <td style=" width: 305px;"><span style="text-decoration: underline;">{Description}</span></td>
 </tr>
 <tr>
-<td style="width: 130px; text-align: center;"><strong>Received By"</strong></td>
+<td style="width: 130px; text-align: center;"><strong>Received By:</strong></td>
 <td style="width: 305px;"><span style="text-decoration: underline;">{ReceivedBy}</span></td>
 </tr>
 </tbody>

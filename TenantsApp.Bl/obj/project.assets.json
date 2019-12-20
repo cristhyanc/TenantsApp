@@ -118,11 +118,11 @@
           "build/_._": {}
         }
       },
-      "TenantsApp.Entities/1.0.0": {
+      "TenantsApp.Entities/1.0.1": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "TenantsApp.Shared": "1.0.0",
+          "TenantsApp.Shared": "1.0.1",
           "Xamarin.Forms": "4.3.0.991221",
           "sqlite-net-pcl": "1.6.292"
         },
@@ -133,7 +133,7 @@
           "bin/placeholder/TenantsApp.Entities.dll": {}
         }
       },
-      "TenantsApp.Shared/1.0.0": {
+      "TenantsApp.Shared/1.0.1": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "compile": {
@@ -1021,12 +1021,12 @@
         "xamarin.forms.nuspec"
       ]
     },
-    "TenantsApp.Entities/1.0.0": {
+    "TenantsApp.Entities/1.0.1": {
       "type": "project",
       "path": "../TenantsApp.Entities/TenantsApp.Entities.csproj",
       "msbuildProject": "../TenantsApp.Entities/TenantsApp.Entities.csproj"
     },
-    "TenantsApp.Shared/1.0.0": {
+    "TenantsApp.Shared/1.0.1": {
       "type": "project",
       "path": "../TenantsApp.Shared/TenantsApp.Shared.csproj",
       "msbuildProject": "../TenantsApp.Shared/TenantsApp.Shared.csproj"
@@ -1036,7 +1036,7 @@
     ".NETStandard,Version=v2.0": [
       "Microsoft.CodeAnalysis.FxCopAnalyzers >= 2.9.7",
       "NETStandard.Library >= 2.0.3",
-      "TenantsApp.Entities >= 1.0.0"
+      "TenantsApp.Entities >= 1.0.1"
     ]
   },
   "packageFolders": {
@@ -1045,7 +1045,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "restore": {
       "projectUniqueName": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Bl\\TenantsApp.Bl.csproj",
       "projectName": "TenantsApp.Bl",

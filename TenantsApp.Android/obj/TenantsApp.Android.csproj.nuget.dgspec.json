@@ -151,7 +151,7 @@
       }
     },
     "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Bl\\TenantsApp.Bl.csproj": {
-      "version": "1.0.0",
+      "version": "1.0.1",
       "restore": {
         "projectUniqueName": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Bl\\TenantsApp.Bl.csproj",
         "projectName": "TenantsApp.Bl",
@@ -221,7 +221,7 @@
       }
     },
     "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Entities\\TenantsApp.Entities.csproj": {
-      "version": "1.0.0",
+      "version": "1.0.1",
       "restore": {
         "projectUniqueName": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Entities\\TenantsApp.Entities.csproj",
         "projectName": "TenantsApp.Entities",
@@ -299,7 +299,7 @@
       }
     },
     "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Repository\\TenantsApp.Repository.csproj": {
-      "version": "1.0.0",
+      "version": "1.0.1",
       "restore": {
         "projectUniqueName": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Repository\\TenantsApp.Repository.csproj",
         "projectName": "TenantsApp.Repository",
@@ -373,7 +373,7 @@
       }
     },
     "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Shared\\TenantsApp.Shared.csproj": {
-      "version": "1.0.0",
+      "version": "1.0.1",
       "restore": {
         "projectUniqueName": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp.Shared\\TenantsApp.Shared.csproj",
         "projectName": "TenantsApp.Shared",
@@ -439,7 +439,7 @@
       }
     },
     "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp\\TenantsApp.csproj": {
-      "version": "1.0.0",
+      "version": "1.0.1",
       "restore": {
         "projectUniqueName": "C:\\Users\\crist\\Documents\\GitHub\\TenantsApp\\TenantsApp\\TenantsApp\\TenantsApp.csproj",
         "projectName": "TenantsApp",

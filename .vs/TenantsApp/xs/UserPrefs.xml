@@ -1,30 +1,32 @@
 ﻿<Properties StartupConfiguration="{05862E9B-EAC8-46E0-B5A1-D37C88327A30}|Default">
   <MonoDevelop.Ide.ItemProperties.Platforms.TenantsApp.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.5063D456-4917-4933-BC2C-D2E48DCDD448" />
   <MonoDevelop.Ide.ItemProperties.Platforms.TenantsApp.Android PreferredExecutionTarget="Android.Android_Accelerated_Pie" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="TenantsApp/App.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TenantsApp.Shared/Enums.cs">
     <Files>
-      <File FileName="TenantsApp.iOS/Info.plist" />
       <File FileName="TenantsApp/App.xaml.cs" />
-      <File FileName="TenantsApp.iOS/AppDelegate.cs" />
       <File FileName="TenantsApp.iOS/Main.cs" />
-      <File FileName="TenantsApp/PageModels/PropertiesPageModel.cs" />
-      <File FileName="TenantsApp/Pages/BillsPage.xaml" Line="22" Column="33" />
-      <File FileName="TenantsApp.Entities/Bill.cs" Line="1" Column="1" />
-      <File FileName="TenantsApp/Pages/UpcomingBillsPage.xaml" Line="18" Column="30" />
-      <File FileName="TenantsApp/Pages/UpcomingRentPage.xaml" Line="17" Column="5" />
+      <File FileName="TenantsApp/PageModels/PropertiesPageModel.cs" Line="1" Column="1" />
+      <File FileName="TenantsApp/Pages/BillsPage.xaml" />
+      <File FileName="TenantsApp.Entities/Bill.cs" />
+      <File FileName="TenantsApp/Pages/UpcomingBillsPage.xaml" />
+      <File FileName="TenantsApp/Pages/UpcomingRentPage.xaml" />
       <File FileName="TenantsApp/App.xaml" Line="11" Column="15" />
+      <File FileName="TenantsApp.iOS/Resources/LaunchScreen.storyboard" />
+      <File FileName="TenantsApp.Shared/Enums.cs" Line="1" Column="7" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="TenantsApp" expanded="True">
             <Node name="Platforms" expanded="True">
-              <Node name="TenantsApp.iOS" expanded="True" />
+              <Node name="TenantsApp.iOS" expanded="True" selected="True">
+                <Node name="Resources" expanded="True" />
+              </Node>
             </Node>
             <Node name="TenantsApp" expanded="True">
-              <Node name="Pages" expanded="True" />
-              <Node name="App.xaml" selected="True" />
+              <Node name="PageModels" expanded="True" />
             </Node>
+            <Node name="TenantsApp.Shared" expanded="True" />
           </Node>
         </State>
       </Pad>
@@ -33,9 +35,7 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/operations/Documents/GitHub/TenantsApp/TenantsApp/PageModels/PropertiesPageModel.cs" relfile="TenantsApp/PageModels/PropertiesPageModel.cs" line="130" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

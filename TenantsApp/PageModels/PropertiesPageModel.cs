@@ -117,7 +117,7 @@ namespace TenantsApp
                 {
                     foreach (var item in this.Places )
                     {
-                        this.TotalBond += item.Tenants.Sum(x => x.Bond);
+                        this.TotalBond += item.Tenants.Where(x=> x.End.HasValue && x.End>DateTime.Now ).Sum(x => x.Bond);
                         this.TotalSaved += item.TotalSaved;
                         this.TotalRentPrice += item.Rent;
                     }

@@ -7,11 +7,11 @@
   "targets": {
     ".NETStandard,Version=v2.0": {},
     ".NETStandard,Version=v2.0/": {
-      "TenantsApp.Bl/1.0.0": {
+      "TenantsApp.Bl/1.0.1": {
         "dependencies": {
           "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.9.7",
           "NETStandard.Library": "2.0.3",
-          "TenantsApp.Entities": "1.0.0"
+          "TenantsApp.Entities": "1.0.1"
         },
         "runtime": {
           "TenantsApp.Bl.dll": {}
@@ -90,9 +90,9 @@
           }
         }
       },
-      "TenantsApp.Entities/1.0.0": {
+      "TenantsApp.Entities/1.0.1": {
         "dependencies": {
-          "TenantsApp.Shared": "1.0.0",
+          "TenantsApp.Shared": "1.0.1",
           "Xamarin.Forms": "4.3.0.991221",
           "sqlite-net-pcl": "1.6.292"
         },
@@ -100,7 +100,7 @@
           "TenantsApp.Entities.dll": {}
         }
       },
-      "TenantsApp.Shared/1.0.0": {
+      "TenantsApp.Shared/1.0.1": {
         "runtime": {
           "TenantsApp.Shared.dll": {}
         }
@@ -108,7 +108,7 @@
     }
   },
   "libraries": {
-    "TenantsApp.Bl/1.0.0": {
+    "TenantsApp.Bl/1.0.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -190,12 +190,12 @@
       "path": "xamarin.forms/4.3.0.991221",
       "hashPath": "xamarin.forms.4.3.0.991221.nupkg.sha512"
     },
-    "TenantsApp.Entities/1.0.0": {
+    "TenantsApp.Entities/1.0.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "TenantsApp.Shared/1.0.0": {
+    "TenantsApp.Shared/1.0.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

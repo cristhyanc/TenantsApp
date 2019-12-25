@@ -32,7 +32,7 @@ namespace TenantsApp.Entities
             {
                 if (this.Tenants?.Count > 0)
                 {
-                    return this.Tenants.Count;
+                    return this.Tenants.Where(x=> !x.End.HasValue || x.End>DateTime.Now).ToList().Count;
 
                 }
                 return 0;

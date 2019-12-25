@@ -1,16 +1,3 @@
-/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Bl/bin/Debug/netstandard2.0/TenantsApp.Bl.deps.json
-/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Bl/bin/Debug/netstandard2.0/TenantsApp.Bl.dll
-/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Bl/bin/Debug/netstandard2.0/TenantsApp.Bl.pdb
-/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Bl/bin/Debug/netstandard2.0/TenantsApp.Entities.dll
-/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Bl/bin/Debug/netstandard2.0/TenantsApp.Shared.dll
-/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Bl/bin/Debug/netstandard2.0/TenantsApp.Entities.pdb
-/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Bl/bin/Debug/netstandard2.0/TenantsApp.Shared.pdb
-/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Bl/obj/Debug/netstandard2.0/TenantsApp.Bl.csprojAssemblyReference.cache
-/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Bl/obj/Debug/netstandard2.0/TenantsApp.Bl.AssemblyInfoInputs.cache
-/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Bl/obj/Debug/netstandard2.0/TenantsApp.Bl.AssemblyInfo.cs
-/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Bl/obj/Debug/netstandard2.0/TenantsApp.Bl.csproj.CopyComplete
-/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Bl/obj/Debug/netstandard2.0/TenantsApp.Bl.dll
-/Users/operations/Documents/GitHub/TenantsApp/TenantsApp.Bl/obj/Debug/netstandard2.0/TenantsApp.Bl.pdb
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Bl\bin\Debug\netstandard2.0\TenantsApp.Bl.deps.json
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Bl\bin\Debug\netstandard2.0\TenantsApp.Bl.dll
 C:\Users\crist\Documents\GitHub\TenantsApp\TenantsApp\TenantsApp.Bl\bin\Debug\netstandard2.0\TenantsApp.Bl.pdb

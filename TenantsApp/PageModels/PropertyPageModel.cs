@@ -91,8 +91,8 @@ namespace TenantsApp
                 if (this.Place != null && this.Place.PlaceID !=Guid.Empty )
                 {
                     this.Place = _placesBl.GetPlace(this.Place.PlaceID);
-                    TotalTenants = this.Place.Tenants.Count;
-                    TotalBond = this.Place.Tenants?.Sum(x => x.Bond);
+                    TotalTenants = this.Place.Tenants.Where(x => !x.End.HasValue || x.End > DateTime.Now).ToList().Count;
+                    TotalBond = this.Place.Tenants.Where(x => x.End.HasValue && x.End > DateTime.Now).Sum(x => x.Bond);
                 }
             }
             catch (Exception ex)
